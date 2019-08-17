@@ -4,7 +4,7 @@
     "build": "vuepress build site",
     "dev": "vuepress dev site"
   },
-  "author": "Nichlas W. Andersen",
+  "author": "Gina Giampaolo",
   "license": "MIT",
   "dependencies": {
     "vuepress": "^0.14.1",

@@ -9,7 +9,8 @@ module.exports = {
     nav: config.navigation,
   },
   head: [
-    ['link', { rel: "icon", href: config.favicon }]
+    ['link', { rel: "icon", href: config.favicon }],
+    ['script', { src: "https://identity.netlify.com/v1/netlify-identity-widget.js"}]
   ],
   markdown: {
     anchor: {

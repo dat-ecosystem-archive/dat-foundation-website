@@ -1,5 +1,4 @@
 ---
-title: Dat Foundation Rules
+title: Dat Foundation
 ---
-<Hero :text="$page.frontmatter.hero_text" />
-<WorksList />
+

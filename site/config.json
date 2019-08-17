@@ -1,0 +1,27 @@
+{
+    "title": "Dat Foundation",
+    "description": "Creative Agency",
+    "logo": "/upload/logo.svg",
+    "footer": "Ⓒ Acme",
+    "favicon": "favicon-32x32.png",
+    "navigation": [
+      {
+        "text": "Works",
+        "link": "/",
+        "position": "left",
+        "external": false
+      },
+      {
+        "text": "Say hi!",
+        "link": "mailto:sayhi@mydomain.com",
+        "position": "right",
+        "external": true
+      },
+      {
+        "text": "Journal",
+        "link": "/journal/",
+        "position": "right",
+        "external": false
+      }
+    ]
+  }

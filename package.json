@@ -1,0 +1,13 @@
+{
+  "name": "dat-foundation-website",
+  "scripts": {
+    "build": "vuepress build site",
+    "dev": "vuepress dev site"
+  },
+  "author": "Nichlas W. Andersen",
+  "license": "MIT",
+  "dependencies": {
+    "vuepress": "^0.14.1",
+    "webpack-dev-middleware": "3.6.0"
+  }
+}

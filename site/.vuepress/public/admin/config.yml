@@ -9,9 +9,19 @@ public_folder: "../../"
 
 collections:
   - name: "Home" # Used in routes, e.g., /admin/collections/blog
-    label: "Home" # Used in the UI
+    label: "Homepage" # Used in the UI
     folder: "site/" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
+    create: false # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
+
+  - name: "People" # Used in routes, e.g., /admin/collections/blog
+    label: "People" # Used in the UI
+    folder: "site/people" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    identifier_field: name
+    fields: # The fields for each document, usually in front matter
+      - {label: "Name", name: "name", widget: "string"}
+

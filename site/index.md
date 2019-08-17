@@ -1,4 +1,6 @@
 ---
-title: Test title
+title: "Dat Foundation"
+
 ---
-Test
+<Hero :text="$page.frontmatter.hero_text" />
+<WorksList />

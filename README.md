@@ -22,11 +22,5 @@ vuepress dev
 vuepress build
 ```
 
-## Deploy with Netlify
-2. Set the build command to: `npm run site:build`
-3. Set the publish directory to `portfolio/.vuepress/dist`
-
-That's it, now your site gets deployed automatically on `git push`
-
 ## Netlify CMS
 Edit the site content at `/admin`. 

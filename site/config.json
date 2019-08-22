@@ -6,22 +6,28 @@
     "favicon": "favicon-32x32.png",
     "navigation": [
       {
-        "text": "Works",
-        "link": "/",
-        "position": "left",
-        "external": false
+        "text": "About",
+        "link": "/about/"
       },
       {
-        "text": "Say hi!",
-        "link": "mailto:sayhi@mydomain.com",
-        "position": "right",
-        "external": true
+        "text": "Blog",
+        "link": "/about/"
       },
       {
-        "text": "Journal",
-        "link": "/journal/",
-        "position": "right",
-        "external": false
+        "text": "Events",
+        "link": "/about/"
+      },
+      {
+        "text": "Learn",
+        "link": "/about/"
+      },
+      {
+        "text": "Explore",
+        "link": "/explore/"
+      },
+      {
+        "text": "Connect",
+        "link": "/connect/"
       }
     ]
   }

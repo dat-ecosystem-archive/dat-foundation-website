@@ -9,24 +9,6 @@
     }"
   >
 
-    <nav v-if="navLinks" class="navigation left desktop-nav">
-      <ul>
-        <router-link
-          v-for="nav in navLinks"
-          :key="nav.text"
-          v-if="nav.position === 'left' && !nav.external"
-          tag="li"
-          :to="nav.link"
-          active-class="active"
-          v-text="nav.text"
-          exact
-        />
-        <li v-for="nav in navLinks" v-if="nav.position === 'left' && nav.external">
-          <a :href="nav.link" target="_blank">{{ nav.text }}</a>
-        </li>
-      </ul>
-    </nav>
-
     <div class="brand">
       <router-link to="/">
         <div
@@ -39,23 +21,20 @@
       </router-link>
     </div>
 
-    <nav v-if="navLinks" class="navigation right desktop-nav">
+    <nav v-if="navLinks" class="navigation left desktop-nav">
       <ul>
         <router-link
           v-for="nav in navLinks"
           :key="nav.text"
-          v-if="nav.position === 'right' && !nav.external"
           tag="li"
           :to="nav.link"
           active-class="active"
           v-text="nav.text"
           exact
         />
-        <li v-for="nav in navLinks" v-if="nav.position === 'right' && nav.external">
-          <a :href="nav.link" target="_blank">{{ nav.text }}</a>
-        </li>
       </ul>
     </nav>
+
 
     <div class="mobile-nav-toggle" @click="toggleMobileNav" />
     <div class="mobile-nav" :class="{'mobile-nav--active': mobileNavActive}">
@@ -113,7 +92,6 @@
 </script>
 
 <style scoped>
-
   .header {
     display: flex;
     position: relative;
@@ -127,15 +105,11 @@
   }
 
   .logo {
-    position: absolute;
-    width: 3rem;
-    height: 3rem;
+    width: 5rem;
+    height: 5rem;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
   }
 
   .navigation li {

@@ -24,3 +24,5 @@ vuepress build
 
 ## Netlify CMS
 Edit the site content at `/admin`. 
+
+Edit the CMS configuration in `.vuepress/public/admin/config.yml`

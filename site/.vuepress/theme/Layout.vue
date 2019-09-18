@@ -4,37 +4,10 @@
     <Navbar :logo="$site.themeConfig.logo" :sticky="$route.path === '/'" />
 
     <div class="container">
-
-      <!-- Works list -->
-      <div
-        v-if="$route.path === '/'"
-        :style="{
-          marginTop: '14vw'
-        }"
-      >
+      <!-- Homepage -->
+      <div v-if="$route.path === '/'">
         <Content/>
       </div>
-
-      <!-- Single project view -->
-      <div v-if="isSingleProject">
-        <SingleProjectHeader
-          :title="$page.frontmatter.title"
-          :year="$page.frontmatter.year.toString()"
-          :categories="$page.frontmatter.categories"
-        />
-        <Content/>
-      </div>
-
-      <!-- Journal list -->
-      <div v-if="$route.path === '/journal/'" class="journal-list">
-        <Content />
-      </div>
-
-      <!-- Single journal -->
-      <div v-if="isSingleJournal" class="single-journal">
-        <Content/>
-      </div>
-
     </div>
 
     <Footer />

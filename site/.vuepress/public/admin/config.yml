@@ -8,61 +8,92 @@ media_folder: '.vuepress/public/upload'
 public_folder: '../../'
 
 collections:
-  - name: 'Home' # Used in routes, e.g., /admin/collections/blog
-    label: 'Home' # Used in the UI
-    folder: 'site/' # The path to the folder where the documents are stored
-    create: false # Allow users to create new documents in this collection
-    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - {label: 'Title', name: 'title', widget: 'string'}
-      - {label: 'Content', name: 'content', widget: 'string'}
-
-  - name: 'People' # Used in routes, e.g., /admin/collections/blog
-    label: 'People' # Used in the UI
-    folder: 'site/about/people' # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
-    identifier_field: name
-    fields: # The fields for each document, usually in front matter
-      - {label: 'Name', name: 'name', widget: 'string', hint: 'First and last name; required.', required: true}
-      - {label: 'Title', name: 'title', widget: 'string', required: false}
-      - label: 'Affiliation'
-        name: 'affiliation'
-        widget: 'object'
-        required: false
-        fields: 
-          - {label: 'Organization or company name', name: 'name', widget: 'string', required: false}
-          - {label: 'URL', name: 'city', widget: 'string', required: false, pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.'] }
-      - {label: 'Bio', name: 'bio', widget: 'markdown', buttons: ['link']}    
-      - {label: 'Active', name: 'active', widget: 'boolean', hint: 'If set to active, the full bio is displayed.'}
-      - {label: 'Image', name: 'image', widget: 'image' }
-      - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, both image and name will link there.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
-
-  - name: 'Projects' # Used in routes, e.g., /admin/collections/blog
-    label: 'Projects' # Used in the UI
-    folder: 'site/about/projects' # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
-    identifier_field: name
-    fields: # The fields for each document, usually in front matter
-      - {label: 'Name', name: 'name', widget: 'string', hint: 'The name of the project.', required: true}
-      - {label: 'Logo', name: 'logo', widget: 'image', hint: '350 x 150 max.' }
-      - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, the logo will link here.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
-      - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link']}    
-
-  - name: 'History' # Used in routes, e.g., /admin/collections/blog
-    label: 'History' # Used in the UI
-    folder: 'site/about/history' # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: '{{name}}' # Filename template, e.g., YYYY-MM-DD-title.md
-    identifier_field: name
-    fields: # The fields for each document, usually in front matter
-      - {label: 'Short name', name: 'name', widget: 'string', hint: 'Displayed in back end only.'}
-      - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link']}    
-      - label: "Month and year"
-        name: "date"
-        widget: "datetime"
-        default: ""
-        format: "MMMM YYYY"
-      - {label: 'Milestone', name: 'milestone', widget: 'boolean', hint: 'If set as a milestone the timeline item is displayed at a larger size.'}
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "Home"
+        name: "home"
+        file: "site/index.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Content, name: content, widget: markdown}
+          
+      - label: "People"
+        name: "People"
+        file: "site/about/people.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - label: "People"
+            name: "people"
+            widget: "list"
+            fields:
+              - {label: 'Name', name: 'name', widget: 'string', hint: 'First and last name; required.', required: true}
+              - {label: 'Title', name: 'title', widget: 'string', required: false}
+              - label: 'Affiliation'
+                name: 'affiliation'
+                widget: 'object'
+                required: false
+                fields: 
+                  - {label: 'Organization or company name', name: 'name', widget: 'string', required: false}
+                  - {label: 'URL', name: 'city', widget: 'string', required: false, pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.'] }
+              - {label: 'Bio', name: 'bio', widget: 'markdown', buttons: ['link']}    
+              - {label: 'Active', name: 'active', widget: 'boolean', hint: 'If set to active, the full bio is displayed.'}
+              - {label: 'Image', name: 'image', widget: 'image' }
+              - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, both image and name will link there.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
       
+      - label: "Code of Conduct"
+        name: "code-of-conduct"
+        file: "site/about/coc.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Introduction, name: intro, widget: markdown}
+      - label: "Financials"
+        name: "financials"
+        file: "site/about/financials.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Introduction, name: intro, widget: markdown}
+      - label: "Projects"
+        name: "projects"
+        file: "site/about/projects.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Introduction, name: intro, widget: markdown}
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            fields:
+              - {label: 'Name', name: 'name', widget: 'string', hint: 'The name of the project.', required: true}
+              - {label: 'Logo', name: 'logo', widget: 'image', hint: '350 x 150 max.' }
+              - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, the logo will link here.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
+              - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link']}    
+
+      - label: "Sponsors"
+        name: "sponsors"
+        file: "site/about/sponsors.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Introduction, name: intro, widget: markdown}
+      - label: "Values"
+        name: "values"
+        file: "site/about/values.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Introduction, name: intro, widget: markdown}
+      - label: "History"
+        name: "history"
+        file: "site/about/history.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Introduction, name: intro, widget: markdown}
+          - label: "Timeline items"
+            name: "timeline"
+            widget: "list"
+            fields:
+              - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link']}    
+              - label: "Month and year"
+                name: "date"
+                widget: "datetime"
+                default: ""
+                format: "MMMM YYYY"
+              - {label: 'Milestone', name: 'milestone', widget: 'boolean', hint: 'If set as a milestone the timeline item is displayed at a larger size.'}

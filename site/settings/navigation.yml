@@ -1,0 +1,43 @@
+nav_items:
+  - label: About
+    secondary-items:
+      - label: People
+        path: /about/people/
+      - label: Values
+        path: /about/values/
+      - label: History
+        path: /about/history/
+      - label: Sponsors
+        path: /about/sponsors/
+      - label: Financial
+        path: /about/financial/
+      - label: Projects
+        path: /about/projects/
+      - label: Code of Conduct
+        path: /about/code-of-conduct/
+  - label: Learn
+    secondary-items:
+      - label: Documentation
+        path: /learn/docs/
+      - label: Tutorials
+        path: /learn/tutorials
+      - label: Protocol
+        path: /learn/protocol/
+  - label: Community
+    secondary-items:
+      - label: Updates
+        path: /community/updates/
+      - label: Forum
+        path: /community/forum/
+      - label: Chat
+        path: /community/chat/
+      - label: Events
+        path: /community/events/
+  - label: Explore
+    secondary-items:
+      - label: Projects
+        path: /explore/projects/
+      - label: Modules
+        path: /explore/modules/
+      - label: Design
+        path: /explore/design/

@@ -8,30 +8,44 @@ media_folder: '.vuepress/public/upload'
 public_folder: '../../'
 
 collections:
-  - label: "Pages"
-    name: "pages"
+  - name: settings
+    label: Settings
     files:
-      - label: "Home"
-        name: "home"
-        file: "site/index.md"
+      - file: site/settings/navigation.yml
+        label: Navigation
+        name: navigation
+        fields:
+          - label: Navigation
+            name: nav_items
+            widget: list
+            fields:
+              - {label: Label, name: label, widget: string}
+              - {label: Path, name: path, widget: string}
+  
+  - label: 'Pages'
+    name: 'pages'
+    files:
+      - label: 'Home'
+        name: 'home'
+        file: 'site/index.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Content, name: content, widget: markdown}
           
-      - label: "People"
-        name: "People"
-        file: "site/about/people.md"
+      - label: 'People'
+        name: 'People'
+        file: 'site/about/people.md'
         fields:
           - {label: Title, name: title, widget: string}
-          - label: "Sections"
-            name: "section"
-            widget: "list"
+          - label: 'Sections'
+            name: 'section'
+            widget: 'list'
             fields:
               - {label: Section Name, name: section-name, widget: string}
               - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link']}   
-              - label: "People"
-                name: "people"
-                widget: "list"
+              - label: 'People'
+                name: 'people'
+                widget: 'list'
                 fields: 
                   - {label: 'Name', name: 'name', widget: 'string', hint: 'First and last name; required.', required: true}
                   - {label: 'Title', name: 'title', widget: 'string', required: false}
@@ -47,59 +61,59 @@ collections:
                       - {label: 'Image', name: 'image', widget: 'image' }
                       - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, both image and name will link there.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
 
-      - label: "Code of Conduct"
-        name: "code-of-conduct"
-        file: "site/about/coc.md"
+      - label: 'Code of Conduct'
+        name: 'code-of-conduct'
+        file: 'site/about/coc.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Introduction, name: intro, widget: markdown}
-      - label: "Financials"
-        name: "financials"
-        file: "site/about/financials.md"
+      - label: 'Financials'
+        name: 'financials'
+        file: 'site/about/financials.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Introduction, name: intro, widget: markdown}
-      - label: "Projects"
-        name: "projects"
-        file: "site/about/projects.md"
+      - label: 'Projects'
+        name: 'projects'
+        file: 'site/about/projects.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Introduction, name: intro, widget: markdown}
-          - label: "Projects"
-            name: "projects"
-            widget: "list"
+          - label: 'Projects'
+            name: 'projects'
+            widget: 'list'
             fields:
               - {label: 'Name', name: 'name', widget: 'string', hint: 'The name of the project.', required: true}
               - {label: 'Logo', name: 'logo', widget: 'image', hint: '350 x 150 max.' }
               - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, the logo will link here.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
               - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link']}    
 
-      - label: "Sponsors"
-        name: "sponsors"
-        file: "site/about/sponsors.md"
+      - label: 'Sponsors'
+        name: 'sponsors'
+        file: 'site/about/sponsors.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Introduction, name: intro, widget: markdown}
-      - label: "Values"
-        name: "values"
-        file: "site/about/values.md"
+      - label: 'Values'
+        name: 'values'
+        file: 'site/about/values.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Introduction, name: intro, widget: markdown}
-      - label: "History"
-        name: "history"
-        file: "site/about/history.md"
+      - label: 'History'
+        name: 'history'
+        file: 'site/about/history.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Introduction, name: intro, widget: markdown}
-          - label: "Timeline items"
-            name: "timeline"
-            widget: "list"
+          - label: 'Timeline items'
+            name: 'timeline'
+            widget: 'list'
             fields:
               - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link']}    
-              - label: "Month and year"
-                name: "date"
-                widget: "datetime"
-                default: ""
-                format: "MMMM YYYY"
+              - label: 'Month and year'
+                name: 'date'
+                widget: 'datetime'
+                default: ''
+                format: 'MMMM YYYY'
               - {label: 'Milestone', name: 'milestone', widget: 'boolean', hint: 'If set as a milestone the timeline item is displayed at a larger size.'}

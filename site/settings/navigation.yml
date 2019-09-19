@@ -1,0 +1,5 @@
+nav_items:
+  - label: About
+    secondary-items:
+      - label: People
+        path: /about/people

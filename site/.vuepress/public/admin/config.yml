@@ -18,7 +18,7 @@ collections:
       - {label: 'Content', name: 'content', widget: 'string'}
 
   - name: 'People' # Used in routes, e.g., /admin/collections/blog
-    label: 'People' # Used in the UI
+    label: 'About/People' # Used in the UI
     folder: 'site/about/people' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
@@ -37,3 +37,15 @@ collections:
       - {label: 'Active', name: 'active', widget: 'boolean', hint: 'If set to active, the full bio is displayed.'}
       - {label: 'Image', name: 'image', widget: 'image' }
       - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, both image and name will link there.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
+
+  - name: 'Projects' # Used in routes, e.g., /admin/collections/blog
+    label: 'About/Projects' # Used in the UI
+    folder: 'site/about/projects' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    identifier_field: name
+    fields: # The fields for each document, usually in front matter
+      - {label: 'Name', name: 'name', widget: 'string', hint: 'The name of the project.', required: true}
+      - {label: 'Logo', name: 'logo', widget: 'image', hint: '350 x 150 max.' }
+      - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, the logo will link here.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
+      - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link']}    

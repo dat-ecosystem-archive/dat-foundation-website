@@ -4,10 +4,7 @@
     <Navbar :logo="$site.themeConfig.logo" :sticky="$route.path === '/'" />
 
     <div class="container">
-      <!-- Homepage -->
-      <div v-if="$route.path === '/'">
-        <Content/>
-      </div>
+      <Content/>
     </div>
 
     <Footer />
@@ -16,45 +13,11 @@
 </template>
 
 <script>
-  export default {
-    computed: {
-      isSingleProject() {
-        const worksRoute = '/works/'
-        const path = this.$route.path
-        if (path.includes('works') && path.length >= (worksRoute.length + 1)) {
-          return true
-        }
-      },
-      isSingleJournal() {
-        const journalRoute = '/journal/'
-        const path = this.$route.path
-        if (path.includes('journal') && path.length >= (journalRoute.length + 1)) {
-          return true
-        }
-      }
-    },
-    updated() {
-        // unwrap all images from paragraph tags so we can have
-        // different widths inside the content.
-
-        document.querySelectorAll('p img').forEach(image => {
-          var wrapper = image.parentNode
-          let children = wrapper.children
-          let fragment = document.createDocumentFragment()
-
-          Array.from(children).forEach(child => {
-            fragment.appendChild(child)
-          })
-
-          wrapper.parentNode.replaceChild(fragment, wrapper)
-
-        })
-    },
-  }
+export default {
+}
 </script>
 
 <style>
-
   :root {
     --color-black: #1c1c1c;
     --color-highlight: rgba(249, 233, 172, 0.99);

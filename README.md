@@ -26,3 +26,5 @@ vuepress build
 Edit the site content at `/admin`. 
 
 Edit the CMS configuration in `.vuepress/public/admin/config.yml`
+
+If you make a change to the Vuepress config file (site/config.json) you'll have to restart the server for any changes to take effect.

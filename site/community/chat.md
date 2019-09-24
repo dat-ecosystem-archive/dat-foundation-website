@@ -1,6 +1,6 @@
 ---
-title: Connect
-content: This is the connect landing page.
+title: Chat
+content: This is the chat page.
 ---
 
 <Hero :text="$page.frontmatter.title" />

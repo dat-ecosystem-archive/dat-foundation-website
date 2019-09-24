@@ -20,18 +20,17 @@ collections:
             widget: list
             fields:
               - {label: Label, name: label, widget: string}
-              - {label: Path, name: path, widget: string}
+              - {label: Path, name: path, widget: string, required: false, hint: 'Leave this blank if this item has no landing page or children.'}
+              - label: Secondary items
+                name: secondary-items
+                widget: list
+                fields:
+                  - {label: Label, name: label, widget: string}
+                  - {label: Path, name: path, widget: string}
   
-  - label: 'Pages'
-    name: 'pages'
-    files:
-      - label: 'Home'
-        name: 'home'
-        file: 'site/index.md'
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Content, name: content, widget: markdown}
-          
+  - label: 'About'
+    name: 'about'
+    files:    
       - label: 'People'
         name: 'People'
         file: 'site/about/people.md'
@@ -117,3 +116,38 @@ collections:
                 default: ''
                 format: 'MMMM YYYY'
               - {label: 'Milestone', name: 'milestone', widget: 'boolean', hint: 'If set as a milestone the timeline item is displayed at a larger size.'}
+  - name: 'Documentation' # Used in routes, e.g., /admin/collections/blog
+    label: 'Docs' # Used in the UI
+    folder: 'site/docs' # The path to the folder where the documents are stored
+    create: false # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: 'Title', name: 'title', widget: 'string'}
+      - {label: 'Content', name: 'content', widget: 'string'}
+
+  - label: 'Learn'
+    name: 'learn'
+    files:    
+      - label: 'Docs'
+        name: 'documentation'
+        file: 'site/learn/docs.md'
+        fields:
+          - {label: Title, name: title, widget: string}
+                        
+  - label: 'Explore'
+    name: 'explore'
+    files:    
+      - label: 'Projects'
+        name: 'projects'
+        file: 'site/about/projects.md'
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Introduction, name: intro, widget: markdown}
+          - label: 'Projects'
+            name: 'projects'
+            widget: 'list'
+            fields:
+              - {label: 'Name', name: 'name', widget: 'string', hint: 'The name of the project.', required: true}
+              - {label: 'Logo', name: 'logo', widget: 'image', hint: '350 x 150 max.' }
+              - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, the logo will link here.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
+              - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link']}    

@@ -8,9 +8,6 @@ This is a shiny new website for the Dat Foundation! It is built on Vuepress, use
 # install VuePress locally
 npm i -g vuepress
 
-# cd into the VuePress directory
-cd portfolio
-
 # Start local dev server
 vuepress dev
 ```

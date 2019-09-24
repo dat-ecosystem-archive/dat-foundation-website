@@ -177,7 +177,12 @@ collections:
             widget: 'list'
             fields:
               - {label: 'Name', name: 'name', widget: 'string', hint: 'The name of the project.', required: true}
-              - {label: 'Description', name: 'description', widget: 'string', hint: 'A short description, no longer than 200 characters.', required: true}
+              - {label: 'Description', name: 'description', widget: 'markdown', hint: 'A short description, no longer than 200 characters.', required: true}
               - {label: 'Image', name: 'image', widget: 'image' }
               - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, the logo will link here.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
-              - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link']}    
+              - label: "Tags"
+                name: "tags"
+                widget: "select"
+                multiple: true
+                options: ["Design", "UX", "Dev"]
+                default: ["Design"]  

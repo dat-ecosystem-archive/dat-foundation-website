@@ -65,7 +65,7 @@ collections:
         file: 'site/about/coc.md'
         fields:
           - {label: Title, name: title, widget: string}
-          - {label: Introduction, name: intro, widget: markdown}
+          - {label: Content, name: content, widget: markdown}
       - label: 'Financials'
         name: 'financials'
         file: 'site/about/financials.md'
@@ -116,6 +116,7 @@ collections:
                 default: ''
                 format: 'MMMM YYYY'
               - {label: 'Milestone', name: 'milestone', widget: 'boolean', hint: 'If set as a milestone the timeline item is displayed at a larger size.'}
+  
   - name: 'Documentation' # Used in routes, e.g., /admin/collections/blog
     label: 'Docs' # Used in the UI
     folder: 'site/docs' # The path to the folder where the documents are stored
@@ -123,23 +124,51 @@ collections:
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: 'Title', name: 'title', widget: 'string'}
-      - {label: 'Content', name: 'content', widget: 'string'}
+      - {label: 'Content', name: 'content', widget: 'markdown'}
 
   - label: 'Learn'
     name: 'learn'
     files:    
-      - label: 'Docs'
-        name: 'documentation'
-        file: 'site/learn/docs.md'
+      - label: 'Tutorials'
+        name: 'tutorials'
+        file: 'site/learn/tutorials.md'
         fields:
           - {label: Title, name: title, widget: string}
-                        
+
+  - label: 'Community'
+    name: 'community'
+    files:    
+      - label: 'I want to help!'
+        name: 'contribute'
+        file: 'site/community/contribute.md'
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: 'Content', name: 'content', widget: 'markdown'}
+      - label: 'Newsletter'
+        name: 'newsletter'
+        file: 'site/community/newsletter.md'
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: 'Content', name: 'content', widget: 'markdown'}
+      - label: 'Chat'
+        name: 'chat'
+        file: 'site/community/chat.md'
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: 'Content', name: 'content', widget: 'markdown'}
+      - label: 'Events'
+        name: 'events'
+        file: 'site/community/events.md'
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: 'Content', name: 'content', widget: 'markdown'}
+
   - label: 'Explore'
     name: 'explore'
     files:    
       - label: 'Projects'
         name: 'projects'
-        file: 'site/about/projects.md'
+        file: 'site/explore/projects.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Introduction, name: intro, widget: markdown}
@@ -148,6 +177,7 @@ collections:
             widget: 'list'
             fields:
               - {label: 'Name', name: 'name', widget: 'string', hint: 'The name of the project.', required: true}
-              - {label: 'Logo', name: 'logo', widget: 'image', hint: '350 x 150 max.' }
+              - {label: 'Description', name: 'description', widget: 'string', hint: 'A short description, no longer than 200 characters.', required: true}
+              - {label: 'Image', name: 'image', widget: 'image' }
               - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, the logo will link here.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
               - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link']}    

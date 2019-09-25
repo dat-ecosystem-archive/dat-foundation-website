@@ -7,11 +7,15 @@ section:
       legal decisions regarding the Dat Foundation in collaboration with Code
       for Science and Society. Learn more about Dat Foundation governance.
     name: Dat Foundation Governance
+    people:
+      - Joe Hand
   - description: >-
       Donec sed odio dui. Donec id elit non mi porta gravida at eget metus.
       Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem
       malesuada magna mollis euismod. Integer posuere erat a ante venenatis
       dapibus posuere velit aliquet.
     name: Dat Protocol Working Group
+    people:
+      - Joe Hand
 ---
 

@@ -33,7 +33,7 @@ collections:
     files:    
       - label: 'People'
         name: 'People'
-        file: 'site/about/people.md'
+        file: 'site/about/people/index.md'
         fields:
           - {label: Title, name: title, widget: string}
           - label: 'Sections'
@@ -62,19 +62,19 @@ collections:
 
       - label: 'Code of Conduct'
         name: 'code-of-conduct'
-        file: 'site/about/coc.md'
+        file: 'site/about/coc/index.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Content, name: content, widget: markdown}
       - label: 'Financials'
         name: 'financials'
-        file: 'site/about/financials.md'
+        file: 'site/about/financials/index.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Introduction, name: intro, widget: markdown}
       - label: 'Projects'
         name: 'projects'
-        file: 'site/about/projects.md'
+        file: 'site/about/projects/index.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Introduction, name: intro, widget: markdown}
@@ -89,19 +89,19 @@ collections:
 
       - label: 'Sponsors'
         name: 'sponsors'
-        file: 'site/about/sponsors.md'
+        file: 'site/about/sponsors/index.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Introduction, name: intro, widget: markdown}
       - label: 'Values'
         name: 'values'
-        file: 'site/about/values.md'
+        file: 'site/about/values/index.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Introduction, name: intro, widget: markdown}
       - label: 'History'
         name: 'history'
-        file: 'site/about/history.md'
+        file: 'site/about/history/index.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Introduction, name: intro, widget: markdown}
@@ -131,13 +131,13 @@ collections:
     files:    
       - label: 'Tutorials'
         name: 'tutorials'
-        file: 'site/learn/tutorials.md'
+        file: 'site/learn/tutorials/index.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: 'Content', name: 'content', widget: 'markdown'}
       - label: 'Protocol'
         name: 'protocol'
-        file: 'site/learn/protocol.md'
+        file: 'site/learn/protocol/index.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: 'Content', name: 'content', widget: 'markdown'}
@@ -147,25 +147,25 @@ collections:
     files:    
       - label: 'I want to help!'
         name: 'contribute'
-        file: 'site/community/contribute.md'
+        file: 'site/community/contribute/index.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: 'Content', name: 'content', widget: 'markdown'}
       - label: 'Newsletter'
         name: 'newsletter'
-        file: 'site/community/newsletter.md'
+        file: 'site/community/newsletter/index.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: 'Content', name: 'content', widget: 'markdown'}
       - label: 'Chat'
         name: 'chat'
-        file: 'site/community/chat.md'
+        file: 'site/community/chat/index.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: 'Content', name: 'content', widget: 'markdown'}
       - label: 'Events'
         name: 'events'
-        file: 'site/community/events.md'
+        file: 'site/community/events/index.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: 'Content', name: 'content', widget: 'markdown'}
@@ -175,7 +175,7 @@ collections:
     files:    
       - label: 'Projects'
         name: 'projects'
-        file: 'site/explore/projects.md'
+        file: 'site/explore/projects/index.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Introduction, name: intro, widget: markdown}
@@ -196,7 +196,7 @@ collections:
       
       - label: 'Modules'
         name: 'modules'
-        file: 'site/explore/modules.md'
+        file: 'site/explore/modules/index.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: 'Content', name: 'content', widget: 'markdown'}
@@ -204,7 +204,7 @@ collections:
       # Lower priority
       - label: 'Design'
         name: 'design'
-        file: 'site/explore/design.md'
+        file: 'site/explore/design/index.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: 'Content', name: 'content', widget: 'markdown'}

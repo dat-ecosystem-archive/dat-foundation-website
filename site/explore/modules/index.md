@@ -1,6 +1,6 @@
 ---
-title: Events
-content: This is the events landing page.
+title: Explore
+content: This is the explore landing page.
 ---
 
 <Hero :text="$page.frontmatter.title" />

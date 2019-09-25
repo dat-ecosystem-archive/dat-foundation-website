@@ -22,7 +22,7 @@ collections:
               - {label: Label, name: label, widget: string}
               - {label: Path, name: path, widget: string, required: false, hint: 'Leave this blank if this item has no landing page or children.'}
               - label: Secondary items
-                name: secondary-items
+                name: secondary
                 widget: list
                 fields:
                   - {label: Label, name: label, widget: string}

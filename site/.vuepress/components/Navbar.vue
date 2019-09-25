@@ -1,15 +1,43 @@
 <template>
-  <header
-    class="header"
-    :style="sticky && {
-      position: 'fixed',
-      top: '0',
-      left: '0',
-      width: '100%',
-    }"
-  >
+  <header>
+    <router-link to="/">
+      <div
+        v-if="logo"
+        class="logo"
+        :style="{ backgroundImage: `url(${logo})`}"
+        :title="$site.title"
+      />
+      <span v-else>{{ $site.title }}</span>
+    </router-link>
+  
+  <nav>
+    <div v-for="(navItem, index) in navItems"
+        :key="`navItem-${index}`"
+        class="nav-section">
+      
+        <a v-if="navItem.path"
+           :href="navItem.path"
+           class="nav-section__name">
+          {{ navItem.label }}
+        </a>
 
-    <div class="brand">
+        <div v-else class="nav-section__name">
+          {{ navItem.label }}
+        </div>
+
+    <ul class="nav-section__items">
+      <li v-for="secondary in navItem.secondary"
+          class="nav-section__items__link">
+        <a :href="secondary.path">
+          {{ secondary.label }}
+        </a>
+      </li>
+    </ul>
+
+    </div>
+  </nav>
+
+<!--     <div class="brand">
       <router-link to="/">
         <div
           v-if="logo"
@@ -56,20 +84,34 @@
         </ul>
         <div class="mobile-nav-close" @click="toggleMobileNav" />
       </nav>
-    </div>
+    </div> -->
 
   </header>
 </template>
 
 <script>
+import navItems from '../../settings/navigation.yml'
+export default {
+  name: 'Navbar',
+  data () {
+    return {
+      navItems: navItems.nav_items
+    }
+  },
+  props: {
+    logo: {
+      type: String,
+      required: false,
+    }
+  }
+}
+</script>
+
+<!-- 
   export default {
     props: {
       logo: {
         type: String,
-        required: false,
-      },
-      sticky: {
-        type: Boolean,
         required: false,
       }
     },
@@ -78,59 +120,74 @@
         mobileNavActive: false
       }
     },
-    computed: {
-      navLinks() {
-        return this.$site.themeConfig.nav
-      },
-    },
     methods: {
       toggleMobileNav() {
         this.mobileNavActive = !this.mobileNavActive
       }
     }
-  }
-</script>
+  } -->
 
-<style scoped>
-  .header {
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: space-between;
-    height: 6rem;
-    padding: 5vw;
-    font-size: 0.8rem;
-    font-weight: 600;
-    z-index: 10;
+<style lang="scss">
+
+// Spacing
+$space-base: 16px;
+
+$space-tiny: $space-base / 4;
+$space-small: $space-base / 2;
+$space-medium: $space-base * 2;
+$space-large: $space-base * 4;
+
+// Colors
+$color-green: #2aca4b;
+$color-black: #293648;
+$color-white: #ffffff;
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: $space-large;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-section {
+  margin-left: $space-large;
+  position: relative;
+
+  &:hover {
+    .nav-section__items { visibility: visible; opacity: 1; }
   }
+
+  &__name {
+    font-weight: bold;
+    
+  }
+
+  &__items {
+    list-style: none;
+    opacity: 0;
+    position: absolute;
+    top: $space-medium;
+    transition: all 250ms ease-in-out;
+    visibility: hidden;
+
+    &__link { 
+      margin-bottom: $space-tiny; 
+      
+      &:hover { color: $color-green; }
+    }
+  }
+}
 
   .logo {
-    width: 5rem;
-    height: 5rem;
+    width: 100px;
+    height: 100px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-  }
-
-  .navigation li {
-    display: inline-block;
-    list-style: none;
-    margin-right: 1rem;
-    user-select: none;
-    cursor: pointer;
-    border-bottom: 1px solid transparent;
-  }
-
-  .navigation li:last-of-type {
-    margin: 0;
-  }
-
-  .navigation li:hover {
-    border-bottom: 1px solid #000;
-  }
-
-  .active {
-    border-bottom: 1px solid #000;
   }
 
   a {
@@ -140,10 +197,6 @@
 
   a:active { color: inherit; }
   a:visited { color: inherit; }
-
-  .desktop-nav {
-    display: none;
-  }
 
   .mobile-nav {
     display: block;

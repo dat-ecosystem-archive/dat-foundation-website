@@ -1,6 +1,6 @@
 nav_items:
   - label: About
-    secondary-items:
+    secondary:
       - label: People
         path: /about/people/
       - label: Values
@@ -15,16 +15,8 @@ nav_items:
         path: /about/projects/
       - label: Code of Conduct
         path: /about/code-of-conduct/
-  - label: Learn
-    secondary-items:
-      - label: Documentation
-        path: /learn/docs/
-      - label: Tutorials
-        path: /learn/tutorials
-      - label: Protocol
-        path: /learn/protocol/
   - label: Community
-    secondary-items:
+    secondary:
       - label: Updates
         path: /community/updates/
       - label: Forum
@@ -33,8 +25,18 @@ nav_items:
         path: /community/chat/
       - label: Events
         path: /community/events/
+  - label: Blog
+    path: /blog/
+  - label: Learn
+    secondary:
+      - label: Docs
+        path: /learn/docs/
+      - label: Tutorials
+        path: /learn/tutorials
+      - label: Protocol
+        path: /learn/protocol/
   - label: Explore
-    secondary-items:
+    secondary:
       - label: Projects
         path: /explore/projects/
       - label: Modules

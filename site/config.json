@@ -1,33 +1,7 @@
 {
-    "title": "Dat Foundation",
-    "description": "p2p protocol",
-    "logo": "/upload/logo.svg",
-    "footer": "Ⓒ Dat Foundation",
-    "favicon": "favicon-32x32.png",
-    "navigation": [
-      {
-        "text": "About",
-        "link": "/about/"
-      },
-      {
-        "text": "Blog",
-        "link": "/blog/"
-      },
-      {
-        "text": "Events",
-        "link": "/events/"
-      },
-      {
-        "text": "Learn",
-        "link": "/learn/"
-      },
-      {
-        "text": "Explore",
-        "link": "/explore/"
-      },
-      {
-        "text": "Connect",
-        "link": "/connect/"
-      }
-    ]
-  }
+  "title": "Dat Foundation",
+  "description": "p2p protocol",
+  "logo": "/upload/logo.svg",
+  "footer": "Ⓒ Dat Foundation",
+  "favicon": "favicon-32x32.png"
+}

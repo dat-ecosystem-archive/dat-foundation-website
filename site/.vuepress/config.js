@@ -1,4 +1,5 @@
 const config = require('../config.json');
+
 module.exports = {
   title: config.title,
   description: config.description,
@@ -15,6 +16,16 @@ module.exports = {
   markdown: {
     anchor: {
       permalink: false
+    }
+  },
+  configureWebpack: {
+    module: {
+      rules: [
+        {
+          test: /\.ya?ml$/,
+          loader: 'js-yaml-loader'
+        }
+      ]
     }
   }
 };

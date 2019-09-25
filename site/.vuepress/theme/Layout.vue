@@ -21,6 +21,10 @@ export default {
   :root {
     --color-black: #1c1c1c;
     --color-highlight: rgba(249, 233, 172, 0.99);
+    --color-green: #2ACA4B;
+    --space-small: 0.5rem;
+    --space-base: 1rem;
+    --space-large: 2rem;
   }
 
   * {

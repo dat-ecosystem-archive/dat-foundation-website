@@ -134,6 +134,13 @@ collections:
         file: 'site/learn/tutorials.md'
         fields:
           - {label: Title, name: title, widget: string}
+          - {label: 'Content', name: 'content', widget: 'markdown'}
+      - label: 'Protocol'
+        name: 'protocol'
+        file: 'site/learn/protocol.md'
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: 'Content', name: 'content', widget: 'markdown'}
 
   - label: 'Community'
     name: 'community'
@@ -172,6 +179,7 @@ collections:
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Introduction, name: intro, widget: markdown}
+          - {label: Featured projects, name: featured, widget: markdown}
           - label: 'Projects'
             name: 'projects'
             widget: 'list'
@@ -184,5 +192,19 @@ collections:
                 name: "tags"
                 widget: "select"
                 multiple: true
-                options: ["Design", "UX", "Dev"]
-                default: ["Design"]  
+                options: ["node", "rust", "clang", "javascript", "art", "browser", "cli"]
+      
+      - label: 'Modules'
+        name: 'modules'
+        file: 'site/explore/modules.md'
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: 'Content', name: 'content', widget: 'markdown'}
+
+      # Lower priority
+      - label: 'Design'
+        name: 'design'
+        file: 'site/explore/design.md'
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: 'Content', name: 'content', widget: 'markdown'}

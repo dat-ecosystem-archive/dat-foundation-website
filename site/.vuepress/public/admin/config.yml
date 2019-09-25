@@ -31,7 +31,10 @@ collections:
   # Collections
   - label: 'People'
     name: 'people'
+    identifier_field: 'name'
     folder: 'site/people'
+    create: true
+    slug: "{{name}}"
     fields: 
       - {label: 'Name', name: 'name', widget: 'string', hint: 'First and last name; required.', required: true}
       - {label: 'Title', name: 'title', widget: 'string', required: false}
@@ -60,7 +63,7 @@ collections:
             name: 'section'
             widget: 'list'
             fields:
-              - {label: Section Name, name: section-name, widget: string}
+              - {label: Section Name, name: name, widget: string}
               - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link']}   
               
 

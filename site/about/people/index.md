@@ -9,6 +9,7 @@ section:
     name: Dat Foundation Governance
     people:
       - Joe Hand
+      - Danielle Robinson
   - description: >-
       Donec sed odio dui. Donec id elit non mi porta gravida at eget metus.
       Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem
@@ -19,3 +20,11 @@ section:
       - Joe Hand
 ---
 
+<div v-for="(section, index) in $page.frontmatter.section">
+  <h1>{{ section.name }}</h1>
+  <h2>{{ section.description }}</h2>
+ 
+  <div v-for="person in section.people">
+    <Person :name="person" />
+  </div>
+</div>

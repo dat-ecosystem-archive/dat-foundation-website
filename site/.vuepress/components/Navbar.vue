@@ -128,19 +128,7 @@ export default {
   } -->
 
 <style lang="scss">
-
-// Spacing
-$space-base: 16px;
-
-$space-tiny: $space-base / 4;
-$space-small: $space-base / 2;
-$space-medium: $space-base * 2;
-$space-large: $space-base * 4;
-
-// Colors
-$color-green: #2aca4b;
-$color-black: #293648;
-$color-white: #ffffff;
+@import '../assets/stylesheets/variables.scss';
 
 header {
   display: flex;

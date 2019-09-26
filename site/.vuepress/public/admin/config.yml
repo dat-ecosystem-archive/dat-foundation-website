@@ -129,7 +129,7 @@ collections:
                 widget: 'datetime'
                 default: ''
                 format: 'MMMM YYYY'
-              - {label: 'Milestone', name: 'milestone', widget: 'boolean', hint: 'If set as a milestone the timeline item is displayed at a larger size.'}
+              - {label: 'Milestone', name: 'milestone', widget: 'boolean', hint: 'If set as a milestone the timeline item is displayed at a larger size.', required: false}
   
   - name: 'Documentation' # Used in routes, e.g., /admin/collections/blog
     label: 'Docs' # Used in the UI

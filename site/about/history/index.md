@@ -23,3 +23,4 @@ timeline:
     milestone: true
 ---
 
+<Timeline :items="$page.frontmatter.timeline" />

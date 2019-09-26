@@ -44,11 +44,11 @@ collections:
         required: false
         fields: 
           - {label: 'Organization or company name', name: 'name', widget: 'string', required: false}
-          - {label: 'URL', name: 'city', widget: 'string', required: false, pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.'] }
-          - {label: 'Bio', name: 'bio', widget: 'markdown', buttons: ['link']}    
-          - {label: 'Active', name: 'active', widget: 'boolean', hint: 'If set to active, the full bio is displayed.'}
-          - {label: 'Image', name: 'image', widget: 'image' }
-          - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, both image and name will link there.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
+          - {label: 'URL', name: 'url', widget: 'string', required: false, pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.'] }
+      - {label: 'Bio', name: 'bio', widget: 'markdown', buttons: ['link']}    
+      - {label: 'Active', name: 'active', widget: 'boolean', hint: 'If set to active, the full bio is displayed.'}
+      - {label: 'Image', name: 'image', widget: 'image' }
+      - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, both image and name will link there.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
   
   # Pages
   - label: 'About'
@@ -65,8 +65,15 @@ collections:
             fields:
               - {label: Section Name, name: name, widget: string}
               - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link']}   
+              - label: "People"
+                name: "people"
+                widget: "relation"
+                collection: "people"
+                searchFields: ["name"]
+                multiple: true
+                valueField: "name"
+                displayFields: ["name"]
               
-
       - label: 'Code of Conduct'
         name: 'code-of-conduct'
         file: 'site/about/coc/index.md'

@@ -74,21 +74,16 @@ collections:
                 valueField: "name"
                 displayFields: ["name"]
               
-      - label: 'Code of Conduct'
-        name: 'code-of-conduct'
-        file: 'site/about/coc/index.md'
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Content, name: content, widget: markdown}
       - label: 'Financials'
         name: 'financials'
         file: 'site/about/financials/index.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Introduction, name: intro, widget: markdown}
-      - label: 'Projects'
-        name: 'projects'
-        file: 'site/about/projects/index.md'
+          
+      - label: 'Foundation'
+        name: 'foundation'
+        file: 'site/about/foundation/index.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Introduction, name: intro, widget: markdown}
@@ -101,18 +96,6 @@ collections:
               - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, the logo will link here.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
               - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link']}    
 
-      - label: 'Sponsors'
-        name: 'sponsors'
-        file: 'site/about/sponsors/index.md'
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Introduction, name: intro, widget: markdown}
-      - label: 'Values'
-        name: 'values'
-        file: 'site/about/values/index.md'
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Introduction, name: intro, widget: markdown}
       - label: 'History'
         name: 'history'
         file: 'site/about/history/index.md'
@@ -159,6 +142,12 @@ collections:
   - label: 'Community'
     name: 'community'
     files:    
+      - label: 'Code of Conduct'
+        name: 'code-of-conduct'
+        file: 'site/about/coc/index.md'
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Content, name: content, widget: markdown}
       - label: 'I want to help!'
         name: 'contribute'
         file: 'site/community/contribute/index.md'

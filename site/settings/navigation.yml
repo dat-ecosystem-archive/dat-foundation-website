@@ -3,18 +3,12 @@ nav_items:
     secondary:
       - label: People
         path: /about/people/
-      - label: Values
-        path: /about/values/
+      - label: Foundation
+        path: /about/foundation/
       - label: History
         path: /about/history/
-      - label: Sponsors
-        path: /about/sponsors/
       - label: Financial
         path: /about/financial/
-      - label: Projects
-        path: /about/projects/
-      - label: Code of Conduct
-        path: /about/code-of-conduct/
   - label: Community
     secondary:
       - label: Updates
@@ -25,6 +19,8 @@ nav_items:
         path: /community/chat/
       - label: Events
         path: /community/events/
+      - label: Code of Conduct
+        path: /about/code-of-conduct/
   - label: Blog
     path: /blog/
   - label: Learn

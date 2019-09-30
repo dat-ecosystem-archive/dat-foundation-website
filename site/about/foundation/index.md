@@ -5,6 +5,15 @@ intro: >-
   dolor id nibh ultricies vehicula ut id elit. Vestibulum id ligula porta felis
   euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris
   condimentum nibh, ut fermentum massa justo sit amet risus.
+<<<<<<< HEAD
+=======
+
+
+  I'm editing this text as a test!
+
+
+  **This is another test.**
+>>>>>>> 722a871711513f1cf1a0511aa250d0145a6abee5
 projects:
   - description: >-
       [Beaker](https://beakerbrowser.com/) is an experimental browser for

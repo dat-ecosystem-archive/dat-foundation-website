@@ -1,0 +1,15 @@
+value:
+  - description: >-
+      The Dat Foundation is a small non-profit group that provides social and
+      technical infrastructure for the consortium of projects and working groups
+      that help build the Dat Protocol.
+    name: Community First
+  - description: >-
+      We believe information and communication technology should be
+      [transparently funded and
+      operated](https://github.com/datproject/organization). Development of the
+      core protocol is driven entirely by contributors from the consortium and
+      grants from external organizations, keeping it neutral and flexible.
+    name: Transparent Funding
+  - description: ' At the scale of the web, every decision can have a massive impact on our political systems and social well-being. Dat Protocol is governed openly through a series of working groups.'
+    name: Open Governance

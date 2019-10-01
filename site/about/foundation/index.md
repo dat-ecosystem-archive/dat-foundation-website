@@ -47,25 +47,35 @@ sponsors:
 
 <div v-html="markdown($page.frontmatter.intro)"></div>
 
-<div v-for="project in $page.frontmatter.projects">
-  <div class="foundation__project__logo">
-    <!-- <img :src="project.logo"> -->
-  </div>
-  <div class="foundation__project__name">
-    <a :href="project.website">{{ project.name}}</a>
-  </div>
-  <div class="foundation__project__description" v-html="markdown(project.description)">
+<div class="foundation__projects">
+  <h2 class="foundation__projects__title">
+    Consortium of Projects
+  </h2>
+  <div v-for="project in $page.frontmatter.projects">
+    <div class="foundation__project__logo">
+      <!-- <img :src="project.logo"> -->
+    </div>
+    <div class="foundation__project__name">
+      <a :href="project.website">{{ project.name}}</a>
+    </div>
+    <div class="foundation__project__description" v-html="markdown(project.description)">
+    </div>
   </div>
 </div>
 
-<div v-for="sponsor in $page.frontmatter.sponsors">
-  <div class="foundation__sponsor__logo">
-    <!-- <img :src="sponsor.logo"> -->
-  </div>
-  <div class="foundation__sponsor__name">
-    <a :href="sponsor.website">{{ sponsor.name}}</a>
-  </div>
-  <div class="foundation__sponsor__description" v-html="markdown(sponsor.description)">
+<div class="foundation__sponsors">
+  <h2 class="foundation__sponsors__title">
+    Sponsors
+  </h2>
+  <div v-for="sponsor in $page.frontmatter.sponsors">
+    <div class="foundation__sponsor__logo">
+      <!-- <img :src="sponsor.logo"> -->
+    </div>
+    <div class="foundation__sponsor__name">
+      <a :href="sponsor.website">{{ sponsor.name}}</a>
+    </div>
+    <div class="foundation__sponsor__description" v-html="markdown(sponsor.description)">
+    </div>
   </div>
 </div>
 

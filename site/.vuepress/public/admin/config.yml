@@ -29,7 +29,7 @@ collections:
                   - {label: Label, name: label, widget: string}
                   - {label: Path, name: path, widget: string}
       - file: site/globals/values.yml
-        label: values
+        label: Values
         name: values
         fields: 
           - label: Value 
@@ -38,6 +38,12 @@ collections:
             fields: 
                 - {label: Name, name: name, widget: string}
                 - {label: Description, name: description, widget: markdown}
+      - file: site/globals/mission-statement.yml
+        label: Mission Statement
+        name: missionStatement
+        fields: 
+          - {label: Mission Statement, name: missionStatement, widget: markdown}
+
   # Collections
   - label: 'People'
     name: 'people'

@@ -90,7 +90,7 @@
 </template>
 
 <script>
-import navItems from '../../settings/navigation.yml'
+import navItems from '../../globals/navigation.yml'
 export default {
   name: 'Navbar',
   data () {

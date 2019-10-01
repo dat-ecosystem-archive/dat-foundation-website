@@ -8,11 +8,11 @@ media_folder: '.vuepress/public/upload'
 public_folder: '../../'
 
 collections:
-  # Settings
-  - name: settings
-    label: Settings
+  # Globals
+  - name: globals
+    label: Globals
     files:
-      - file: site/settings/navigation.yml
+      - file: site/globals/navigation.yml
         label: Navigation
         name: navigation
         fields:
@@ -28,6 +28,16 @@ collections:
                 fields:
                   - {label: Label, name: label, widget: string}
                   - {label: Path, name: path, widget: string}
+      - file: site/globals/values.yml
+        label: values
+        name: values
+        fields: 
+          - label: Value 
+            name: value 
+            widget: list 
+            fields: 
+                - {label: Name, name: name, widget: string}
+                - {label: Description, name: description, widget: markdown}
   # Collections
   - label: 'People'
     name: 'people'

@@ -104,8 +104,15 @@ collections:
               - {label: 'Name', name: 'name', widget: 'string', hint: 'The name of the project.', required: true}
               - {label: 'Logo', name: 'logo', widget: 'image', hint: '350 x 150 max.' }
               - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, the logo will link here.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
+              - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link']}
+          - label: 'Sponsors'
+            name: 'sponsors'
+            widget: 'list'
+            fields:
+              - {label: 'Name', name: 'name', widget: 'string', hint: 'The name of the sponsor.', required: true}
+              - {label: 'Logo', name: 'logo', widget: 'image', hint: '350 x 150 max.' }
+              - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, the logo will link here.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
               - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link']}    
-
       - label: 'History'
         name: 'history'
         file: 'site/about/history/index.md'

@@ -45,3 +45,49 @@ sponsors:
     website: 'https://codeforscience.org'
 ---
 
+<div v-html="markdown($page.frontmatter.intro)"></div>
+
+<div v-for="project in $page.frontmatter.projects">
+  <div class="foundation__project__logo">
+    <!-- <img :src="project.logo"> -->
+  </div>
+  <div class="foundation__project__name">
+    <a :href="project.website">{{ project.name}}</a>
+  </div>
+  <div class="foundation__project__description" v-html="markdown(project.description)">
+  </div>
+</div>
+
+<div v-for="sponsor in $page.frontmatter.sponsors">
+  <div class="foundation__sponsor__logo">
+    <!-- <img :src="sponsor.logo"> -->
+  </div>
+  <div class="foundation__sponsor__name">
+    <a :href="sponsor.website">{{ sponsor.name}}</a>
+  </div>
+  <div class="foundation__sponsor__description" v-html="markdown(sponsor.description)">
+  </div>
+</div>
+
+<script> 
+import marked from 'marked'
+// import markdown from '../../.vuepress/helpers/markdown'
+
+ export default {
+  name: 'AboutFoundation',
+
+  methods: {
+    markdown (input) {
+      if (input === null) {
+        return false
+      } else {
+        return marked(String(input), {
+          smartypants: true,
+          gfm: true,
+          breaks: true
+        })
+      }
+    }
+  } 
+}
+</script>

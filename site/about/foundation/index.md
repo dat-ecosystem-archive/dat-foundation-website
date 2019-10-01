@@ -10,18 +10,12 @@ intro: >-
   building peer-to-peer applications presents both technical and ethical
   challenges but Dat is slowly changing that.
 
-
-
-
   To encourage people to experiment and innovate with peer-to-peer technology,
   we aim to make Dat foundational software for peer-to-peer applications – one
   that is sponsored by a mission-driven nonprofit. To realize this future, we
   aim to make Dat good at supporting the core needs of peer-to-peer
   applications. We hope that with our small but critical focus, we can create a
   strong building block for the Dat ecosystem.
-
-
-
 
   The first code went into Dat [on August 17,
   2013](https://github.com/datproject/dat/commit/e5eda57b53f60b05c0c3d97da90c10cd17dcbe19).

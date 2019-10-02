@@ -99,7 +99,7 @@ collections:
           
       - label: 'Foundation'
         name: 'foundation'
-        file: 'site/about/foundation/index.md'
+        file: 'site/.vuepress/assets/data/about-foundation.yml'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Introduction, name: intro, widget: markdown}

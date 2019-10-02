@@ -90,9 +90,9 @@ collections:
                 valueField: "name"
                 displayFields: ["name"]
               
-      - label: 'Financials'
-        name: 'financials'
-        file: 'site/about/financials/index.md'
+      - label: 'Financial'
+        name: 'financial'
+        file: 'site/about/financial/index.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Introduction, name: intro, widget: markdown}

@@ -15,11 +15,12 @@
         :key="`navItem-${index}`"
         class="nav-section">
       
-        <a v-if="navItem.path"
+        <router-link v-if="navItem.path"
+          :to="navItem.path"
            :href="navItem.path"
            class="nav-section__name">
           {{ navItem.label }}
-        </a>
+        </router-link>
 
         <div v-else class="nav-section__name">
           {{ navItem.label }}
@@ -28,9 +29,9 @@
     <ul class="nav-section__items">
       <li v-for="secondary in navItem.secondary"
           class="nav-section__items__link">
-        <a :href="secondary.path">
+        <router-link :to="secondary.path">
           {{ secondary.label }}
-        </a>
+        </router-link>
       </li>
     </ul>
 

@@ -5,7 +5,7 @@ backend:
 
 publish_mode: editorial_workflow
 media_folder: '.vuepress/public/upload'
-public_folder: '../../'
+public_folder: '.vuepress/public/upload'
 
 collections:
   # Globals

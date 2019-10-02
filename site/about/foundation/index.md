@@ -1,6 +1,11 @@
 ---
 title: Foundation
 intro: >-
+  testing!
+
+
+
+
   Dat is a community-driven project for distributed data syncronization. The Dat
   Foundation imagines a web of commons created by global communities on open and
   secure protocols. We set out to improve access to public data and [created a
@@ -9,7 +14,6 @@ intro: >-
   potential to return control of digital information to the people. Today,
   building peer-to-peer applications presents both technical and ethical
   challenges but Dat is slowly changing that.
-
 
 
   To encourage people to experiment and innovate with peer-to-peer technology,

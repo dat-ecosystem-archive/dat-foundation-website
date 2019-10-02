@@ -34,7 +34,7 @@
 
 <script> 
 import marked from 'marked'
-import content from '../../.vuepress/assets/data/about-foundation.yml'
+import content from '../../.vuepress/assets/data/about/foundation.yml'
 // import markdown from '../../.vuepress/helpers/markdown'
 
  export default {

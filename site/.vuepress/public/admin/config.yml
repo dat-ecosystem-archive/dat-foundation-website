@@ -72,7 +72,7 @@ collections:
     files:    
       - label: 'People'
         name: 'People'
-        file: 'site/about/people/index.md'
+        file: 'site/.vuepress/assets/data/about/people.yml'
         fields:
           - {label: Title, name: title, widget: string}
           - label: 'Sections'
@@ -99,7 +99,7 @@ collections:
           
       - label: 'Foundation'
         name: 'foundation'
-        file: 'site/.vuepress/assets/data/about-foundation.yml'
+        file: 'site/.vuepress/assets/data/about/foundation.yml'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Introduction, name: intro, widget: markdown}
@@ -121,7 +121,7 @@ collections:
               - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link']}    
       - label: 'History'
         name: 'history'
-        file: 'site/about/history/index.md'
+        file: 'site/.vuepress/assets/data/about/history.yml'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Introduction, name: intro, widget: markdown}

@@ -1,13 +1,12 @@
 <template>
-  <div class="wrapper">
+  <div class="app">
+    <Navbar :logo="$site.themeConfig.logo"/>
 
-    <Navbar :logo="$site.themeConfig.logo" :sticky="$route.path === '/'" />
-
-    <div class="container">
+    <main class="app__main">
       <Content/>
-    </div>
+    </main>
 
-    <Footer />
+    <Footer/>
 
   </div>
 </template>
@@ -17,103 +16,12 @@ export default {
 }
 </script>
 
-<style>
-  :root {
-    --color-black: #1c1c1c;
-    --color-highlight: rgba(249, 233, 172, 0.99);
-    --color-green: #2ACA4B;
-    --space-small: 0.5rem;
-    --space-base: 1rem;
-    --space-large: 2rem;
-  }
+<style lang="scss">
+@import '../assets/stylesheets/variables.scss';
 
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  *::-moz-selection {
-    background: var(--color-highlight);
-    color: var(--color-black);
-  }
-
-  *::-webkit-selection {
-    background: var(--color-highlight);
-    color: var(--color-black);
-  }
-
-  *::selection {
-    background: var(--color-highlight);
-    color: var(--color-black);
-  }
-
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Noto Sans", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
-    font-size: 16px;
-    background: #fff;
-    color: var(--color-black);
-  }
-
-  img {
-    width: 100%;
-    max-width: 100%;
-    line-height: 0;
-    margin: 2rem 0;
-  }
-
-  .container {
-    padding: 0 5vw;
-  }
-
-  .journal-list, .single-journal {
-    width: 800px;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-
-  h1,h2,h3,h4,h5,h6,p {
-    width: 100%;
-    max-width: 800px;
-  }
-
-  h1 {
-    font-size: 3rem;
-    line-height: 1.15;
-    font-weight: 300;
-    margin: 0 auto 3rem auto;
-  }
-
-  h2 {
-    font-size: 2rem;
-    font-weight: 300;
-    margin: 2rem auto 2rem auto;
-  }
-
-  h3 {
-    font-size: 1rem;
-    font-weight: 700;
-    margin: 2rem auto 1rem auto;
-  }
-
-  p {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin: 1rem auto 2rem auto;
-  }
-
-  pre {
-    background: var(--color-black);
-    padding: 1rem;
-    margin: 1rem 0;
-  }
-
-  code {
-    color: white;
-    background: var(--color-black);
-    font-size: 0.8rem;
-    padding: 0.05rem 0.25rem;
-    font-weight: 400;
-  }
-
+.app__main {
+  padding: $space-large;
+  margin: 0 $space-large;
+  background: $color-white;
+}
 </style>

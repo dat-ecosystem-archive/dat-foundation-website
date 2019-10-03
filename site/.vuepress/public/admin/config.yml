@@ -4,8 +4,8 @@ backend:
   branch: master
 
 publish_mode: editorial_workflow
-media_folder: '.vuepress/public/upload'
-public_folder: '/upload'
+media_folder: 'site/.vuepress/public/images'
+public_folder: '/images'
 
 collections:
   # Globals

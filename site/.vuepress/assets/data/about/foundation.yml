@@ -28,13 +28,18 @@ projects:
   - description: >-
       [Beaker](https://beakerbrowser.com/) is an experimental browser for
       exploring and building the peer-to-peer Web.
-    logo: /.vuepress/public/upload/beaker-logo.png
+    logo: /images/beaker-logo.png
     name: Beaker Browser
     website: 'https://beakerbrowser.com/'
+  - description: >-
+      [Wireline](https://www.wireline.io/) provides the infrastructure to build fullstack internet-scale peer-to-peer applications.
+    logo: /images/wireline-logo.png
+    name: Wireline
+    website: 'https://www.wireline.io/'
 sponsors:
   - description: >-
       Code for Science and society empowers communities to work together and
       build innovative technology for the public good.
-    logo: /.vuepress/public/upload/codeforscience.png
+    logo: /images/codeforscience.png
     name: Code for Science & Society
     website: 'https://codeforscience.org'

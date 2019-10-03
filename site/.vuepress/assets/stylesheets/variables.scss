@@ -1,12 +1,107 @@
+// Typography
+$type-size-base: 18px;
+
+$type-size-small: 16px;
+$type-size-medium: 24px;
+$type-size-big: 36px;
+$type-size-large: 40px;
+
+
 // Spacing
-$space-base: 16px;
+$space-base: $type-size-base;
 
 $space-tiny: $space-base / 4;
 $space-small: $space-base / 2;
 $space-medium: $space-base * 2;
 $space-large: $space-base * 4;
 
+
 // Colors
 $color-green: #2aca4b;
 $color-black: #293648;
 $color-white: #ffffff;
+$color-neutral: #f6f7f8;
+$color-highlight: #94e4a5;
+
+@mixin text-subhead {
+  font-size: $type-size-medium;
+}
+
+a {
+  text-decoration: underline;
+  color: $color-green;
+}
+
+p { 
+  margin-bottom: $space-medium; 
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::-moz-selection {
+  background: $color-highlight;
+  color: $color-black;
+}
+
+*::-webkit-selection {
+  background: $color-highlight;
+  color: $color-black;
+}
+
+*::selection {
+  background: $color-highlight;
+  color: $color-black;
+}
+
+body {
+  background-color: $color-neutral;
+  color: $color-black;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: $type-size-base;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+h1 {
+  font-size: $type-size-large;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: $type-size-big;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: $type-size-medium;
+  font-weight: 700;
+}
+
+// p {
+//   font-size: 1rem;
+//   line-height: 1.5;
+//   margin: 1rem auto 2rem auto;
+// }
+
+// pre {
+//   background: $color-black;
+//   padding: 1rem;
+//   margin: 1rem 0;
+// }
+
+// TODO: make this look really nice;
+code {
+  color: white;
+  background: $color-black;
+  font-size: 0.8rem;
+  padding: 0.05rem 0.25rem;
+  font-weight: 400;
+  font-family: monospace;
+}

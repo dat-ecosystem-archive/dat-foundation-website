@@ -1,4 +1,4 @@
-<div v-for="(section, index) in $page.frontmatter.section">
+<div v-for="(section, index) in section">
   <h1>{{ section.name }}</h1>
   <h2>{{ section.description }}</h2>
  

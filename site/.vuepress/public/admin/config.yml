@@ -12,7 +12,7 @@ collections:
   - name: globals
     label: Globals
     files:
-      - file: site/globals/navigation.yml
+      - file: site/.vuepress/assets/data/globals/navigation.yml
         label: Navigation
         name: navigation
         fields:
@@ -28,7 +28,7 @@ collections:
                 fields:
                   - {label: Label, name: label, widget: string}
                   - {label: Path, name: path, widget: string}
-      - file: site/globals/values.yml
+      - file: site/.vuepress/assets/data/globals/values.yml
         label: Values
         name: values
         fields: 
@@ -38,7 +38,7 @@ collections:
             fields: 
                 - {label: Name, name: name, widget: string}
                 - {label: Description, name: description, widget: markdown}
-      - file: site/globals/mission-statement.yml
+      - file: site/.vuepress/assets/data/globals/mission-statement.yml
         label: Mission Statement
         name: missionStatement
         fields: 

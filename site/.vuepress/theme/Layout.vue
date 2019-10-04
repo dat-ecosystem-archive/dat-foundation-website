@@ -21,7 +21,8 @@ export default {
 
 .app__main {
   padding: $space-large;
-  margin: 0 $space-large;
+  margin: 0 $space-large $space-large;
   background: $color-white;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
 }
 </style>

@@ -1,7 +1,7 @@
 <div v-for="(section, index) in section"
      class="people__section">
   <h1 class="people__section__title">{{ section.name }}</h1>
-  <div class="people__section__subhead">{{ section.description }}</div>
+  <p class="people__section__subhead">{{ section.description }}</p>
   
 
   <div class="people__section__people">

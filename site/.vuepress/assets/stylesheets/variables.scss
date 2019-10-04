@@ -21,6 +21,7 @@ $color-green: #2aca4b;
 $color-black: #293648;
 $color-white: #ffffff;
 $color-neutral: #f6f7f8;
+$color-gray-light: #a7afb6;
 $color-highlight: #94e4a5;
 
 @mixin text-subhead {
@@ -29,9 +30,9 @@ $color-highlight: #94e4a5;
 
 a {
   text-decoration: none;
-  color: $color-black;
+  color: inherit;
 }
-  
+
 p > a {
   text-decoration: underline;
   color: $color-green;

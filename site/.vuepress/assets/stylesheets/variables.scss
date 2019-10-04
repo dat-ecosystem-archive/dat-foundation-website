@@ -28,11 +28,16 @@ $color-highlight: #94e4a5;
 }
 
 a {
+  text-decoration: none;
+  color: $color-black;
+}
+  
+p > a {
   text-decoration: underline;
   color: $color-green;
 }
 
-p { 
+p + p { 
   margin-bottom: $space-medium; 
 }
 

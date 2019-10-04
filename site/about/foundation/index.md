@@ -50,9 +50,9 @@
 <script> 
 import marked from 'marked'
 import content from '../../.vuepress/assets/data/about/foundation.yml'
-import values from '../../globals/values.yml'
+import values from '../../.vuepress/assets/data/globals/values.yml'
 
- export default {
+export default {
   name: 'AboutFoundation',
   data () {
     return {

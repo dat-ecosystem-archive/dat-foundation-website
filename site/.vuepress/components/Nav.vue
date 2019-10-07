@@ -9,18 +9,25 @@
       />
       <span v-else>{{ $site.title }}</span>
     </router-link>
-  
-  <nav>
+
+  <div class="nav__mobile__open" @click="toggleMobileNav">
+    <svg width="18" height="14" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><path d="M0 0h18v2H0zM0 6h18v2H0zM0 12h18v2H0z"/></g></svg>
+  </div>
+
+  <nav :class="{'is-visible': mobileNavActive}">
+    <div class="nav__mobile__close" @click="toggleMobileNav">
+      <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><path d="M2.343.929l12.728 12.728-1.414 1.414L.929 2.343z"/><path d="M13.657.929L.929 13.657l1.414 1.414L15.071 2.343z"/></g></svg>
+    </div>
     <div v-for="(navItem, index) in navItems"
         :key="`navItem-${index}`"
         class="nav-section">
       
-        <router-link v-if="navItem.path"
+        <a v-if="navItem.path"
           :to="navItem.path"
            :href="navItem.path"
            class="nav-section__name">
           {{ navItem.label }}
-        </router-link>
+        </a>
 
         <div v-else class="nav-section__name">
           {{ navItem.label }}
@@ -38,18 +45,7 @@
     </div>
   </nav>
 
-<!--     <div class="brand">
-      <router-link to="/">
-        <div
-          v-if="logo"
-          class="logo"
-          :style="{ backgroundImage: `url(${logo})`}"
-          :title="$site.title"
-        />
-        <span v-else>{{ $site.title }}</span>
-      </router-link>
-    </div>
-
+<!--     
     <nav v-if="navLinks" class="navigation left desktop-nav">
       <ul>
         <router-link
@@ -63,7 +59,6 @@
         />
       </ul>
     </nav>
-
 
     <div class="mobile-nav-toggle" @click="toggleMobileNav" />
     <div class="mobile-nav" :class="{'mobile-nav--active': mobileNavActive}">
@@ -96,7 +91,8 @@ export default {
   name: 'Navbar',
   data () {
     return {
-      navItems: navItems.nav_items
+      navItems: navItems.nav_items,
+      mobileNavActive: false
     }
   },
   props: {
@@ -104,29 +100,14 @@ export default {
       type: String,
       required: false,
     }
+  },
+  methods: {
+    toggleMobileNav() {
+      this.mobileNavActive = !this.mobileNavActive
+    }
   }
 }
 </script>
-
-<!-- 
-  export default {
-    props: {
-      logo: {
-        type: String,
-        required: false,
-      }
-    },
-    data() {
-      return {
-        mobileNavActive: false
-      }
-    },
-    methods: {
-      toggleMobileNav() {
-        this.mobileNavActive = !this.mobileNavActive
-      }
-    }
-  } -->
 
 <style lang="scss">
 @import '../assets/stylesheets/variables.scss';
@@ -134,34 +115,86 @@ export default {
 header {
   display: flex;
   justify-content: space-between;
-  padding: $space-large;
+  padding: $space-medium;
+
+  @include laptop {
+    padding: $space-large;
+  }
 }
 
-nav {
-  display: flex;
-  justify-content: flex-end;
+nav,
+.nav {
+  background: $color-black;
+  bottom: 0;
+  color: $color-white;
+  display: none;
+  left: 20vw;
+  padding: $space-medium;
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  &.is-visible {
+    display: block;
+  }
+
+  @include mobile {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    background: none;
+    left: auto;
+    color: $color-black;
+  }
+
 }
 
+.nav__mobile {
+  
+  &__open {
+    fill: $color-black;
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__close {
+    fill: $color-white;
+    @include mobile {
+      display: none;
+    }
+  }
+}
 .nav-section {
-  margin-left: $space-large;
   position: relative;
+  margin-bottom: $space-medium;
 
-  &:hover {
-    .nav-section__items { visibility: visible; opacity: 1; }
+  @include mobile {
+    margin-right: $space-medium;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+    
+    &:hover {
+      .nav-section__items { visibility: visible; opacity: 1; }
+    }
   }
 
   &__name {
     font-weight: bold;
-    
   }
 
   &__items {
     list-style: none;
-    opacity: 0;
-    position: absolute;
-    top: $space-medium;
-    transition: all 250ms ease-in-out;
-    visibility: hidden;
+  
+    @include mobile {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      top: $space-medium;
+      transition: all 250ms ease-in-out;
+    }
 
     &__link { 
       margin-bottom: $space-tiny; 
@@ -171,24 +204,11 @@ nav {
   }
 }
 
-  .logo {
-    width: 100px;
-    height: 100px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  @media screen and (min-width: 600px) {
-    .desktop-nav {
-      display: block;
-    }
-    .mobile-nav-toggle {
-      display: none;
-    }
-    .mobile-nav {
-      display: none;
-    }
-  }
-
+.logo {
+  width: 30vw;
+  height: 30vw;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 </style>

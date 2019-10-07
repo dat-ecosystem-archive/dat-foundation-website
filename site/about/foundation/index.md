@@ -1,4 +1,6 @@
 <div class="foundation">
+  <h1 class="foundation__title page-title">{{ title }}</h1>
+    
   <div v-html="markdown(intro)"
        class="foundation__intro">
   </div>
@@ -56,6 +58,7 @@ export default {
   name: 'AboutFoundation',
   data () {
     return {
+      title: content.title,
       intro: content.intro,
       projects: content.projects,
       sponsors: content.sponsors,

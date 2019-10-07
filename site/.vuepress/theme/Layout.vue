@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <Navbar :logo="$site.themeConfig.logo"/>
+    <Nav :logo="$site.themeConfig.logo"/>
 
     <main class="app__main">
       <Content/>

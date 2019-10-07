@@ -20,9 +20,14 @@ export default {
 @import '../assets/stylesheets/variables.scss';
 
 .app__main {
-  padding: $space-large;
-  margin: 0 $space-large $space-large;
+  padding: $space-medium;
   background: $color-white;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+
+  @include laptop {
+    padding: $space-large;
+    margin: 0 $space-large $space-large;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+
+  }
 }
 </style>

@@ -167,6 +167,27 @@ $breakpoint-mobile: 640px;
   }
 }
 
+
+// start moving things into these reusable styles, like page headers and subheads and eventually breadcrumbs
+.page-title {
+  margin-bottom: 1rem;
+}
+
+@mixin shadow {
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+// breakpoint helper
 // body {
 //   background-color: blue;
 
@@ -186,8 +207,3 @@ $breakpoint-mobile: 640px;
 //     background: yellow;
 //   }
 // }
-
-// start moving things into these reusable styles, like page headers and subheads and eventually breadcrumbs
-.page-title {
-  margin-bottom: 1rem;
-}

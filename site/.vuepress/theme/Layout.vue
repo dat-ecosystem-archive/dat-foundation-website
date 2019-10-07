@@ -24,10 +24,9 @@ export default {
   background: $color-white;
 
   @include laptop {
+    @include shadow;
     padding: $space-large;
     margin: 0 $space-large $space-large;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
-
   }
 }
 </style>

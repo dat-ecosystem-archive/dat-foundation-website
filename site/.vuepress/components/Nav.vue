@@ -1,19 +1,15 @@
 <template>
   <header>
     <router-link to="/">
-      <div
-        v-if="logo"
-        class="logo"
-        :style="{ backgroundImage: `url(${logo})`}"
-        :title="$site.title"
-      />
-      <span v-else>{{ $site.title }}</span>
+      <div class="logo">
+      </div>
     </router-link>
 
   <div class="nav__mobile__open" @click="toggleMobileNav">
     <svg width="18" height="14" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><path d="M0 0h18v2H0zM0 6h18v2H0zM0 12h18v2H0z"/></g></svg>
   </div>
 
+  <div v-if="mobileNavActive" class="nav__shade" />
   <nav :class="{'is-visible': mobileNavActive}">
     <div class="nav__mobile__close" @click="toggleMobileNav">
       <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><path d="M2.343.929l12.728 12.728-1.414 1.414L.929 2.343z"/><path d="M13.657.929L.929 13.657l1.414 1.414L15.071 2.343z"/></g></svg>
@@ -44,45 +40,7 @@
 
     </div>
   </nav>
-
-<!--     
-    <nav v-if="navLinks" class="navigation left desktop-nav">
-      <ul>
-        <router-link
-          v-for="nav in navLinks"
-          :key="nav.text"
-          tag="li"
-          :to="nav.link"
-          active-class="active"
-          v-text="nav.text"
-          exact
-        />
-      </ul>
-    </nav>
-
-    <div class="mobile-nav-toggle" @click="toggleMobileNav" />
-    <div class="mobile-nav" :class="{'mobile-nav--active': mobileNavActive}">
-      <nav>
-        <ul @click="toggleMobileNav">
-          <router-link
-            v-for="nav in navLinks"
-            :key="nav.text"
-            v-if="!nav.external"
-            tag="li"
-            :to="nav.link"
-            active-class="active"
-            v-text="nav.text"
-            exact
-          />
-          <li v-for="nav in navLinks" v-if="nav.external" @click="toggleMobileNav">
-            <a :href="nav.link" target="_blank">{{ nav.text }}</a>
-          </li>
-        </ul>
-        <div class="mobile-nav-close" @click="toggleMobileNav" />
-      </nav>
-    </div> -->
-
-  </header>
+</header>
 </template>
 
 <script>
@@ -93,12 +51,6 @@ export default {
     return {
       navItems: navItems.nav_items,
       mobileNavActive: false
-    }
-  },
-  props: {
-    logo: {
-      type: String,
-      required: false,
     }
   },
   methods: {
@@ -124,33 +76,40 @@ header {
 
 nav,
 .nav {
+  @include shadow;
   background: $color-black;
-  bottom: 0;
   color: $color-white;
   display: none;
-  left: 20vw;
+  overflow-y: scroll;
   padding: $space-medium;
   position: fixed;
-  right: 0;
-  top: 0;
+  top: 0; right: 0; bottom: 0; left: 20vw;
+
+  &__shade {
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: $color-white;
+    opacity: 0.85;
+  }
 
   &.is-visible {
     display: block;
   }
 
   @include mobile {
+    background: none;
+    box-shadow: none;
+    color: $color-black;
     display: flex;
     justify-content: flex-end;
-    position: relative;
-    background: none;
     left: auto;
-    color: $color-black;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
   }
-
 }
 
 .nav__mobile {
-  
   &__open {
     fill: $color-black;
     @include mobile {
@@ -160,29 +119,36 @@ nav,
 
   &__close {
     fill: $color-white;
+    position: absolute;
+    right: $space-medium;
+    top: $space-medium;
+
     @include mobile {
       display: none;
     }
   }
 }
+
 .nav-section {
   position: relative;
   margin-bottom: $space-medium;
+  margin-right: $space-medium;
 
   @include mobile {
-    margin-right: $space-medium;
-
     &:last-of-type {
       margin-right: 0;
     }
     
     &:hover {
-      .nav-section__items { visibility: visible; opacity: 1; }
+      .nav-section__items { 
+        visibility: visible; 
+        opacity: 1; }
     }
   }
 
   &__name {
     font-weight: bold;
+    margin-bottom: $space-small;
   }
 
   &__items {
@@ -205,10 +171,16 @@ nav,
 }
 
 .logo {
-  width: 30vw;
-  height: 30vw;
+  background-image: url("../public/images/logo.svg");
+  width: 15vw;
+  height: 15vw;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+
+  @include tablet {
+    width: 10vw;
+    height: 10vw;
+  }
 }
 </style>

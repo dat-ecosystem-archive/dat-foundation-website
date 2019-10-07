@@ -25,8 +25,9 @@
         </li>
       </ul>
     </div>
+  </div>
 
-    </div>
+  <!-- TODO: Update this link -->
   <div class="footer__copyright">Dat Foundation © 2013 - 2019 • Source on <a href="#">GitHub</a>
   </div>
   </footer>
@@ -47,31 +48,49 @@ export default {
 <style lang="scss">
 @import '../assets/stylesheets/variables.scss';
 
-
 .footer {
   background-color: $color-black;
   color: $color-white;
-  padding: $space-large;
+  padding: $space-medium;
+
+  @include tablet {
+    padding: $space-large;
+  }
+
 
   &__wrapper {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: $space-large;
-    justify-content: space-between;
+    
+    @include tablet {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
   }
 
   &__section {
-    margin-right: $space-large;
+    margin-bottom: $space-medium;
+    width: 50%;
+
+    @include tablet {
+      margin-right: $space-large;
+      width: 100%;
+    }
 
     &__name {
       font-weight: bold;
-      margin-bottom: $space-medium;
+      margin-bottom: $space-small;
+
+      @include tablet {
+        margin-bottom: $space-medium;
+      }
     }
 
     &__items {
       list-style: none;
 
       &__link  {
-
         color: $color-white;
       }
     }

@@ -68,6 +68,7 @@ body {
   color: $color-black;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: $type-size-base;
+  overflow-x: hidden;
 }
 
 img {
@@ -110,4 +111,54 @@ code {
   padding: 0.05rem 0.25rem;
   font-weight: 400;
   font-family: monospace;
+}
+
+// Breakpoints
+$breakpoint-desktop: 1500px;
+$breakpoint-laptop: 1250px;
+$breakpoint-tablet: 1024px;
+$breakpoint-mobile: 640px;
+
+@mixin mobile {
+  @media screen and (min-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (min-width: $breakpoint-laptop) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+body {
+  background-color: blue;
+
+  @include mobile {
+    background: red;
+  }
+
+  @include tablet {
+    background: pink;
+  }
+
+  @include laptop {
+    background: orange;
+  }
+
+  @include desktop {
+    background: yellow;
+  }
 }

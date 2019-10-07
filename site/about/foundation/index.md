@@ -89,9 +89,13 @@ export default {
   }
 
   &__values { 
-    display: flex; 
-    justify-content: space-between;
     margin-bottom: $space-large;
+
+    @include laptop {
+      display: flex; 
+      justify-content: space-between;
+
+    }
 
     &__title {
       margin-bottom: $space-small;
@@ -103,7 +107,11 @@ export default {
     }
 
     &__value {
-      width: 32%;
+      margin-bottom: $space-medium;
+
+      @include laptop {
+        width: 32%;
+      }
 
       &__name {
         margin-bottom: $space-small;
@@ -113,9 +121,12 @@ export default {
 
   &__sponsors,
   &__projects {
-    display: flex;
-    flex-wrap: wrap;
     margin-bottom: $space-large;
+
+    @include laptop {
+      display: flex;
+      flex-wrap: wrap;
+    }
 
     &__title {
       margin-bottom: $space-medium;
@@ -124,11 +135,16 @@ export default {
 
   &__project,
   &__sponsor {
-    margin-bottom: $space-medium;
-    margin-right: 5%;
-    padding-top: $space-medium;
-    padding: $space-small;
-    width: 20%;
+    margin-bottom: $space-large;
+
+    @include laptop {
+      margin-bottom: $space-medium;
+      margin-right: 5%;
+      padding-top: $space-medium;
+      padding: $space-small;
+      width: 20%;
+
+    }
 
     &__title {
       margin-bottom: $space-large;

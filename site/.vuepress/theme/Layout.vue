@@ -20,8 +20,13 @@ export default {
 @import '../assets/stylesheets/variables.scss';
 
 .app__main {
-  padding: $space-medium;
   background: $color-white;
+
+  @include mobile {
+    @include shadow;
+    padding: $space-medium;
+    margin: 0 $space-medium $space-medium;
+  }
 
   @include laptop {
     @include shadow;

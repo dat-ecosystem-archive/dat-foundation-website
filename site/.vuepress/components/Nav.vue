@@ -19,7 +19,6 @@
         class="nav-section">
       
         <a v-if="navItem.path"
-          :to="navItem.path"
            :href="navItem.path"
            class="nav-section__name">
           {{ navItem.label }}
@@ -32,9 +31,9 @@
     <ul class="nav-section__items">
       <li v-for="secondary in navItem.secondary"
           class="nav-section__items__link">
-        <router-link :to="secondary.path">
+        <a :href="secondary.path">
           {{ secondary.label }}
-        </router-link>
+        </a>
       </li>
     </ul>
 
@@ -103,7 +102,7 @@ nav,
     display: flex;
     justify-content: flex-end;
     left: auto;
-    overflow: hidden;
+    overflow: unset;
     position: relative;
     padding: 0;
   }

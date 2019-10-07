@@ -97,8 +97,8 @@ export default {
   }
 
   &__copyright {
+    @include type-small;
     color: $color-gray-light;
-    font-size: $type-size-small;
   }
 }
 

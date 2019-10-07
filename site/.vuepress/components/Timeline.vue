@@ -88,7 +88,7 @@ export default {
     }
 
     &__description {
-      font-size: $type-size-medium;
+      @include type-medium;
 
 
       .milestone & {
@@ -97,7 +97,7 @@ export default {
     }
 
     &__date {
-      font-size: $type-size-small;
+      @include type-small;
     }
   }
 }

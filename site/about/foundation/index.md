@@ -164,11 +164,10 @@ export default {
     }
 
     &__description {
-      font-size: $type-size-small;
+      @include type-small;
 
       p { margin-bottom: 0; }
     }
   }
-  
 }
 </style>

@@ -1,11 +1,43 @@
 // Typography
-$type-size-base: 18px;
 
 $type-size-small: 16px;
+$type-size-base: 18px;
 $type-size-medium: 24px;
 $type-size-big: 36px;
 $type-size-large: 40px;
 
+$type-leading-small: 1.25;
+$type-leading-base: 1.25;
+$type-leading-medium: 1.15;
+$type-leading-big: 1.10;
+$type-leading-large: 1.05;
+
+@mixin type-small {
+  font-size: $type-size-small;
+  line-height: $type-leading-small;
+}
+
+@mixin type-base {
+  font-size: $type-size-base;
+  line-height: $type-leading-base;
+}
+
+@mixin type-medium {
+  font-size: $type-size-medium;
+  line-height: $type-leading-medium;
+}
+
+@mixin type-big {
+  font-size: $type-size-big;
+  line-height: $type-leading-big;
+}
+
+@mixin type-large {
+  font-size: $type-size-large;
+  line-height: $type-leading-large;
+}
+
+// TODO: make sure to only request weights of the font that you're using
 
 // Spacing
 $space-base: $type-size-base;
@@ -25,7 +57,11 @@ $color-gray-light: #a7afb6;
 $color-highlight: #94e4a5;
 
 @mixin text-subhead {
-  font-size: $type-size-medium;
+  @include type-base;
+
+  @include mobile {
+    @include type-medium;
+  }
 }
 
 a {
@@ -39,7 +75,7 @@ p > a {
 }
 
 p + p { 
-  margin-bottom: $space-medium; 
+  margin-top: $space-base; 
 }
 
 * {
@@ -64,10 +100,10 @@ p + p {
 }
 
 body {
+  @include type-base;
   background-color: $color-neutral;
   color: $color-black;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: $type-size-base;
   overflow-x: hidden;
 }
 
@@ -77,31 +113,19 @@ img {
 }
 
 h1 {
-  font-size: $type-size-large;
+  @include type-large;
   font-weight: 700;
 }
 
 h2 {
-  font-size: $type-size-big;
+  @include type-big;
   font-weight: 700;
 }
 
 h3 {
-  font-size: $type-size-medium;
+  @include type-medium;
   font-weight: 700;
 }
-
-// p {
-//   font-size: 1rem;
-//   line-height: 1.5;
-//   margin: 1rem auto 2rem auto;
-// }
-
-// pre {
-//   background: $color-black;
-//   padding: 1rem;
-//   margin: 1rem 0;
-// }
 
 // TODO: make this look really nice;
 code {
@@ -143,22 +167,27 @@ $breakpoint-mobile: 640px;
   }
 }
 
-body {
-  background-color: blue;
+// body {
+//   background-color: blue;
 
-  @include mobile {
-    background: red;
-  }
+//   @include mobile {
+//     background: red;
+//   }
 
-  @include tablet {
-    background: pink;
-  }
+//   @include tablet {
+//     background: pink;
+//   }
 
-  @include laptop {
-    background: orange;
-  }
+//   @include laptop {
+//     background: orange;
+//   }
 
-  @include desktop {
-    background: yellow;
-  }
+//   @include desktop {
+//     background: yellow;
+//   }
+// }
+
+// start moving things into these reusable styles, like page headers and subheads and eventually breadcrumbs
+.page-title {
+  margin-bottom: 1rem;
 }

@@ -1,8 +1,12 @@
 <div class="foundation">
   <h1 class="foundation__title page-title">{{ title }}</h1>
-    
+  
+  <div v-html="markdown(missionStatement)"
+       class="foundation__mission-statement">
+  </div>
+
   <div v-html="markdown(intro)"
-       class="foundation__intro">
+       class="foundation__content">
   </div>
   
   <h1 class="foundation__values__title">Value-driven technology</h1>
@@ -53,6 +57,7 @@
 import marked from 'marked'
 import content from '../../.vuepress/assets/data/about/foundation.yml'
 import values from '../../.vuepress/assets/data/globals/values.yml'
+import missionStatement from '../../.vuepress/assets/data/globals/mission-statement.yml'
 
 export default {
   name: 'AboutFoundation',
@@ -62,7 +67,8 @@ export default {
       intro: content.intro,
       projects: content.projects,
       sponsors: content.sponsors,
-      values: values.value
+      values: values.value,
+      missionStatement: missionStatement.missionStatement
     }
   },
 
@@ -86,9 +92,13 @@ export default {
 @import '../../.vuepress/assets/stylesheets/variables.scss';
 
 .foundation {
-  &__intro { 
+  &__mission-statement { 
     @include text-subhead;
-    margin-bottom: $space-large; 
+    margin-bottom: $space-medium; 
+  }
+
+  &__content {
+    margin-bottom: $space-medium;
   }
 
   &__values { 

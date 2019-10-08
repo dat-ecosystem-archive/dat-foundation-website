@@ -18,6 +18,7 @@ intro: >-
   applications. We hope that with our small but critical focus, we can create a
   strong building block for the Dat ecosystem.
 
+
   The first code went into Dat [on August 17,
   2013](https://github.com/datproject/dat/commit/e5eda57b53f60b05c0c3d97da90c10cd17dcbe19).
   Throughout its history, Dat has had a primary focus on Dat sharing in civic

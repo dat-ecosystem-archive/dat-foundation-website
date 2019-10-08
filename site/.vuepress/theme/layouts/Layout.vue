@@ -56,6 +56,10 @@
   display: block;
   margin: 0 0 $space-base $space-medium;
 
+  @include laptop {
+    margin-left: $space-large;
+  }
+
   &__crumb {
     position: relative; 
     

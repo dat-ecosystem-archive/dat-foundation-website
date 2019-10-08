@@ -7,8 +7,8 @@ nav_items:
         path: /about/foundation/
       - label: History
         path: /about/history/
-      - label: Financial
-        path: /about/financial/
+      # - label: Financial
+      #   path: /about/financial/
   - label: Community
     secondary:
       - label: Updates

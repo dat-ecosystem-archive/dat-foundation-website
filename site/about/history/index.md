@@ -1,4 +1,7 @@
 <div class="about__history">
+  <h1 class="about__history__title page-title">
+    {{ title }}
+  </h1>
   <div class="about__history__intro">
     {{ intro }}
   </div>
@@ -12,6 +15,7 @@ export default {
   name: 'AboutHistory',
   data () {
     return {
+      title: content.title,
       intro: content.intro,
       timeline: content.timeline
     }

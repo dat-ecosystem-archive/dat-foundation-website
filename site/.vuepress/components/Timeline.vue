@@ -3,9 +3,18 @@
     <div v-for="item in sortedItems"
          class="timeline__item"
          :class="{ 'milestone': item.milestone }">
-      <div v-html="markdown(item.description)" 
-           class="timeline__item__description"></div>
+      <div v-if="item.milestone" 
+           class="timeline__item--milestone">
+      </div>
+      <p v-html="markdown(item.description)" 
+           class="timeline__item__description"></p>
       <div class="timeline__item__date">{{ item.date }}</div>
+    </div>
+
+    <div class="timeline__item milestone">
+      <div class="timeline__item--milestone">
+      </div>
+      <p class="timeline__item__description">What's next? <a href="#">Sponsor us</a> or join our <a href="#">community</a> to learn how you can help build the future of the web.</p>
     </div>
   </div>
 </template>
@@ -48,48 +57,47 @@ export default {
 .timeline {
   position: relative;
 
-  // The line itself
-  &::before {
-    height: 95%;
-    width: 8px;
-    content: '';
-    background-color: green;
-    position: absolute;
-    left: 18px;
-  }
-
   &__item {
     margin-bottom: $space-medium;
     position: relative;
     margin-left: $space-large;
 
-    &.milestone {
-      &::after {
+    &::before {
+      height: 200%;
+      width: 8px;
+      content: '';
+      background-color: green;
+      position: absolute;
+      left: -$space-base * 3;
+    }
+
+    &:last-of-type {
+      &::before { display: none; }
+    }
+
+    &--milestone {
+      position: absolute;
+      width: 50px;
+      height: 58px;
+      background-color: $color-white;
+      clip-path: polygon(49% 0, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      top: -4px;
+      left: -$space-large - 3px;
+
+      &::before {
         content: '';
         position: absolute;
         width: 44px;
         height: 50px;
         background-color: $color-green;
         clip-path: polygon(49% 0, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-        top: 0;
-        left: -$space-large;
-      }
-
-      &::before {
-        content: '';
-        position: absolute;
-        width: 50px;
-        height: 58px;
-        background-color: $color-white;
-        clip-path: polygon(49% 0, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-        left: -$space-large - 3px;
-        top: -4px;
+        top: 4px;
+        left: 3px;
       }
     }
 
     &__description {
       @include type-medium;
-
 
       .milestone & {
         font-weight: bold;

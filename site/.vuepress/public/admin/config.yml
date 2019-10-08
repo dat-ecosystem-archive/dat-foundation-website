@@ -17,7 +17,6 @@ collections:
     fields: 
       - {label: 'Title', name: 'title', widget: 'string'}
       - {label: 'Excerpt', name: 'excerpt', widget: 'markdown', hint: 'This displays on the blog index page and as the subhead of the blog post.', required: false}
-      - {label: 'Content', name: 'content', widget: 'markdown'}
       - label: "Tags"
         name: "tags"
         widget: "relation"
@@ -43,6 +42,7 @@ collections:
         format: 'YYYY-MM-DD'
       - {label: 'Image', name: 'image', widget: 'image', required: false }
       - {label: 'Featured', name: 'featured', widget: 'boolean', hint: 'If set to featured, the full blog post card is displayed on the blog index.', required: false}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
 
   # Globals
   - name: globals
@@ -173,12 +173,12 @@ collections:
                 format: 'MMMM YYYY'
               - {label: 'Milestone', name: 'milestone', widget: 'boolean', hint: 'If set as a milestone the timeline item is displayed at a larger size.', required: false}
   
-  - name: 'Documentation' # Used in routes, e.g., /admin/collections/blog
-    label: 'Docs' # Used in the UI
-    folder: 'site/docs' # The path to the folder where the documents are stored
-    create: false # Allow users to create new documents in this collection
-    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
+  - name: 'Documentation'
+    label: 'Docs'
+    folder: 'site/docs'
+    create: true
+    slug: '{{slug}}'
+    fields:
       - {label: 'Title', name: 'title', widget: 'string'}
       - {label: 'Content', name: 'content', widget: 'markdown'}
 

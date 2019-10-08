@@ -309,5 +309,6 @@ content: >-
 authors:
   - Darius Kazemi
 date: '2019-03-22'
+layout: 'blog'
 ---
 

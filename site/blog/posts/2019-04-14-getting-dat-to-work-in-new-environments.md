@@ -301,6 +301,6 @@ content: >-
   \* Website (http://dat.foundation)
 date: '2019-08-12'
 featured: true
-layout: 'blog'
+layout: blog
 ---
 

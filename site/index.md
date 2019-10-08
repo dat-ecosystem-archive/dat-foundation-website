@@ -1,7 +1,38 @@
----
-title: Dat Foundation
-content: Can this be a lot of text? How does that work? Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget urna mollis ornare vel eu leo. Curabitur blandit tempus porttitor.
----
+<template>
+  <h1 class="mission-statement">{{ missionStatement }}</h1>
+  <Values />
+</template>
 
-<h1>{{ $page.frontmatter.title }}</h1>
-<h3>{{ $page.frontmatter.content }}</h3>
+<script> 
+import marked from 'marked'
+import missionStatement from '../site/.vuepress/assets/data/globals/mission-statement.yml'
+
+export default {
+  name: 'Home',
+  data () {
+    return {
+      missionStatement: missionStatement.missionStatement
+    }
+  },
+
+  methods: {
+    markdown (input) {
+      if (input === null) {
+        return false
+      } else {
+        return marked(String(input), {
+          smartypants: true,
+          gfm: true,
+          breaks: true
+        })
+      }
+    }
+  } 
+}
+</script>
+
+<style lang="scss">
+@import '../site/.vuepress/assets/stylesheets/variables.scss';
+
+.mission-statement { margin-bottom: $space-large; }
+</style>

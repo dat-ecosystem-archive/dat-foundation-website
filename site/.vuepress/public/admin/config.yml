@@ -32,8 +32,8 @@ collections:
         label: Values
         name: values
         fields: 
-          - label: Value 
-            name: value 
+          - label: Values
+            name: values 
             widget: list 
             fields: 
                 - {label: Name, name: name, widget: string}

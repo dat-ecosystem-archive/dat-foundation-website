@@ -9,18 +9,7 @@
        class="foundation__content">
   </div>
   
-  <h1 class="foundation__values__title">Value-driven technology</h1>
-  <div class="foundation__values__subhead"> Technology built by community, financed responsibly, and given away for free to the public </div>
-
-  <div class="foundation__values">
-    <div v-for="value in values"
-         class="foundation__values__value">
-      <h3 class="foundation__values__value__name">
-        {{ value.name }}
-      </h3>
-      <div v-html="markdown(value.description)"></div>
-    </div>
-  </div>
+  <Values />
 
   <h2 class="foundation__projects__title">
     Consortium of Projects
@@ -56,7 +45,6 @@
 <script> 
 import marked from 'marked'
 import content from '../../.vuepress/assets/data/about/foundation.yml'
-import values from '../../.vuepress/assets/data/globals/values.yml'
 import missionStatement from '../../.vuepress/assets/data/globals/mission-statement.yml'
 
 export default {
@@ -67,7 +55,6 @@ export default {
       intro: content.intro,
       projects: content.projects,
       sponsors: content.sponsors,
-      values: values.value,
       missionStatement: missionStatement.missionStatement
     }
   },
@@ -99,37 +86,6 @@ export default {
 
   &__content {
     margin-bottom: $space-medium;
-  }
-
-  &__values { 
-    margin-bottom: $space-large;
-
-    @include mobile {
-      display: flex; 
-      justify-content: space-between;
-
-    }
-
-    &__title {
-      margin-bottom: $space-small;
-    }
-
-    &__subhead {
-      @include text-subhead;
-      margin-bottom: $space-medium;
-    }
-
-    &__value {
-      margin-bottom: $space-medium;
-
-      @include mobile {
-        width: 32%;
-      }
-
-      &__name {
-        margin-bottom: $space-small;
-      }
-    }
   }
 
   &__sponsors,

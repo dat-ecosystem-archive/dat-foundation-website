@@ -1,16 +1,23 @@
 // Typography
 
+$type-size-tiny: 14px;
 $type-size-small: 16px;
 $type-size-base: 18px;
 $type-size-medium: 24px;
 $type-size-big: 36px;
 $type-size-large: 40px;
 
+$type-leading-tiny: 1.25;
 $type-leading-small: 1.25;
 $type-leading-base: 1.25;
 $type-leading-medium: 1.15;
 $type-leading-big: 1.10;
 $type-leading-large: 1.05;
+
+@mixin type-tiny {
+  font-size: $type-size-tiny;
+  line-height: $type-leading-tiny;
+}
 
 @mixin type-small {
   font-size: $type-size-small;

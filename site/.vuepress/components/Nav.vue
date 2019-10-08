@@ -174,7 +174,6 @@ nav,
   width: 15vw;
   height: 15vw;
   background-size: contain;
-  background-position: center;
   background-repeat: no-repeat;
 
   @include tablet {

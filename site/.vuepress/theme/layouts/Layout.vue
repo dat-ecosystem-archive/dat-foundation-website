@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <Nav :logo="$site.themeConfig.logo"/>
+    <Nav/>
 
     <main class="app__main">
       <Content/>
@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/stylesheets/variables.scss';
+@import '../../assets/stylesheets/variables.scss';
 
 .app__main {
   background: $color-white;

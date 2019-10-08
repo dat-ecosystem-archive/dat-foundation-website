@@ -94,7 +94,7 @@ export default {
   &__values { 
     margin-bottom: $space-large;
 
-    @include laptop {
+    @include mobile {
       display: flex; 
       justify-content: space-between;
 
@@ -112,7 +112,7 @@ export default {
     &__value {
       margin-bottom: $space-medium;
 
-      @include laptop {
+      @include mobile {
         width: 32%;
       }
 
@@ -126,7 +126,7 @@ export default {
   &__projects {
     margin-bottom: $space-large;
 
-    @include laptop {
+    @include mobile {
       display: flex;
       flex-wrap: wrap;
     }
@@ -140,7 +140,7 @@ export default {
   &__sponsor {
     margin-bottom: $space-large;
 
-    @include laptop {
+    @include mobile {
       margin-bottom: $space-medium;
       margin-right: 5%;
       padding-top: $space-medium;

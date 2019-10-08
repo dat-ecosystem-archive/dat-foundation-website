@@ -8,6 +8,41 @@ media_folder: 'site/.vuepress/public/images'
 public_folder: '/images'
 
 collections:
+  - name: 'blog' 
+    label: 'Blog' 
+    folder: 'site/blog/posts'
+    create: true
+    slug: 'YYYY-MM-DD-title.md'
+    fields: 
+      - {label: 'Title', name: 'title', widget: 'string'}
+      - {label: 'Excerpt', name: 'excerpt', widget: 'markdown', hint: 'This displays on the blog index page and as the subhead of the blog post.', required: false}
+      - {label: 'Content', name: 'content', widget: 'markdown'}
+      - label: "Tags"
+        name: "tags"
+        widget: "relation"
+        collection: "tags"
+        searchFields: ["title"]
+        multiple: true
+        valueField: "title"
+        displayFields: ["title"]
+        required: false
+      - label: "Authors"
+        name: "authors"
+        widget: "relation"
+        collection: "people"
+        searchFields: ["name"]
+        multiple: true
+        valueField: "name"
+        displayFields: ["name"]
+        required: false
+      - label: 'Publish date'
+        name: 'date'
+        widget: 'datetime'
+        default: ''
+        format: 'YYYY-MM-DD'
+      - {label: 'Image', name: 'image', widget: 'image', required: false }
+      - {label: 'Featured', name: 'featured', widget: 'boolean', hint: 'If set to featured, the full blog post card is displayed on the blog index.', required: false}
+
   # Globals
   - name: globals
     label: Globals

@@ -21,6 +21,7 @@ export default {
 
 .app__main {
   background: $color-white;
+  padding: $space-base;
 
   @include mobile {
     @include shadow;

@@ -30,6 +30,7 @@ export default {
   &__section {
     margin-bottom: $space-large;
 
+
     &__title {
       margin-bottom: $space-medium;
     }
@@ -41,6 +42,7 @@ export default {
 
     &__people {
       display: flex;
+      flex-wrap: wrap;
     }
   }
 }

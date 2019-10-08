@@ -12,7 +12,7 @@ collections:
     label: 'Blog' 
     folder: 'site/blog/posts'
     create: true
-    slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     preview_path_date_field: "date"
     fields: 
       - {label: 'Title', name: 'title', widget: 'string'}
@@ -97,9 +97,9 @@ collections:
         fields: 
           - {label: 'Organization or company name', name: 'name', widget: 'string', required: false}
           - {label: 'URL', name: 'url', widget: 'string', required: false, pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.'] }
-      - {label: 'Bio', name: 'bio', widget: 'markdown', buttons: ['link']}    
-      - {label: 'Active', name: 'active', widget: 'boolean', hint: 'If set to active, the full bio is displayed.'}
-      - {label: 'Image', name: 'image', widget: 'image' }
+      - {label: 'Bio', name: 'bio', widget: 'markdown', buttons: ['link'], required: false}    
+      - {label: 'Active', name: 'active', widget: 'boolean', hint: 'If set to active, the full bio is displayed.', required: false}
+      - {label: 'Image', name: 'image', widget: 'image', required: false }
       - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, both image and name will link there.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
   
   # Pages

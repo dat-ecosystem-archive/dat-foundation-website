@@ -1,6 +1,6 @@
 ---
 title: Getting Dat to work in new environments
-excerpt: ''
+excerpt: 'A look at some of the work that RangerMauve has been doing.'
 content: >-
   \*\*A look at some of the work I've been doing for Dat\*\*
 

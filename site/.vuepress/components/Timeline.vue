@@ -6,8 +6,9 @@
       <div v-if="item.milestone" 
            class="timeline__item--milestone">
       </div>
-      <p v-html="markdown(item.description)" 
-           class="timeline__item__description" />
+      <div class="timeline__item__description">
+        <p v-html="markdown(item.description)" />
+      </div>
       <div class="timeline__item__date">{{ item.date }}</div>
     </div>
 

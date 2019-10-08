@@ -486,6 +486,6 @@ content: >-
   I'd also like to improve the documentation for using the Dat CLI, as well as
   improving the usability of \`dat store\`.
 date: October 2019
-layout: blog
+template: blog
 ---
 

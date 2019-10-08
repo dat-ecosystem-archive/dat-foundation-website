@@ -9,6 +9,9 @@
     </div>
     <main class="app__main">
       <Content/>
+      <Post 
+        v-if="$page.frontmatter.template === blog" 
+      />
     </main>
 
     <Footer/>

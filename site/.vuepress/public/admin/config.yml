@@ -42,7 +42,7 @@ collections:
         format: 'YYYY-MM-DD'
       - {label: 'Image', name: 'image', widget: 'image', required: false }
       - {label: 'Featured', name: 'featured', widget: 'boolean', hint: 'If set to featured, the full blog post card is displayed on the blog index.', required: false}
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Template", name: "template", widget: "hidden", default: "blog"}
 
   # Globals
   - name: globals

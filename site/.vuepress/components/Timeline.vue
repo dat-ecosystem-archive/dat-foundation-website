@@ -61,18 +61,24 @@ export default {
     margin-bottom: $space-medium;
     position: relative;
     margin-left: $space-large;
-
+    
+    // The green vertical line
     &::before {
       height: 200%;
       width: 8px;
       content: '';
-      background-color: green;
+      background-color: $color-green-dark;
       position: absolute;
       left: -$space-base * 3;
+
+      // @include tablet { height: 200%; }
     }
 
     &:last-of-type {
-      &::before { display: none; }
+      &::before { 
+        background-color: $color-white; 
+        height: 120%;
+      }
     }
 
     &--milestone {
@@ -105,7 +111,8 @@ export default {
     }
 
     &__date {
-      @include type-small;
+      @include type-tiny;
+      color: $color-gray;
     }
   }
 }

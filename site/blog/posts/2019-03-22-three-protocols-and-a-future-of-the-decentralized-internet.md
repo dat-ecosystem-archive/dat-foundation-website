@@ -1,7 +1,7 @@
 ---
 title: Three protocols and a future of the decentralized internet
 excerpt: >-
-  Hi, I'm Darius Kazemi and I'm Code for Science & Society's \[Mozilla
+  Hi, I'm Darius Kazemi and I'm Code for Science & Society's [Mozilla
   Fellow](https://blog.mozilla.org/blog/2018/08/21/mozilla-announces-25-new-fellows-in-openness-science-and-tech-policy/).
   I'm halfway through my fellowship and we thought now would be a good time for
   me to share some of the things that I've been researching, building, and
@@ -10,8 +10,8 @@ content: >-
   I knew coming into this fellowship that I wanted my work to be about the
   decentralized web as a whole, and not just Dat. CS&S was totally receptive to
   that and so I've been spending time learning about Dat, but also about
-  \[Secure ScuttleButt](https://www.scuttlebutt.nz/) and
-  \[ActivityPub](https://activitypub.rocks/).
+  [Secure ScuttleButt](https://www.scuttlebutt.nz/) and
+  [ActivityPub](https://activitypub.rocks/).
 
 
 
@@ -28,7 +28,7 @@ content: >-
 
 
 
-  \## Complementary protocols, working together
+  ## Complementary protocols, working together
 
 
 
@@ -49,11 +49,11 @@ content: >-
 
 
   In addition to working with and meeting people from the Dat and SSB community,
-  I've been \[developing](https://github.com/dariusk/express-activitypub)
-  \[software](https://github.com/dariusk/rss-to-activitypub/) that uses
+  I've been [developing](https://github.com/dariusk/express-activitypub)
+  [software](https://github.com/dariusk/rss-to-activitypub/) that uses
   ActivityPub. ActivityPub is yet another protocol that tries to reduce our
   reliance on tech giants to do the kind of things we want to do with the
-  internet. I \[wrote an introduction to ActivityPub for the Mozilla Hacks
+  internet. I [wrote an introduction to ActivityPub for the Mozilla Hacks
   blog](https://hacks.mozilla.org/2018/11/decentralizing-social-interactions-with-activitypub/)
   that might be a helpful read.
 
@@ -67,7 +67,7 @@ content: >-
 
 
 
-  I'll try and sketch them out here \_extremely\_ briefly and broadly, and
+  I'll try and sketch them out here _extremely_ briefly and broadly, and
   conclude with my thoughts on how we can design better software by bridging
   these technologies. (I know there are more technologies out there than these
   three, but these are the three that I know best.)
@@ -75,14 +75,14 @@ content: >-
 
 
 
-  \### Dat
+  ### Dat
 
 
 
 
   If you're reading this blog, chances are you already know about Dat. Dat was
   invented to allow researchers to share very large data sets with each other.
-  It's a protocol that powers software like \[Beaker
+  It's a protocol that powers software like [Beaker
   Browser](https://beakerbrowser.com/), a web browser that lets you create and
   publish your own websites without needing a web hosting service.
 
@@ -94,28 +94,28 @@ content: >-
 
 
 
-  \* Peer to peer protocol, can share data via your laptop or phone without
+  * Peer to peer protocol, can share data via your laptop or phone without
   connecting to some company's server, no out-of-the-box web browser support
 
 
-  \* All your content is its own hidden island until its URL is sent to someone
+  * All your content is its own hidden island until its URL is sent to someone
   else; that person can share the URL or even post it somewhere public and now
   your island is on the map
 
 
-  \* Good for sharing large files, your friends can consent to re-sharing them
+  * Good for sharing large files, your friends can consent to re-sharing them
   if they want
 
 
-  \* Sends blobs of unstructured data around (you can add your own structure)
+  * Sends blobs of unstructured data around (you can add your own structure)
 
 
-  \* Discovering new stuff requires manually sharing links
+  * Discovering new stuff requires manually sharing links
 
 
 
 
-  \### Secure ScuttleButt
+  ### Secure ScuttleButt
 
 
 
@@ -123,13 +123,13 @@ content: >-
   Secure ScuttleButt (SSB) was invented, at least in part, to remove
   distinctions between frontend and backend software, enabling the "backend" to
   be carried around by a user, who then owns their own data. SSB is a protocol
-  that, like Dat, powers \[a bunch of different decentralized
+  that, like Dat, powers [a bunch of different decentralized
   applications](https://www.scuttlebutt.nz/applications). Chief among them is
-  \[Patchwork](https://www.scuttlebutt.nz/getting-started), which is a kind of
+  [Patchwork](https://www.scuttlebutt.nz/getting-started), which is a kind of
   decentralized forum software that lets people have and follow conversations
-  about different topics. SSB is also used for things like \[decentralized
+  about different topics. SSB is also used for things like [decentralized
   chess](https://github.com/Happy0/ssb-chess-mithril/blob/master/README.md) and
-  \[decentralized GitHub-style code
+  [decentralized GitHub-style code
   collaboration](https://github.com/noffle/git-ssb-intro).
 
 
@@ -140,42 +140,42 @@ content: >-
 
 
 
-  \* Peer to peer protocol, can share data via your laptop or phone without
+  * Peer to peer protocol, can share data via your laptop or phone without
   connecting to some company's server, no out-of-the-box web browser support
 
 
-  \* Automatic publication of content to your friends
+  * Automatic publication of content to your friends
 
 
-  \* Bad for sharing large files; among other things you don't want to force all
+  * Bad for sharing large files; among other things you don't want to force all
   your friends to store all your large files
 
 
-  \* Sends blobs of unstructured data around (you can add your own structure)
+  * Sends blobs of unstructured data around (you can add your own structure)
 
 
-  \* Discovering new stuff is somewhat automatic; once you are initially
+  * Discovering new stuff is somewhat automatic; once you are initially
   connected to a network then you can find friends-of-friends and keep
   connecting to more people
 
 
 
 
-  \### ActivityPub
+  ### ActivityPub
 
 
 
 
   ActivityPub was designed to solve the problem of "walled gardens" on the
   internet by providing a common language for websites and apps to speak to each
-  other. Quoting \[my previous writing on the
+  other. Quoting [my previous writing on the
   topic](https://hacks.mozilla.org/2018/11/decentralizing-social-interactions-with-activitypub/),
   ActivityPub is a protocol that "enables a decentralized social web, where a
   network of servers interact with each other on behalf of individual
   users/clients, very much like email operates at a macro level." It enables
-  Twitter-style services like \[Mastodon](https://joinmastodon.org) to talk to
-  Instagram-style services like \[PixelFed](https://pixelfed.social/) and
-  YouTube-style services like \[PeerTube](https://joinpeertube.org/en/). (Brief
+  Twitter-style services like [Mastodon](https://joinmastodon.org) to talk to
+  Instagram-style services like [PixelFed](https://pixelfed.social/) and
+  YouTube-style services like [PeerTube](https://joinpeertube.org/en/). (Brief
   nerd note: I am referring to the server-to-server portion of the protocol
   here.)
 
@@ -187,28 +187,28 @@ content: >-
 
 
 
-  \* Web protocol, so it works in all desktop and mobile web browsers without
+  * Web protocol, so it works in all desktop and mobile web browsers without
   special software
 
 
-  \* Not peer to peer, relies on special network nodes (servers) and an expert
+  * Not peer to peer, relies on special network nodes (servers) and an expert
   class of systems administrators to operate
 
 
-  \* Since content is "federated" (replicated) between known servers, large
+  * Since content is "federated" (replicated) between known servers, large
   files can fill up server hard drives pretty fast
 
 
-  \* Designed around sending highly structured data
+  * Designed around sending highly structured data
 
 
-  \* Discovering new stuff can be pretty easy, it's not too different from
+  * Discovering new stuff can be pretty easy, it's not too different from
   existing centralized services that way
 
 
 
 
-  \## What this means
+  ## What this means
 
 
 
@@ -221,18 +221,18 @@ content: >-
 
 
 
-  \* Dat is great for sharing big files (or bundles of small files).
+  * Dat is great for sharing big files (or bundles of small files).
 
 
 
 
-  \* Secure ScuttleButt is great for spreading messages organically between
+  * Secure ScuttleButt is great for spreading messages organically between
   connected networks of people or computers.
 
 
 
 
-  \* ActivityPub is great for coordinating messages between networks of
+  * ActivityPub is great for coordinating messages between networks of
   always-on servers that are actively maintained by specialist systems
   administrators. 
 
@@ -252,7 +252,7 @@ content: >-
   with each other over ActivityPub to share file serving responsibilities, and
   perhaps discovery of what files my friends have been posting happens over
   Secure ScuttleButt. Maybe every pinning server is also a SSB pub, and
-  \_these\_ coordinate over ActivityPub so there is robust delivery of social
+  _these_ coordinate over ActivityPub so there is robust delivery of social
   data to every user too. That's a very rough example and of course there are
   lots of problems that would need to be solved but it gives us a starting point
   for thinking about how to make this thing happen.
@@ -260,7 +260,7 @@ content: >-
 
 
 
-  \## Conclusion
+  ## Conclusion
 
 
 
@@ -302,10 +302,10 @@ content: >-
 
 
 
-  \_Thanks to Joe Hand and \[noffle](http://eight45.net/) for feedback, and to
-  \[Zach Mandeville](https://coolguy.website/) and \[Sam
+  _Thanks to Joe Hand and [noffle](http://eight45.net/) for feedback, and to
+  [Zach Mandeville](https://coolguy.website/) and [Sam
   Muirhead](https://www.cameralibre.cc/) for getting me thinking about this in
-  the first place.\_
+  the first place._
 authors:
   - Darius Kazemi
 date: '2019-03-22'

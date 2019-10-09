@@ -1,20 +1,20 @@
 <template>
   <div class="post">
-    <h1 class="post__title">Blog post</h1>
+    <h1 class="post__title">{{ $page.frontmatter.title }}</h1>
+    <div v-html="markdown($page.frontmatter.excerpt)"></div>
+    <div>{{ $page.frontmatter.date }}</div>
+    <div>{{ $page.frontmatter.tags }}</div>
+    <div>{{ $page.frontmatter.authors }}</div>
+    <div>{{ $page.frontmatter.image }}</div>
+    <div v-html="markdown($page.frontmatter.content)"></div>
   </div>
 </template>
 
 <script>
 import marked from 'marked'
-import values from '../../.vuepress/assets/data/globals/values.yml'
 
 export default {
   name: 'BlogPost',
-  data () {
-    return {
-      values: values.values
-    }
-  },
   methods: {
     markdown (input) {
       if (input === null) {
@@ -34,35 +34,4 @@ export default {
 <style lang="scss">
 @import '../assets/stylesheets/variables.scss';
 
-.values { 
-  margin-bottom: $space-large;
-
-  &__row {
-    @include mobile {
-      display: flex; 
-      justify-content: space-between;
-    }
-  }
-
-  &__title {
-    margin-bottom: $space-small;
-  }
-
-  &__subhead {
-    @include text-subhead;
-    margin-bottom: $space-medium;
-  }
-
-  &__value {
-    margin-bottom: $space-medium;
-
-    @include mobile {
-      width: 32%;
-    }
-
-    &__name {
-      margin-bottom: $space-small;
-    }
-  }
-}
 </style>

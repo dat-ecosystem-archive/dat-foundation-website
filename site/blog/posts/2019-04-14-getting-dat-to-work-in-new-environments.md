@@ -3,60 +3,60 @@ title: 'Dat Project Newsletter: July 2019'
 excerpt: >-
   The Dat Project newsletter is a monthly newsletter highlighting interesting
   things happening in the Dat community. Let us know if you have something to
-  share! You can support Dat with a \[recurring
-  donation](https://opencollective.com/dat). \[Subscribe
+  share! You can support Dat with a [recurring
+  donation](https://opencollective.com/dat). [Subscribe
   here](http://blog.datproject.org/subscribe).
 content: >-
-  \## Building up on dat
+  ## Building up on dat
 
 
 
 
-  \[Diego](https://twitter.com/carax) from \[Geut](https://github.com/geut)
-  presented his \[guide](https://github.com/geut/building-up-on-dat) on how to
+  [Diego](https://twitter.com/carax) from [Geut](https://github.com/geut)
+  presented his [guide](https://github.com/geut/building-up-on-dat) on how to
   build with Dat at Nodeconf Colombia. Part of the guide contained an example
   React app for viewing Dat archives called
-  \[Datviewer](https://github.com/geut/building-up-on-dat/blob/master/packages/datviewer)
+  [Datviewer](https://github.com/geut/building-up-on-dat/blob/master/packages/datviewer)
   , and a Node.js package manager for loading modules from Dat called
-  \[gpm](https://github.com/geut/building-up-on-dat/tree/master/packages/gpm) .
+  [gpm](https://github.com/geut/building-up-on-dat/tree/master/packages/gpm) .
 
 
 
 
-  \[READ MORE](https://building-up-on-dat.hashbase.io/#0)
+  [READ MORE](https://building-up-on-dat.hashbase.io/#0)
 
 
 
 
-  \------------------------------------------------------------
+  ------------------------------------------------------------
 
 
 
 
 
 
-  \## Alpha release of Cliqz concept browser
+  ## Alpha release of Cliqz concept browser
 
 
 
 
-  \[Cliqz](https://cliqz.com/en/latest) is a privacy focused web browser built
+  [Cliqz](https://cliqz.com/en/latest) is a privacy focused web browser built
   on top of Firefox. They recently released an APK for the alpha version of
-  their new Firefox-based Android web browser which integrates the \[Dat Firefox
+  their new Firefox-based Android web browser which integrates the [Dat Firefox
   extensions](https://github.com/cliqz-oss/dat-webext) . Check out the
-  \[download here](https://github.com/cliqz/cliqz-concept-browser/releases) .
+  [download here](https://github.com/cliqz/cliqz-concept-browser/releases) .
 
 
 
 
-  \------------------------------------------------------------
+  ------------------------------------------------------------
 
 
 
 
 
 
-  \## Dat SDK
+  ## Dat SDK
 
 
 
@@ -69,30 +69,30 @@ content: >-
 
 
 
-  \[Here's a quote](https://twitter.com/RangerMauve/status/1154470449549590528)
+  [Here's a quote](https://twitter.com/RangerMauve/status/1154470449549590528)
   from one of it's first users.
 
 
 
 
-  \[READ MORE](https://github.com/datproject/sdk)
+  [READ MORE](https://github.com/datproject/sdk)
 
 
 
 
-  \------------------------------------------------------------
+  ------------------------------------------------------------
 
 
 
 
 
 
-  \## Hyperdrive Daemon
+  ## Hyperdrive Daemon
 
 
 
 
-  The \[Hyperdivision](https://github.com/hyperdivision) team has been working
+  The [Hyperdivision](https://github.com/hyperdivision) team has been working
   on a daemon that runs in the background on your computer and enables keeping
   hyperdrives seeded and also provides the ability to mount archives as real
   folders on your filesystem using FUSE.
@@ -100,19 +100,19 @@ content: >-
 
 
 
-  \[READ MORE](https://github.com/andrewosh/hyperdrive-daemon)
+  [READ MORE](https://github.com/andrewosh/hyperdrive-daemon)
 
 
 
 
-  \------------------------------------------------------------
+  ------------------------------------------------------------
 
 
 
 
 
 
-  \## Data Terra Nemo talks
+  ## Data Terra Nemo talks
 
 
 
@@ -123,19 +123,19 @@ content: >-
 
 
 
-  \[READ MORE](https://www.youtube.com/channel/UCp-7zAsouqg4LP4xULhYhcg/videos)
+  [READ MORE](https://www.youtube.com/channel/UCp-7zAsouqg4LP4xULhYhcg/videos)
 
 
 
 
-  \------------------------------------------------------------
+  ------------------------------------------------------------
 
 
 
 
 
 
-  \## Cabal-controlled toothbrush
+  ## Cabal-controlled toothbrush
 
 
 
@@ -147,19 +147,19 @@ content: >-
 
 
 
-  \[READ MORE](https://twitter.com/_donblair/status/1151976620032450560)
+  [READ MORE](https://twitter.com/_donblair/status/1151976620032450560)
 
 
 
 
-  \------------------------------------------------------------
+  ------------------------------------------------------------
 
 
 
 
 
 
-  \## Wikipedia on Dat 2.0
+  ## Wikipedia on Dat 2.0
 
 
 
@@ -171,19 +171,19 @@ content: >-
 
 
 
-  \[READ MORE](https://twitter.com/pfrazee/status/1158744193407340544)
+  [READ MORE](https://twitter.com/pfrazee/status/1158744193407340544)
 
 
 
 
-  \------------------------------------------------------------
+  ------------------------------------------------------------
 
 
 
 
 
 
-  \## New ACK feature in Hypercore
+  ## New ACK feature in Hypercore
 
 
 
@@ -198,19 +198,19 @@ content: >-
 
 
 
-  \[READ MORE](https://github.com/mafintosh/hypercore/pull/215)
+  [READ MORE](https://github.com/mafintosh/hypercore/pull/215)
 
 
 
 
-  \------------------------------------------------------------
+  ------------------------------------------------------------
 
 
 
 
 
 
-  \## Peer to-Peer Web Night Freiburg
+  ## Peer to-Peer Web Night Freiburg
 
 
 
@@ -225,19 +225,19 @@ content: >-
 
 
 
-  \[READ MORE](https://cccfr.de/calendar/2019-07-26-DAT-peer2peer.html)
+  [READ MORE](https://cccfr.de/calendar/2019-07-26-DAT-peer2peer.html)
 
 
 
 
-  \------------------------------------------------------------
+  ------------------------------------------------------------
 
 
 
 
 
 
-  \## Dweb Camp Dat-Zine
+  ## Dweb Camp Dat-Zine
 
 
 
@@ -246,19 +246,19 @@ content: >-
   community is putting together a Zine about people's experiences at Dweb Camp.
   If you're interested in contributing, try to get in touch before Wednesday and
   check out the post on SSB:
-  \`%26bwmdpstgxINgLTzj1HphaMostQXNHZ9HzEi65fCuA=.sha256\`
+  `%26bwmdpstgxINgLTzj1HphaMostQXNHZ9HzEi65fCuA=.sha256`
 
 
 
 
-  \------------------------------------------------------------
+  ------------------------------------------------------------
 
 
 
 
 
 
-  \## DatPy is progressing
+  ## DatPy is progressing
 
 
 
@@ -269,36 +269,36 @@ content: >-
 
 
 
-  \[READ MORE](https://datpy.decentral1.se/)
+  [READ MORE](https://datpy.decentral1.se/)
 
 
 
 
-  \------------------------------------------------------------
+  ------------------------------------------------------------
 
 
 
 
 
 
-  \#### \[Help support Dat: make a recurring donation
+  #### [Help support Dat: make a recurring donation
   ](https://opencollective.com/dat) !
 
 
 
 
-  \============================================================
+  ============================================================
 
 
 
 
-  \* Twitter (http://www.twitter.com/dat_project)
+  * Twitter (http://www.twitter.com/dat_project)
 
 
-  \* GitHub (https://github.com/datproject)
+  * GitHub (https://github.com/datproject)
 
 
-  \* Website (http://dat.foundation)
+  * Website (http://dat.foundation)
 date: '2019-08-12'
 featured: true
 template: blog

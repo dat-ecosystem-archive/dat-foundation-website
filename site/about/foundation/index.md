@@ -43,7 +43,7 @@
 </div>
 
 <script> 
-import marked from 'marked'
+import { markdown } from '../../.vuepress/util'
 import content from '../../.vuepress/assets/data/about/foundation.yml'
 import missionStatement from '../../.vuepress/assets/data/globals/mission-statement.yml'
 
@@ -59,19 +59,7 @@ export default {
     }
   },
 
-  methods: {
-    markdown (input) {
-      if (input === null) {
-        return false
-      } else {
-        return marked(String(input), {
-          smartypants: true,
-          gfm: true,
-          breaks: true
-        })
-      }
-    }
-  } 
+  methods: { markdown }
 }
 </script>
 

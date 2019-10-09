@@ -1,6 +1,6 @@
 import marked from 'marked'
 
-function markdown (input) {
+export function markdown (input) {
   if (input === null) {
     return false
   } else {

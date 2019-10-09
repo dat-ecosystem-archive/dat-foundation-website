@@ -4,10 +4,11 @@
 </template>
 
 <script> 
-import marked from 'marked'
+import { markdown } from '../site/.vuepress/util'
 import missionStatement from '../site/.vuepress/assets/data/globals/mission-statement.yml'
 
 export default {
+
   name: 'Home',
   data () {
     return {

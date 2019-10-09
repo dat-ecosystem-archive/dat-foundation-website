@@ -21,7 +21,8 @@
 </template>
 
 <script>
-import marked from 'marked'
+import { markdown } from '../util'
+
 
 export default {
   name: 'Timeline',
@@ -36,19 +37,7 @@ export default {
       return this.items.sort((a, b) => new Date(b.date) - new Date(a.date))
     }
   },
-  methods: {
-    markdown (input) {
-      if (input === null) {
-        return false
-      } else {
-        return marked(String(input), {
-          smartypants: true,
-          gfm: true,
-          breaks: true
-        })
-      }
-    }
-  } 
+  methods: { markdown } 
 }
 </script>
 

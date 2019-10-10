@@ -1,8 +1,103 @@
----
-id: faq
-title: Dat Questions
-sidebar_label: Dat FAQ
----
+## Intro to Dat
+
+### What is Dat?
+
+Dat is a protocol for sharing data between computers. By making sure changes in data are transparent, everyone receives only the data they want, and connecting computers directly (rather than using a cloud server), Dat powers communities building next-generation Web.
+
+### Welcome to Dat
+
+Ever tried moving large files and folders to other computers? Usually this involves one of a few strategies: being in the same location (usb stick), using a cloud service (Dropbox), or using old but reliable technical tools (rsync). None of these easily store, track, and share your data over time. People often are stuck choosing between security, speed, or ease of use. Dat provides all three by using a state of the art technical foundation and user friendly tools for fast and encrypted file sharing that you control.
+
+Dat is free software built for the public by the open source consortium of contributors. Researchers, analysts, libraries, and universities are [already using Dat](https://www.nytimes.com/2017/03/06/science/donald-trump-data-rescue-science.html) to archive and distribute scientific data. Developers are building applications on Dat for [browsing peer-to-peer websites](https://beakerbrowser.com) and [offline editable maps](https://www.digital-democracy.org/blog/update-from-the-ecuadorian-amazon/).  Anyone can use Dat to backup files or share cute cat pictures with a friend. Install and get started today by using the desktop application, command line, or JavaScript library.
+
+Ready to try it? [Head over to Installation to get started.](getting-started-installation.md)
+
+### Why Dat?
+
+Cloud services, such as Dropbox or GitHub, force users to store data on places outside of their control. Until now, it has been very difficult to avoid centralized servers without major sacrifices. Dat's unique distributed network allows users to store data where they want. By decentralizing storage, Dat also increases speeds by downloading from many sources at the same time.
+
+Having a history of how files have changed is essential for effective collaboration and reproducibility. Git has been promoted as a solution for history, but it becomes slow with large files and a high learning curve. Git is designed for editing source code, while Dat is designed for sharing files. With a few simple commands, you can version files of any size. People can instantly get the latest files or download previous versions.
+
+In sum, we've taken the best parts of Git, BitTorrent, and Dropbox to design Dat. Learn more about how it all works by reading [How Dat Works](https://datprotocol.github.io/how-dat-works) or get more in depth at [datprotocol.com](https://datprotocol.com).
+
+#### Distributed Network
+
+Dat works on a distributed network unlike cloud services, such as Dropbox or Google Drive. This means Dat transfers files peer to peer, skipping centralized servers. Dat's network makes file transfers faster, encrypted, and auditable. You can even use Dat on local networks for offline file sharing or local backups. Dat reduces bandwidth costs on popular files, as downloads are *distributed* across all available computers, rather than centralized on a single host.
+
+#### Data History
+
+Dat makes it easy for you to save old versions of files. With every file
+update, Dat automatically tracks your changes. You can even direct these
+backups to be stored efficiently on an external hard drive or a cloud serve by using [our archiver](usingdat-server.md).
+
+#### Security
+
+Dat transfers files over an encrypted connection using state-of-the-art
+cryptography. Only users with your unique read key can access your files. Your dat read key allows users to download and re-share your files. To write updates to a dat, users must have the write key. Dat also verifies the hashes of files on download so no malicious content can be added. As long as the read key isn't shared outside of your team, the content will be encrypted, though the IP addresses and discovery key may become known. [Read more about security in dat.](learn-more-security.md)
+
+Note: There has not been an independent security audit for Dat.
+
+### Who we are
+
+Dat is a vibrant global community of people contributing and building software with the Dat protocol. The community hosts [weekly meetings](https://comm-comm.datproject.org/) to chat about Dat.
+
+The Dat Project is a fiscally supported project of [Code for Science & Society](https://codeforscience.org), a nonprofit supporting open source tools that benefit science and society. 
+
+These documents are collaboratively maintained on Github under
+[datproject/docs](https://github.com/datproject/docs). We welcome corrections
+and requests for clarification.
+
+Enough reading, more doing? Head over to [Installation to get started](getting-started-installation.md).
+
+## Installation
+
+### Installing Dat
+
+This page will guide how to install Dat for the command line or javascript applications. There are also [many other applications](https://dat.land/apps), such as [Beaker Browser](https://beakerbrowser.com), which provide a graphical user interface and much more on Dat. 
+
+Dat can be used as a command line tool, a Node.js library, and a JS library:
+
+* See below to install the `dat` command line tool.
+* Node.js - `npm install dat` and [read more](https://github.com/datproject/dat-node).
+* JavaScript - `npm install dat-js` and [learn more](https://github.com/datproject/dat-js).
+
+
+### Installing Dat Command Line
+
+To install Dat, you can use `wget` or `curl` to download and get you started with Dat!
+
+```
+wget -qO- https://raw.githubusercontent.com/datproject/dat/master/download.sh | bash
+```
+
+
+```
+curl -o- https://raw.githubusercontent.com/datproject/dat/master/download.sh | bash
+```
+
+Once the install finishes, you should be able to run the `$ dat` command in your terminal. If not, see the [installation troubleshooting](usingdat-troubleshooting.md#installation-troubleshooting) for tips.
+
+### Using npm
+
+If you have `npm`, you can install Dat with it:
+
+```
+npm install -g dat
+```
+
+Make sure you have `node` and `npm` installed first. If not, see the prerequisites section below. We recommend `npm` because it makes it easy to install new versions of `dat` when they get released.
+
+Once `npm install` finishes, you should be able to run the `$ dat` command. If not, see the [installation troubleshooting](usingdat-troubleshooting.md#installation-troubleshooting) for tips.
+
+#### NPM Prerequisites
+
+* **Node**: You'll need to install Node JS before installing Dat. Dat needs `node` version 6 or above and `npm` installed. You can run `node -v` to check your version. Dat follows the Node.js LTS schedule for Node support.
+* **npm**: `npm` is installed with node. You can run `npm -v` to make sure it is installed.
+
+Once you have `npm` ready, install `dat` from npm with the `--global, -g` option, `npm install -g dat`.
+
+## Dat FAQ
+### Dat Questions
 
 ### Sustainability
 
@@ -20,7 +115,7 @@ Dat software is built with long-term sustainability as a focus. For us, this goe
 
 **No Centralized Servers** Dat transfers all data directly between peers and has little reliance on Dat maintaining servers. We have public servers for peers to help discover each other, but those use very little bandwidth and anyone can run them.
 
-## Dat Usage
+### Dat Usage
 
 ### I am having trouble connecting to another Dat, how do I debug?
 
@@ -105,7 +200,7 @@ Currently, Dat uses one keypair to verify that only one writer is allowed to add
 
 [HyperDB](https://github.com/mafintosh/hyperdb/) adds multiwriter support for Dat. It is under [active development](https://github.com/datproject/planning).
  
-## Dat vs ?
+### Dat vs ?
 
 Dat has a lot of overlap with other distributed web tools, data management tools, and distributed version control. Below are some of the most common questions.
 
@@ -123,7 +218,7 @@ In order for IPFS to provide guarantees about interoperability, IPFS application
 
 Academic Torrents [13] uses BitTorrent to share scientific datasets, and BitTorrent has many drawbacks that hinder direct use by scientists. BitTorrent is for sharing static files, that is, files that do not change over time. Dat, on the other hand, has the ability to update and sync files over the peer-to-peer network. BitTorrent is also inefficient at providing random access to data in larger datasets, which is crucial for those who want to get only a piece of a large dataset. BitTorrent comes close to the solution, but we have been able to build something that is more efficient and better designed for the data sharing use case.
 
-## Under the Hood
+### Under the Hood
 
 ### Is Dat different from hyperdrive?
 
@@ -141,3 +236,4 @@ Dat(dir, {sparse: true}, function (dat) {
   console.log('got the dat!')
 })
 ```
+

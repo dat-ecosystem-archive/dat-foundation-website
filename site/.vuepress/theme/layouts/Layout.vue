@@ -7,8 +7,11 @@
         {{ crumb }}
       </span>
     </div>
+
     <main class="app__main">
-      <Content/>
+      <transition appear name="fade">
+        <Content/>
+      </transition>
       <Post 
         v-if="$page.frontmatter.template === 'blog'" 
       />
@@ -36,6 +39,14 @@
 @import '../../assets/stylesheets/variables.scss';
 
 .app__main {
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .75s;
+  }
+
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
+
   background: $color-white;
   padding: $space-base;
 

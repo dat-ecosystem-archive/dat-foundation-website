@@ -101,27 +101,26 @@ collections:
       - {label: 'Active', name: 'active', widget: 'boolean', hint: 'If set to active, the full bio is displayed.', required: false}
       - {label: 'Image', name: 'image', widget: 'image', required: false }
       - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, both image and name will link there.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
-
   - label: 'Projects'
-    name: 'people'
+    name: 'projects'
     identifier_field: 'name'
     folder: site/_data/projects
     create: true
     slug: "{{name}}"
     fields: 
-      - {label: 'Name', name: 'name', widget: 'string', hint: 'First and last name; required.', required: true}
-      - {label: 'Title', name: 'title', widget: 'string', required: false}
-      - label: 'Affiliation'
-        name: 'affiliation'
-        widget: 'object'
-        required: false
-        fields: 
-          - {label: 'Organization or company name', name: 'name', widget: 'string', required: false}
-          - {label: 'URL', name: 'url', widget: 'string', required: false, pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.'] }
-      - {label: 'Bio', name: 'bio', widget: 'markdown', buttons: ['link'], required: false}    
-      - {label: 'Active', name: 'active', widget: 'boolean', hint: 'If set to active, the full bio is displayed.', required: false}
+      - {label: 'Name', name: 'name', widget: 'string', required: true}
+      - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link'], required: true}
       - {label: 'Image', name: 'image', widget: 'image', required: false }
       - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, both image and name will link there.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
+  - label: 'Tags'
+    name: 'tags'
+    identifier_field: 'name'
+    folder: site/_data/projects
+    create: true
+    slug: "{{name}}"
+    fields: 
+      - {label: 'Name', name: 'name', widget: 'string', required: true}
+
   # Pages
   - label: 'About'
     name: 'about'

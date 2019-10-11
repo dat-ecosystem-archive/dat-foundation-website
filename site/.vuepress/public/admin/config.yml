@@ -86,7 +86,7 @@ collections:
   - label: 'People'
     name: 'people'
     identifier_field: 'name'
-    folder: 'site/_data/people'
+    folder: 'site/_people'
     create: true
     slug: "{{name}}"
     fields: 
@@ -117,7 +117,7 @@ collections:
       - label: "Tags"
         name: "tags"
         widget: "relation"
-        collection: "_data/tags"
+        collection: "_tags"
         searchFields: ["name"]
         multiple: true
         valueField: "name"
@@ -127,7 +127,7 @@ collections:
   - label: 'Tags'
     name: 'tags'
     identifier_field: 'name'
-    folder: site/_data/tags
+    folder: _tags
     create: true
     slug: "{{name}}"
     fields: 
@@ -151,7 +151,7 @@ collections:
               - label: "People"
                 name: "people"
                 widget: "relation"
-                collection: "people"
+                collection: "_people"
                 searchFields: ["name"]
                 multiple: true
                 valueField: "name"

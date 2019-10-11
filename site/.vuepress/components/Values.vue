@@ -17,7 +17,7 @@
 
 <script>
 import { markdown } from '../util'
-import values from '../../.vuepress/assets/data/globals/values.yml'
+import values from '../../../site/_data/globals/values.yml'
 
 export default {
   name: 'Values',

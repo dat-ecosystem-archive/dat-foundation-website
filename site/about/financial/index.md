@@ -1,7 +1,7 @@
 <h4>{{ title }}</h4>
 
 <script>
-import content from '../../.vuepress/assets/data/about/financial.yml'
+import content from '../../../site/_data/about/financial.yml'
 
 export default {
   name: 'AboutFinancial',

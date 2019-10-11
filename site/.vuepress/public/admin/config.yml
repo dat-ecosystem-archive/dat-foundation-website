@@ -48,7 +48,7 @@ collections:
   - name: globals
     label: Globals
     files:
-      - file: site/.vuepress/assets/data/globals/navigation.yml
+      - file: site/_data/globals/navigation.yml
         label: Navigation
         name: navigation
         fields:
@@ -64,7 +64,7 @@ collections:
                 fields:
                   - {label: Label, name: label, widget: string}
                   - {label: Path, name: path, widget: string}
-      - file: site/.vuepress/assets/data/globals/values.yml
+      - file: site/_data/globals/values.yml
         label: Values
         name: values
         fields: 
@@ -74,7 +74,7 @@ collections:
             fields: 
                 - {label: Name, name: name, widget: string}
                 - {label: Description, name: description, widget: markdown}
-      - file: site/.vuepress/assets/data/globals/mission-statement.yml
+      - file: site/_data/globals/mission-statement.yml
         label: Mission Statement
         name: missionStatement
         fields: 
@@ -84,7 +84,7 @@ collections:
   - label: 'People'
     name: 'people'
     identifier_field: 'name'
-    folder: 'site/people'
+    folder: 'site/_data/people'
     create: true
     slug: "{{name}}"
     fields: 
@@ -101,14 +101,34 @@ collections:
       - {label: 'Active', name: 'active', widget: 'boolean', hint: 'If set to active, the full bio is displayed.', required: false}
       - {label: 'Image', name: 'image', widget: 'image', required: false }
       - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, both image and name will link there.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
-  
+
+  - label: 'Projects'
+    name: 'people'
+    identifier_field: 'name'
+    folder: site/_data/projects
+    create: true
+    slug: "{{name}}"
+    fields: 
+      - {label: 'Name', name: 'name', widget: 'string', hint: 'First and last name; required.', required: true}
+      - {label: 'Title', name: 'title', widget: 'string', required: false}
+      - label: 'Affiliation'
+        name: 'affiliation'
+        widget: 'object'
+        required: false
+        fields: 
+          - {label: 'Organization or company name', name: 'name', widget: 'string', required: false}
+          - {label: 'URL', name: 'url', widget: 'string', required: false, pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.'] }
+      - {label: 'Bio', name: 'bio', widget: 'markdown', buttons: ['link'], required: false}    
+      - {label: 'Active', name: 'active', widget: 'boolean', hint: 'If set to active, the full bio is displayed.', required: false}
+      - {label: 'Image', name: 'image', widget: 'image', required: false }
+      - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, both image and name will link there.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
   # Pages
   - label: 'About'
     name: 'about'
     files:    
       - label: 'People'
         name: 'People'
-        file: 'site/.vuepress/assets/data/about/people.yml'
+        file: 'site/_data/about/people.yml'
         fields:
           - {label: Title, name: title, widget: string}
           - label: 'Sections'
@@ -135,7 +155,7 @@ collections:
           
       - label: 'Foundation'
         name: 'foundation'
-        file: 'site/.vuepress/assets/data/about/foundation.yml'
+        file: 'site/_data/about/foundation.yml'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Introduction, name: intro, widget: markdown}
@@ -157,7 +177,7 @@ collections:
               - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link']}    
       - label: 'History'
         name: 'history'
-        file: 'site/.vuepress/assets/data/about/history.yml'
+        file: 'site/_data/about/history.yml'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Introduction, name: intro, widget: markdown}
@@ -172,16 +192,6 @@ collections:
                 default: ''
                 format: 'MMMM YYYY'
               - {label: 'Milestone', name: 'milestone', widget: 'boolean', hint: 'If set as a milestone the timeline item is displayed at a larger size.', required: false}
-  
-  - name: 'Documentation'
-    label: 'Docs'
-    folder: 'site/docs'
-    create: true
-    slug: '{{slug}}'
-    fields:
-      - {label: 'Title', name: 'title', widget: 'string'}
-      - {label: 'Content', name: 'content', widget: 'markdown'}
-
   - label: 'Learn'
     name: 'learn'
     files:    

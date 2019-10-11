@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import navItems from '../assets/data/globals/navigation.yml'
+import navItems from '../../../site/_data/globals/navigation.yml'
 export default {
   name: 'Navbar',
   data () {

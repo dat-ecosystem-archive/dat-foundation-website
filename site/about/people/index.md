@@ -11,7 +11,7 @@
 </div>
 
 <script>
-import content from '../../.vuepress/assets/data/about/people.yml'
+import content from '../../../site/_data/about/people.yml'
 
 export default {
   name: 'AboutPeople',

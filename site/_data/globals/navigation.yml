@@ -11,22 +11,20 @@ nav_items:
       #   path: /about/financial/
   - label: Community
     secondary:
-      - label: Updates
-        path: /community/updates/
-      - label: Forum
-        path: /community/forum/
+      # - label: Forum
+      #   path: /community/forum/
       - label: Chat
         path: /community/chat/
       - label: Events
         path: /community/events/
-      - label: Code of Conduct
-        path: /about/code-of-conduct/
+      # - label: Code of Conduct
+      #   path: /about/code-of-conduct/
   - label: Blog
     path: /blog/
   - label: Learn
     secondary:
-      - label: Docs
-        path: /learn/docs/
+      # - label: Docs
+      #   path: /learn/docs/
       - label: Tutorials
         path: /learn/tutorials
       - label: Protocol
@@ -37,5 +35,5 @@ nav_items:
         path: /explore/projects/
       - label: Modules
         path: /explore/modules/
-      - label: Design
-        path: /explore/design/
+      # - label: Design
+      #   path: /explore/design/

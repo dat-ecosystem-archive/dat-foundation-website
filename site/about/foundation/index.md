@@ -44,8 +44,8 @@
 
 <script> 
 import { markdown } from '../../.vuepress/util'
-import content from '../../.vuepress/assets/data/about/foundation.yml'
-import missionStatement from '../../.vuepress/assets/data/globals/mission-statement.yml'
+import content from '../../../site/_data/about/foundation.yml'
+import missionStatement from '../../../site/_data/globals/mission-statement.yml'
 
 export default {
   name: 'AboutFoundation',

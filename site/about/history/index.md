@@ -9,7 +9,7 @@
 </div>
 
 <script>
-import content from '../../.vuepress/assets/data/about/history.yml'
+import content from '../../../site/_data/about/history.yml'
 
 export default {
   name: 'AboutHistory',

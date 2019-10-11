@@ -5,7 +5,7 @@
 
 <script> 
 import { markdown } from '../site/.vuepress/util'
-import missionStatement from '../site/.vuepress/assets/data/globals/mission-statement.yml'
+import missionStatement from '../site/_data/globals/mission-statement.yml'
 
 export default {
 

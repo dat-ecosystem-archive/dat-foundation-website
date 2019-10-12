@@ -75,7 +75,7 @@ collections:
         name: 'publishdate'
         widget: 'datetime'
         default: ''
-        format: 'D MMMM YYYY'
+        dateFormat: 'D MMMM YYYY'
       - {label: 'Image', name: 'image', widget: 'image', required: false }
       - {label: 'Featured', name: 'featured', widget: 'boolean', hint: 'If set to featured, the full blog post card is displayed on the blog index.', required: false}
       - {label: "Template", name: "template", widget: "hidden", default: "blog"}

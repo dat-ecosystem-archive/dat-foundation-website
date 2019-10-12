@@ -99,6 +99,7 @@ nav,
   padding: $space-medium;
   position: fixed;
   top: 0; right: 0; bottom: 0; left: 20vw;
+  z-index: 1;
 
   &__shade {
     position: fixed;

@@ -22,12 +22,14 @@ collections:
             fields:
               - {label: Label, name: label, widget: string}
               - {label: Path, name: path, widget: string, required: false, hint: 'Leave this blank if this item has no landing page or children.'}
+              - {label: 'External', name: 'external', widget: 'boolean', hint: 'Set to external to handle external links without using the router.', required: false, default: false}
               - label: Secondary items
                 name: secondary
                 widget: list
                 fields:
                   - {label: Label, name: label, widget: string}
                   - {label: Path, name: path, widget: string}
+                  - {label: 'External', name: 'external', widget: 'boolean', hint: 'Set to external to handle external links without using the router.', required: false, default: false}
       - file: site/_data/globals/values.yml
         label: Values
         name: values

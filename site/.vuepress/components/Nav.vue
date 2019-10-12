@@ -28,15 +28,22 @@
           {{ navItem.label }}
         </div>
 
-    <ul class="nav-section__items">
-      <li v-for="secondary in navItem.secondary"
-          class="nav-section__items__link">
-        <router-link :to="secondary.path">
-          {{ secondary.label }}
-        </router-link>
-      </li>
-    </ul>
+      <ul class="nav-section__items">
+        <li v-for="secondary in navItem.secondary"
+            class="nav-section__items__link">
 
+          <a v-if="secondary.external"
+             target="_blank"
+             rel="noopener"
+             :href="secondary.path">
+            {{ secondary.label }}
+          </a>
+              
+          <router-link v-else :to="secondary.path">
+            {{ secondary.label }}
+          </router-link>
+        </li>
+      </ul>
     </div>
   </nav>
 </header>
@@ -163,6 +170,7 @@ nav,
 
     &__link { 
       margin-bottom: $space-tiny; 
+      margin-left: 0;
       
       &:hover { color: $color-green; }
     }

@@ -43,12 +43,13 @@ collections:
         name: missionStatement
         fields: 
           - {label: Mission Statement, name: missionStatement, widget: markdown}
+  
   - name: 'blog' 
     label: 'Blog' 
     folder: 'site/blog/posts'
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    preview_path_date_field: "publishdate"
+    preview_path_date_field: "date"
     fields: 
       - {label: 'Title', name: 'title', widget: 'string'}
       - {label: 'Excerpt', name: 'excerpt', widget: 'markdown', hint: 'This displays on the blog index page and as the subhead of the blog post.', required: true}
@@ -72,10 +73,10 @@ collections:
         displayFields: ["name"]
         required: false
       - label: 'Publish date'
-        name: 'publishdate'
+        name: 'date'
         widget: 'datetime'
         default: ''
-        dateFormat: 'D MMMM YYYY'
+        format: 'D MMMM YYYY'
       - {label: 'Image', name: 'image', widget: 'image', required: false }
       - {label: 'Featured', name: 'featured', widget: 'boolean', hint: 'If set to featured, the full blog post card is displayed on the blog index.', required: false}
       - {label: "Template", name: "template", widget: "hidden", default: "blog"}

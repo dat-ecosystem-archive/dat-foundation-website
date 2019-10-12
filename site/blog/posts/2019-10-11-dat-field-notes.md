@@ -49,6 +49,9 @@ content: >-
 
   Thanks for everyone that has contributed time for thoughtful writing about
   Dat!
+tags:
+  - node
+  - rust
 authors:
   - Joe Hand
 date: '2019-03-19'

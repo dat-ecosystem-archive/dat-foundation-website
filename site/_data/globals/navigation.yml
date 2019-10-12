@@ -7,24 +7,19 @@ nav_items:
         path: /about/foundation/
       - label: History
         path: /about/history/
-      # - label: Financial
-      #   path: /about/financial/
   - label: Community
     secondary:
-      # - label: Forum
-      #   path: /community/forum/
       - label: Chat
         path: /community/chat/
       - label: Events
         path: /community/events/
-      # - label: Code of Conduct
-      #   path: /about/code-of-conduct/
+      - featured: true
+        label: Forums
+        path: 'https://dat.discourse.group/'
   - label: Blog
     path: /blog/
   - label: Learn
     secondary:
-      # - label: Docs
-      #   path: /learn/docs/
       - label: Tutorials
         path: /learn/tutorials
       - label: Protocol
@@ -35,5 +30,3 @@ nav_items:
         path: /explore/projects/
       - label: Modules
         path: /explore/modules/
-      # - label: Design
-      #   path: /explore/design/

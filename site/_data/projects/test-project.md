@@ -8,6 +8,11 @@ description: >-
   elit. Curabitur blandit tempus porttitor. Sed posuere consectetur est at
   lobortis. Cum sociis natoque penatibus et magnis dis parturient montes,
   nascetur ridiculus mus.
+image: /images/boyfriend.jpg
 website: 'https://www.google.com'
+tags:
+  - node
+  - community
+  - rust
 ---
 

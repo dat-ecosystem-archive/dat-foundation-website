@@ -7,7 +7,6 @@
            class="blog__index__post__image" />
 
       <div class="blog__index__post__info">
-        
         <router-link tag="h3" :to="post.path" class="blog__index__post__title">{{ post.frontmatter.title }}</router-link>
         <p class="blog__index__post__excerpt" v-html="markdown(post.frontmatter.excerpt)"></p>
         <div class="blog__index__post__authors">

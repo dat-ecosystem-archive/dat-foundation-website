@@ -65,13 +65,7 @@ $color-gray: #65737f;
 $color-gray-light: #a7afb6;
 $color-highlight: #94e4a5;
 
-@mixin text-subhead {
-  @include type-base;
 
-  @include mobile {
-    @include type-medium;
-  }
-}
 
 a {
   text-decoration: none;
@@ -85,6 +79,13 @@ p > a {
 
 p + p { 
   margin-top: $space-base; 
+}
+
+p,
+.text {
+  h1, h2, h3, h4, h5 {
+    margin: $space-base 0;
+  }
 }
 
 * {
@@ -136,6 +137,14 @@ h3 {
   font-weight: 700;
 }
 
+ul, ol {
+  margin: $space-small 0;
+  li { 
+    margin-left: $space-base;
+    margin-bottom: $space-small; 
+  }
+}
+
 // TODO: make this look really nice;
 code {
   color: white;
@@ -178,8 +187,21 @@ $breakpoint-mobile: 640px;
 
 
 // start moving things into these reusable styles, like page headers and subheads and eventually breadcrumbs
+
 .page-title {
-  margin-bottom: 1rem;
+  margin-bottom: $space-medium;
+}
+
+@mixin text-title {
+  margin-bottom: $space-medium;
+}
+
+@mixin text-subhead {
+  @include type-base;
+
+  @include mobile {
+    @include type-medium;
+  }
 }
 
 @mixin shadow {
@@ -187,7 +209,21 @@ $breakpoint-mobile: 640px;
 }
 
 
+.tag {
+  color: $color-green;
+  padding: 3px $type-size-tiny;
+  @include type-small;
+  border-radius: 20%/50%;
+  display: inline-block;
+  margin-right: $space-small;
+  text-align: center;
+  border: 1px solid $color-green;
 
+  &:hover {
+    color: $color-white;
+    background-color: $color-green;
+  }
+} 
 
 
 

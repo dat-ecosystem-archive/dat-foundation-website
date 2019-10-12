@@ -9,11 +9,9 @@ excerpt: >-
 content: >-
   I knew coming into this fellowship that I wanted my work to be about the
   decentralized web as a whole, and not just Dat. CS&S was totally receptive to
-  that and so I've been spending time learning about Dat, but also about
-  [Secure ScuttleButt](https://www.scuttlebutt.nz/) and
+  that and so I've been spending time learning about Dat, but also about [Secure
+  ScuttleButt](https://www.scuttlebutt.nz/) and
   [ActivityPub](https://activitypub.rocks/).
-
-
 
 
   If what we broadly want is for power to be redistributed from the hands of
@@ -26,11 +24,7 @@ content: >-
   practice surrounding the protocols.
 
 
-
-
   ## Complementary protocols, working together
-
-
 
 
   I recently attended ScuttleCamp outside of Wellington, New Zealand. A bunch of
@@ -46,8 +40,6 @@ content: >-
   protocols to provide great, useful, people-powered software.
 
 
-
-
   In addition to working with and meeting people from the Dat and SSB community,
   I've been [developing](https://github.com/dariusk/express-activitypub)
   [software](https://github.com/dariusk/rss-to-activitypub/) that uses
@@ -58,13 +50,9 @@ content: >-
   that might be a helpful read.
 
 
-
-
   In the course of learning about these three protocols and being inspired by
   conversations with the people that use them, I've come to see them as
   fulfilling different, complementary roles.
-
-
 
 
   I'll try and sketch them out here _extremely_ briefly and broadly, and
@@ -73,11 +61,7 @@ content: >-
   three, but these are the three that I know best.)
 
 
-
-
   ### Dat
-
-
 
 
   If you're reading this blog, chances are you already know about Dat. Dat was
@@ -87,37 +71,25 @@ content: >-
   publish your own websites without needing a web hosting service.
 
 
-
-
   My basic bullet points:
-
-
 
 
   * Peer to peer protocol, can share data via your laptop or phone without
   connecting to some company's server, no out-of-the-box web browser support
 
-
   * All your content is its own hidden island until its URL is sent to someone
   else; that person can share the URL or even post it somewhere public and now
   your island is on the map
 
-
-  * Good for sharing large files, your friends can consent to re-sharing them
-  if they want
-
+  * Good for sharing large files, your friends can consent to re-sharing them if
+  they want
 
   * Sends blobs of unstructured data around (you can add your own structure)
-
 
   * Discovering new stuff requires manually sharing links
 
 
-
-
   ### Secure ScuttleButt
-
-
 
 
   Secure ScuttleButt (SSB) was invented, at least in part, to remove
@@ -133,37 +105,25 @@ content: >-
   collaboration](https://github.com/noffle/git-ssb-intro).
 
 
-
-
   My basic bullet points:
-
-
 
 
   * Peer to peer protocol, can share data via your laptop or phone without
   connecting to some company's server, no out-of-the-box web browser support
 
-
   * Automatic publication of content to your friends
-
 
   * Bad for sharing large files; among other things you don't want to force all
   your friends to store all your large files
 
-
   * Sends blobs of unstructured data around (you can add your own structure)
-
 
   * Discovering new stuff is somewhat automatic; once you are initially
   connected to a network then you can find friends-of-friends and keep
   connecting to more people
 
 
-
-
   ### ActivityPub
-
-
 
 
   ActivityPub was designed to solve the problem of "walled gardens" on the
@@ -180,37 +140,25 @@ content: >-
   here.)
 
 
-
-
   My basic bullet points:
-
-
 
 
   * Web protocol, so it works in all desktop and mobile web browsers without
   special software
 
-
   * Not peer to peer, relies on special network nodes (servers) and an expert
   class of systems administrators to operate
 
-
-  * Since content is "federated" (replicated) between known servers, large
-  files can fill up server hard drives pretty fast
-
+  * Since content is "federated" (replicated) between known servers, large files
+  can fill up server hard drives pretty fast
 
   * Designed around sending highly structured data
-
 
   * Discovering new stuff can be pretty easy, it's not too different from
   existing centralized services that way
 
 
-
-
   ## What this means
-
-
 
 
   I've started thinking of these three protocols as each solving certain
@@ -219,30 +167,17 @@ content: >-
   seemingly intractable problems.
 
 
-
-
   * Dat is great for sharing big files (or bundles of small files).
-
-
-
 
   * Secure ScuttleButt is great for spreading messages organically between
   connected networks of people or computers.
 
-
-
-
-  * ActivityPub is great for coordinating messages between networks of
-  always-on servers that are actively maintained by specialist systems
-  administrators. 
-
-
+  * ActivityPub is great for coordinating messages between networks of always-on
+  servers that are actively maintained by specialist systems administrators. 
 
 
   Looking at the software this way gives us a framework to design complex
   decentralized services.
-
-
 
 
   For example: how can we have a Google Drive style system where a bunch of
@@ -251,23 +186,17 @@ content: >-
   Dat, we have a small network of always-on Dat pinning servers that coordinate
   with each other over ActivityPub to share file serving responsibilities, and
   perhaps discovery of what files my friends have been posting happens over
-  Secure ScuttleButt. Maybe every pinning server is also a SSB pub, and
-  _these_ coordinate over ActivityPub so there is robust delivery of social
-  data to every user too. That's a very rough example and of course there are
-  lots of problems that would need to be solved but it gives us a starting point
-  for thinking about how to make this thing happen.
-
-
+  Secure ScuttleButt. Maybe every pinning server is also a SSB pub, and _these_
+  coordinate over ActivityPub so there is robust delivery of social data to
+  every user too. That's a very rough example and of course there are lots of
+  problems that would need to be solved but it gives us a starting point for
+  thinking about how to make this thing happen.
 
 
   ## Conclusion
 
 
-
-
   All of this points to two major recommendations that I can make.
-
-
 
 
   First, that software developers should not be afraid to mix, match, and layer
@@ -280,8 +209,6 @@ content: >-
   big centralized tech giants have to offer.
 
 
-
-
   Second, communities that build and support these protocols need to keep their
   specific strengths and weaknesses in mind. Instead of trying to make a
   "kitchen sink" protocol that solves a wide variety of problems, we should
@@ -290,16 +217,12 @@ content: >-
   communities.
 
 
-
-
   The internet has always been built on a bunch of different technologies
   filling in the gaps for each other. For example, while web browsers mainly use
   the TCP protocol for loading web pages, they switch to using UDP when it's
   convenient for things like video chat. Decentralized web protocols should be
   no exception to this pattern. The only way we're going to make the internet
   better is by working together to help each other.
-
-
 
 
   _Thanks to Joe Hand and [noffle](http://eight45.net/) for feedback, and to

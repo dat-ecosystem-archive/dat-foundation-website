@@ -24,7 +24,9 @@
           {{ navItem.label }}
         </router-link>
 
-        <div v-else class="nav-section__name">
+        <div v-else 
+             class="nav-section__name"
+             :class="{'is-active': subIsActive('/' + navItem.label.toLowerCase())}">
           {{ navItem.label }}
         </div>
 
@@ -62,6 +64,13 @@ export default {
   methods: {
     toggleMobileNav() {
       this.mobileNavActive = !this.mobileNavActive
+    },
+    subIsActive(input) {
+      const paths = Array.isArray(input) ? input : [input];
+      
+      return paths.some(path => {
+        return this.$route.path.indexOf(path) === 0 // current path starts with this path string
+        })
     }
   }
 }
@@ -138,7 +147,7 @@ nav,
 .nav-section {
   position: relative;
   margin-bottom: $space-medium;
-  margin-right: $space-medium;
+  margin-right: $space-large;
 
   @include mobile {
     &:last-of-type {
@@ -155,6 +164,23 @@ nav,
   &__name {
     font-weight: bold;
     margin-bottom: $space-small;
+
+    &.is-active,
+    &.router-link-active {
+      color: $color-green;
+      position: relative;
+
+      &::before {
+        clip-path: polygon(49% 0, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        content: '';
+        height: 10px  * 1.15;
+        width: 10px;
+        background: $color-green;
+        position: absolute;
+        left: -$space-base;
+        top: 6px;
+      }
+    }
   }
 
   &__items {
@@ -173,6 +199,11 @@ nav,
       margin-left: 0;
       
       &:hover { color: $color-green; }
+
+      .router-link-active {
+        color: $color-green;
+        text-decoration: underline;
+      }
     }
   }
 }

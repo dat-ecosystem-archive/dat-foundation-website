@@ -48,19 +48,13 @@
 
     &__post {
       @include shadow;
+      @include hover-pop;
       overflow: hidden;
       margin-bottom: $space-large;
       border: 0.5px solid $color-gray-light;
       // padding: $space-base;
       width: 30%;
       margin-right: $space-small;
-      transition: all 250ms ease-in-out;
-
-
-      &:hover {
-        transform: translateY(-$space-small);
-        cursor: pointer;
-      }
 
       &:last-of-type {
         margin-right: 0;

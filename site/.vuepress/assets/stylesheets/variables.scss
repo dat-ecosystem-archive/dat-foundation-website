@@ -208,6 +208,14 @@ $breakpoint-mobile: 640px;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
 }
 
+@mixin hover-pop {
+  transition: all 250ms ease-in-out;
+
+  &:hover {
+    transform: translateY(-$space-tiny);
+    cursor: pointer;
+  }
+}
 
 .tag {
   color: $color-green;

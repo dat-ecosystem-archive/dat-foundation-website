@@ -9,11 +9,11 @@ date: 19 May 2019
 start: '8:00'
 end: '13:00'
 location:
-  address-1: Kluckstr. 25
-  address-2: 10785 Berlin
-  location-url: 'https://www.google.com'
+  addressOne: Kluckstraße 25
+  addressTwo: 10785 Berlin, Germany
+  url: 'https://www.google.com'
   name: Trust
-rsvp-url: 'https://events.datproject.org'
-livestream-url: 'https://www.google.com'
+rsvp: 'https://events.datproject.org'
+livestream: 'https://www.google.com'
 ---
 

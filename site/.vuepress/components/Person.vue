@@ -29,9 +29,9 @@ export default {
   },
 
   computed: {
-    person(name) {
+    person (name) {
       return this.$site.pages
-        .filter(x => x.path.startsWith('/_data/people/') && x.frontmatter.name == this.name)[0].frontmatter
+        .filter(x => x.path.startsWith('/people/') && x.frontmatter.name == this.name)[0].frontmatter
     }
   },
 

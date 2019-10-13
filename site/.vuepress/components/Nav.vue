@@ -72,6 +72,11 @@ export default {
         return this.$route.path.indexOf(path) === 0 // current path starts with this path string
         })
     }
+  },
+  watch: {
+    '$route' () {
+      this.mobileNavActive = false
+    }
   }
 }
 </script>

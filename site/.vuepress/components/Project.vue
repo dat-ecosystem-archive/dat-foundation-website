@@ -1,20 +1,27 @@
 <template>
   <div class="project">
-    <div class="project__name">
-      <a :href="project.frontmatter.website">
-        {{ project.frontmatter.name }}
-      </a>
-    </div>
+    <a :href="project.frontmatter.website">
+      <figure class="project__image">
+        <img :src="project.frontmatter.image" alt="" >
+      </figure>
+    </a>
+    
+    <div class="project__details">
+      <div class="project__name">
+        <a :href="project.frontmatter.website">
+          {{ project.frontmatter.name }}
+        </a>
+      </div>
+      <div class="project__description">
+        {{ project.frontmatter.description }}
+      </div>
 
-    <div class="project__description">
-      {{ project.frontmatter.description }}
-    </div>
-
-    <div class="project__tags">
-      <span v-for="tag in project.frontmatter.tags"
-            class="tag">
-        {{ tag }}
-      </span>
+      <div class="project__tags">
+        <span v-for="tag in project.frontmatter.tags"
+              class="tag">
+          {{ tag }}
+        </span>
+      </div>
     </div>
   </div>
 </template>
@@ -24,8 +31,18 @@ export default {
   name: 'Project',
   props: {
     project: {
-      type: Array,
+      type: Object,
       required: false
+    },
+    name: {
+      type: String,
+      required: false
+    }
+  },
+  computed: {
+    fetchProject (name) {
+      return this.$site.pages
+        .filter(x => x.path.startsWith('/projects/') && x.frontmatter.name == this.name)[0].frontmatter
     }
   }
 }
@@ -35,7 +52,40 @@ export default {
 @import '../assets/stylesheets/variables.scss';
 
 .project {
+  &__image {
+    height: 12vw;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: $space-base;
 
+    img { object-fit: cover; }
+  }
+
+  &__name {
+    font-weight: bold;
+    margin-bottom: $space-small;
+    color: $color-green;
+  }
+
+  &__description {
+    margin-bottom: $space-base;
+  }
+
+  // Style when featured.
+  .projects-index__featured & {
+    display: flex;
+    margin-bottom: $space-medium;
+
+    &__image {
+      margin-right: $space-base;
+      width: 40vw;
+      height: 25vw;
+    }
+
+    &__name {
+      @include type-medium;
+    }
+  }
 }
 </style>
 

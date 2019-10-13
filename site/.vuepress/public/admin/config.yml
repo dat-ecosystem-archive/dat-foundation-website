@@ -127,6 +127,7 @@ collections:
         valueField: "name"
         displayFields: ["name"]
         required: false
+      - {label: 'Featured', name: 'featured', widget: 'boolean', default: false, hint: 'If set to featured, the project displays full-width in the Featured section on the projects index page.', required: false}
 
   - label: 'Tags'
     name: 'tags'

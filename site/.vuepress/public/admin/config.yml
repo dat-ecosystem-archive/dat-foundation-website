@@ -106,6 +106,7 @@ collections:
       - {label: 'Active', name: 'active', widget: 'boolean', hint: 'If set to active, the full bio is displayed.', required: false}
       - {label: 'Image', name: 'image', widget: 'image', required: false }
       - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, both image and name will link there.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
+
   - label: 'Projects'
     name: 'projects'
     identifier_field: 'name'
@@ -135,6 +136,44 @@ collections:
     slug: "{{name}}"
     fields: 
       - {label: 'Name', name: 'name', widget: 'string', required: true}
+       
+  - label: 'Events'
+    name: 'events'
+    identifier_field: 'name'
+    folder: 'site/events'
+    create: true
+    slug: "{{name}}"
+    fields: 
+      - {label: 'Name', name: 'name', widget: 'string', required: true}
+      - {label: 'Image', name: 'image', widget: 'image', required: false }
+      - label: Date'
+        name: 'date'
+        widget: 'datetime'
+        default: ''
+        format: 'D MMMM YYYY'
+      - label: "Start time"
+        name: "start"
+        widget: "datetime"
+        default: ""
+        format: "LLL"
+      - label: "End time"
+        name: "end"
+        widget: "datetime"
+        default: ""
+        format: "LLL"
+      - label: 'Location'
+        name: 'location'
+        widget: 'object'
+        required: false
+        hint: 'Leave this blank if the event is online only.'
+        fields: 
+          - {label: 'Name', name: 'name', widget: 'string', required: false}
+          - {label: 'URL', name: 'url', widget: 'string', required: false, pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.'] }
+          - {label: 'Address Line 1', name: 'address-1', widget: 'string', required: false}
+          - {label: 'Address Line 2', name: 'address-2', widget: 'string', required: false}
+      - {label: 'RSVP URL', name: 'url', widget: 'string', required: false, pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.'] }
+      - {label: 'Livestream URL', name: 'url', widget: 'string', required: false, pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.'] }
+
 
   # Pages
   - label: 'About'
@@ -282,10 +321,4 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: 'Content', name: 'content', widget: 'markdown'}
 
-      # Lower priority
-      - label: 'Design'
-        name: 'design'
-        file: 'site/explore/design/index.md'
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: 'Content', name: 'content', widget: 'markdown'}
+     

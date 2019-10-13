@@ -145,6 +145,7 @@ collections:
     slug: "{{name}}"
     fields: 
       - {label: 'Name', name: 'name', widget: 'string', required: true}
+      - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link'], required: true}
       - {label: 'Image', name: 'image', widget: 'image', required: false }
       - label: Date'
         name: 'date'
@@ -154,11 +155,13 @@ collections:
       - label: "Start time"
         name: "start"
         widget: "datetime"
+        dateFormat: false
         default: ""
         format: "LLL"
       - label: "End time"
         name: "end"
         widget: "datetime"
+        dateFormat: false
         default: ""
         format: "LLL"
       - label: 'Location'
@@ -168,11 +171,11 @@ collections:
         hint: 'Leave this blank if the event is online only.'
         fields: 
           - {label: 'Name', name: 'name', widget: 'string', required: false}
-          - {label: 'URL', name: 'url', widget: 'string', required: false, pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.'] }
+          - {label: 'URL', name: 'location-url', widget: 'string', required: false, pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.'] }
           - {label: 'Address Line 1', name: 'address-1', widget: 'string', required: false}
           - {label: 'Address Line 2', name: 'address-2', widget: 'string', required: false}
-      - {label: 'RSVP URL', name: 'url', widget: 'string', required: false, pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.'] }
-      - {label: 'Livestream URL', name: 'url', widget: 'string', required: false, pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.'] }
+      - {label: 'RSVP URL', name: 'rsvp-url', widget: 'string', required: false, pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.'] }
+      - {label: 'Livestream URL', name: 'livestream-url', widget: 'string', required: false, pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.'] }
 
 
   # Pages

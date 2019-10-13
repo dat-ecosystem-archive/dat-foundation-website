@@ -5,31 +5,35 @@
           :key="`footerItem-${index}`"
           class="footer__section">
         
-          <router-link v-if="footerItem.path"
-            :to="footerItem.path"
-             :href="footerItem.path"
-             class="footer__section__name">
-            {{ footerItem.label }}
-          </router-link>
+        <router-link v-if="footerItem.path"
+          :to="footerItem.path"
+           :href="footerItem.path"
+           class="footer__section__name">
+          {{ footerItem.label }}
+        </router-link>
 
-          <div v-else class="footer__section__name">
-            {{ footerItem.label }}
-          </div>
+        <div v-else class="footer__section__name">
+          {{ footerItem.label }}
+        </div>
 
-      <ul class="footer__section__items">
-        <li v-for="secondary in footerItem.secondary"
-            class="footer__section__items__link">
-          <router-link :to="secondary.path">
-            {{ secondary.label }}
-          </router-link>
-        </li>
-      </ul>
+        <ul class="footer__section__items">
+          <li v-for="secondary in footerItem.secondary"
+              class="footer__section__items__link">
+            <router-link :to="secondary.path">
+              {{ secondary.label }}
+            </router-link>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
 
-  <!-- TODO: Update this link -->
-  <div class="footer__copyright">Dat Foundation © 2013 - 2019 • Source on <a href="#">GitHub</a>
-  </div>
+    <!-- TODO: Language switcher -->
+    <!-- TODO: Sitemap link -->
+
+    <!-- TODO: Update this link -->
+    <div class="footer__copyright">
+      Dat Foundation © 2013 - 2019 • Source on <a href="#">GitHub</a>
+    </div>
   </footer>
 </template>
 

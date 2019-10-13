@@ -212,35 +212,57 @@ $breakpoint-mobile: 640px;
   transition: all 250ms ease-in-out;
 
   &:hover {
-    transform: translateY(-$space-tiny);
+    transform: translateY(-2px);
     cursor: pointer;
   }
 }
 
 
 .tag {
-  color: $color-green;
-  padding: 3px $type-size-tiny;
   @include type-small;
   border-radius: 500px;
+  border: 1px solid $color-green;
+  color: $color-green;
   display: inline-block;
   margin: 0 $space-small $space-small 0;
+  padding: 3px $type-size-tiny;
   text-align: center;
-  border: 1px solid $color-green;
 
   &:hover {
-    color: $color-white;
     background-color: $color-green;
+    color: $color-white;
   }
 } 
 
+// Form styles
+button,
 .button {
   @include hover-pop;
   @include shadow;
+  @include type-base;
   background: $color-green;
+  border: 0;
   color: $color-white;
   display: inline-block;
+  font-family: 'Source Sans Pro', sans-serif;
   padding: $space-small;
+}
+
+fieldset {
+  border: 0;
+}
+
+input {
+  @include shadow;
+  @include type-base;
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 40px;
+  padding: $space-small;
+
+  &:focus {
+    border: 1px solid $color-green;
+    outline: none;
+  }
 }
 
 // breakpoint helper

@@ -17,6 +17,11 @@
       />
     </main>
 
+    <div class="pre-footer">
+      <NewsletterSignup />
+      <Donate />
+    </div>
+
     <Footer/>
 
   </div>
@@ -94,5 +99,14 @@
       }
     }
   }
+}
+
+.pre-footer {
+  background-color: $color-neutral;
+  color: black;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: $space-medium;
+  padding: $space-medium;
 }
 </style>

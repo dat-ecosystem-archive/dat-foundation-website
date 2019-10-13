@@ -217,6 +217,7 @@ $breakpoint-mobile: 640px;
   }
 }
 
+
 .tag {
   color: $color-green;
   padding: 3px $type-size-tiny;
@@ -233,12 +234,14 @@ $breakpoint-mobile: 640px;
   }
 } 
 
-
-
-
-
-
-
+.button {
+  @include hover-pop;
+  @include shadow;
+  background: $color-green;
+  color: $color-white;
+  display: inline-block;
+  padding: $space-small;
+}
 
 // breakpoint helper
 // body {

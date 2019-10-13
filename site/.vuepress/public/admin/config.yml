@@ -109,7 +109,7 @@ collections:
   - label: 'Projects'
     name: 'projects'
     identifier_field: 'name'
-    folder: site/_data/projects
+    folder: 'site/projects'
     create: true
     slug: "{{name}}"
     fields: 

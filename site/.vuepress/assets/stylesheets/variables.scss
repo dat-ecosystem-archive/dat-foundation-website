@@ -222,9 +222,9 @@ $breakpoint-mobile: 640px;
   color: $color-green;
   padding: 3px $type-size-tiny;
   @include type-small;
-  border-radius: 20%/50%;
+  border-radius: 500px;
   display: inline-block;
-  margin-right: $space-small;
+  margin: 0 $space-small $space-small 0;
   text-align: center;
   border: 1px solid $color-green;
 

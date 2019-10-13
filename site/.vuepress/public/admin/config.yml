@@ -157,13 +157,13 @@ collections:
         widget: "datetime"
         dateFormat: false
         default: ""
-        format: "LLL"
+        format: "h mm"
       - label: "End time"
         name: "end"
         widget: "datetime"
         dateFormat: false
         default: ""
-        format: "LLL"
+        format: "h mm"
       - label: 'Location'
         name: 'location'
         widget: 'object'

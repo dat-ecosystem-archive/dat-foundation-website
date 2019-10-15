@@ -32,9 +32,16 @@
         {{ event.frontmatter.description}}
       </div>
 
+      <div v-if="event.frontmatter.livestream"
+           class="event__details__livestream">
+        Watch the
+        <a :href="event.frontmatter.rsvp" class="">livestream</a>!
+      </div>
+
       <div v-if="event.frontmatter.rsvp">
         <a :href="event.frontmatter.rsvp" class="button">RSVP</a>
       </div>
+
     </div>
 
   </div>
@@ -56,11 +63,19 @@ export default {
 @import '../assets/stylesheets/variables.scss';
 
 .event {
+  margin-bottom: $space-medium;
   display: flex;
-  margin-bottom: $space-large;
+  flex-direction: column;
+  border-bottom: 0.5px solid $color-gray-light;
+  padding-bottom: $space-medium;
+
+  @include mobile {
+    flex-direction: row;
+  }
 
   &__timing {
-    margin-right: $space-large;
+    margin-right: $space-medium;
+    margin-bottom: $space-base;
     
     &__date {
       @include type-medium;
@@ -69,18 +84,27 @@ export default {
 
     &__time {
       color: $color-gray;
-      font-weight: bold;
     }
   }
   
   &__image {
-    width: 30vw;
-    margin-right: $space-base;
+    margin-bottom: $space-base;
+    height: 50vw;
+    width: 50vw;
+    object-fit: cover;
+
+    @include mobile {
+      width: 30vw;
+      margin-right: $space-base;
+      height: 30vw;
+    }
   }
 
   &__details {
-    width: 30vw;
-    
+    @include mobile {
+      width: 30vw;
+    }
+
     &__name {
       @include type-medium;
       font-weight: bold;
@@ -102,6 +126,12 @@ export default {
     
     &__description {
       margin-bottom: $space-base;
+    }
+
+    &__livestream {
+      margin-bottom: $space-base;
+      color: $color-green;
+      text-decoration: underline;
     }
   }
 }

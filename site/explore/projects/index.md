@@ -5,7 +5,6 @@
     <h2 class="projects-index__featured__title">
       Featured
     </h2>
-   <!--  what if featured projects were displayed based on a boolean -->
     <Project v-for="project in projects" 
              v-if="project.frontmatter.featured"
              :project="project"/>

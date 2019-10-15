@@ -129,6 +129,27 @@ collections:
         required: false
       - {label: 'Featured', name: 'featured', widget: 'boolean', default: false, hint: 'If set to featured, the project displays full-width in the Featured section on the projects index page.', required: false}
 
+  - label: 'Modules'
+    name: 'modules'
+    identifier_field: 'name'
+    folder: 'site/modules'
+    create: true
+    slug: "{{name}}"
+    fields: 
+      - {label: 'Name', name: 'name', widget: 'string', required: true}
+      - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link'], required: true}
+      - {label: 'Image', name: 'image', widget: 'image', required: false }
+      - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, both image and name will link there.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
+      - label: "Tags"
+        name: "tags"
+        widget: "relation"
+        collection: "tags"
+        searchFields: ["name"]
+        multiple: true
+        valueField: "name"
+        displayFields: ["name"]
+        required: false
+        
   - label: 'Tags'
     name: 'tags'
     identifier_field: 'name'

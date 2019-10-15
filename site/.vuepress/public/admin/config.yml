@@ -328,30 +328,16 @@ collections:
   - label: 'Explore'
     name: 'explore'
     files:    
-
-      # TODO: move this into data
       - label: 'Projects'
         name: 'projects'
         file: 'site/_data/explore/projects.yml'
-
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Introduction, name: intro, widget: markdown}
-          - label: "Featured projects"
-            name: "featured"
-            widget: "relation"
-            collection: "projects"
-            searchFields: ["name"]
-            multiple: true
-            valueField: "name"
-            displayFields: ["name"]
-            required: false
-      
+
       - label: 'Modules'
         name: 'modules'
         file: 'site/explore/modules/index.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: 'Content', name: 'content', widget: 'markdown'}
-
-     

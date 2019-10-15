@@ -10,9 +10,8 @@
       </div>
     </div>
 
-    <!-- If no image is present, display a placeholder -->
-    <img :src="event.frontmatter.image"
-         class="event__image" />
+    <ImageHelper :image="event.frontmatter.image"
+                 :imageAltText="event.frontmatter.imageAltText" />
 
     <div class="event__details">
       <div class="event__details__name">
@@ -87,7 +86,7 @@ export default {
     }
   }
   
-  &__image {
+  figure {
     margin-bottom: $space-base;
     height: 50vw;
     width: 50vw;

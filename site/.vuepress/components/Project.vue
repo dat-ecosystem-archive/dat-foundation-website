@@ -1,9 +1,8 @@
 <template>
   <div class="project">
     <a :href="project.frontmatter.website">
-      <figure class="project__image">
-        <img :src="project.frontmatter.image" alt="" >
-      </figure>
+      <ImageHelper :image="project.frontmatter.image"
+                   :imageAltText="project.frontmatter.imageAltText" />
     </a>
     
     <div class="project__details">
@@ -52,7 +51,7 @@ export default {
 @import '../assets/stylesheets/variables.scss';
 
 .project {
-  &__image {
+  figure {
     height: 12vw;
     width: 100%;
     overflow: hidden;
@@ -76,7 +75,7 @@ export default {
     display: flex;
     margin-bottom: $space-medium;
 
-    &__image {
+    figure {
       margin-right: $space-base;
       width: 40vw;
       height: 25vw;

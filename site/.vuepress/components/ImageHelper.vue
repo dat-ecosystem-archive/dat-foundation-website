@@ -2,8 +2,7 @@
   <figure class="image">
     <img v-if="image"
          :src="image" 
-         :alt="imageAltText"
-         alt="test">
+         :alt="imageAltText">
     <div v-else class="placeholder">placeholder image</div>
   </figure>
 </template>

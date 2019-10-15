@@ -3,9 +3,10 @@
     <h1 class="blog__index__page-title page-title">Blog</h1>
 
     <div v-for="post in journal" :key="post.title" class="blog__index__post">
-      <img :src="post.frontmatter.image"
-           class="blog__index__post__image" />
 
+      <ImageHelper :image="post.frontmatter.image"
+                   :imageAltText="post.frontmatter.imageAltText" />
+      
       <div class="blog__index__post__info">
         <router-link tag="h3" :to="post.path" class="blog__index__post__title">{{ post.frontmatter.title }}</router-link>
         <p class="blog__index__post__excerpt" v-html="markdown(post.frontmatter.excerpt)"></p>
@@ -62,10 +63,6 @@
 
       &__title {
         margin-bottom: $space-base;
-      }
-
-      &__image {
-        
       }
 
       &__info {

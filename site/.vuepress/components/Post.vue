@@ -1,7 +1,8 @@
 <template>
   <div class="post">
-    <img :src="$page.frontmatter.image"
-          class="post__image" />
+    <ImageHelper :image="$page.frontmatter.image"
+                 :imageAltText="$page.frontmatter.imageAltText" />
+   
     <h1 class="post__title">{{ $page.frontmatter.title }}</h1>
     <div v-html="markdown($page.frontmatter.excerpt)"
          class="post__excerpt"></div>
@@ -35,7 +36,7 @@ export default {
 @import '../assets/stylesheets/variables.scss';
 
 .post {
-  &__image {
+  figure {
     margin-bottom: $space-medium;
   }
 

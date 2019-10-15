@@ -229,9 +229,8 @@ content: >-
   [Zach Mandeville](https://coolguy.website/) and [Sam
   Muirhead](https://www.cameralibre.cc/) for getting me thinking about this in
   the first place._
-authors:
-  - Darius Kazemi
-date: '2019-03-22'
+author: 'Darius Kazemi'
+date: '22 March 2019'
 template: blog
 ---
 

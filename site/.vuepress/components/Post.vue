@@ -1,6 +1,8 @@
 <template>
   <div class="post">
-    <ImageHelper :image="$page.frontmatter.image"
+
+    <ImageHelper v-if="$page.frontmatter.image"
+                 :image="$page.frontmatter.image"
                  :imageAltText="$page.frontmatter.imageAltText" />
    
     <h1 class="post__title">{{ $page.frontmatter.title }}</h1>
@@ -38,6 +40,10 @@ export default {
 .post {
   figure {
     margin-bottom: $space-medium;
+
+    .placeholder {
+      min-height: 50vh;
+    }
   }
 
   &__title {

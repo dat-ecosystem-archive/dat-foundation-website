@@ -32,7 +32,7 @@ export default {
   background-color: $color-neutral;
   display: inline-block;
   height: 100%;
-  min-height: 200px;
+  min-height: 30vh;
   position: relative;
   width: 100%;
 }

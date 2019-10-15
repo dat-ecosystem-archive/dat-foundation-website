@@ -299,7 +299,7 @@ content: >-
 
 
   * Website (http://dat.foundation)
-date: '2019-08-12'
+date: '12 August 2019'
 featured: true
 template: blog
 ---

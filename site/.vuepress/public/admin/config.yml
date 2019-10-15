@@ -70,12 +70,12 @@ collections:
         valueField: "name"
         displayFields: ["name"]
         required: false
-      - label: "Authors"
-        name: "authors"
+      - label: "Author"
+        name: "author"
         widget: "relation"
         collection: "people"
         searchFields: ["name"]
-        multiple: true
+        multiple: false
         valueField: "name"
         displayFields: ["name"]
         required: false

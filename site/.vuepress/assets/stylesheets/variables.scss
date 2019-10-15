@@ -88,6 +88,10 @@ p,
   }
 }
 
+.text {
+  hr { margin: $space-medium 0; }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -149,10 +153,9 @@ ul, ol {
 code {
   color: white;
   background: $color-black;
-  font-size: 0.8rem;
-  padding: 0.05rem 0.25rem;
-  font-weight: 400;
+  font-size: $type-size-small;
   font-family: monospace;
+  padding: $space-tiny;
 }
 
 // Breakpoints

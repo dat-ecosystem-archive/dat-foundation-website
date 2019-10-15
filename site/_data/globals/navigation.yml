@@ -20,10 +20,15 @@ nav_items:
     path: /blog/
   - label: Learn
     secondary:
-      - label: Tutorials
-        path: /learn/tutorials
-      - label: Protocol
-        path: /learn/protocol/
+      - external: true
+        label: Docs
+        path: 'https://docs.dat.foundation/'
+      - external: true
+        label: Tutorials
+        path: 'https://docs.dat.foundation/tutorials'
+      - external: true
+        label: Protocol
+        path: 'https://www.datprotocol.com'
   - label: Explore
     secondary:
       - label: Projects

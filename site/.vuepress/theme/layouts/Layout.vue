@@ -19,9 +19,12 @@
       <transition appear name="fade">
         <Content/>
       </transition>
-      <Post 
-        v-if="$page.frontmatter.template === 'blog'" 
-      />
+      
+      <transition appear name="fade">
+        <Post 
+          v-if="$page.frontmatter.template === 'blog'" 
+        />
+      </transition>
     </main>
 
     <div class="pre-footer">
@@ -121,8 +124,10 @@
   background-color: $color-neutral;
   color: black;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   grid-gap: $space-medium;
   padding: $space-medium;
+
+  @include mobile { grid-template-columns: repeat(2, 1fr); }
 }
 </style>

@@ -2,9 +2,8 @@
   <div class="person"
        :class="{ 'full-bio': person.active }">
     <a :href="person.website">
-      <div class="person__image">
-        <img :src="person.image">
-      </div>
+      <ImageHelper :image="person.image"
+                   :imageAltText="person.imageAltText" />
     </a>
     <div class="person__info">
       <a :href="person.website" class="person__name"><h3>{{ person.name }}</h3></a>
@@ -70,9 +69,11 @@ $person-outline-height: $person-height + ($person-stroke * 2);
 
   &.full-bio {
     flex-direction: column;
+
+    figure { margin-right: 0; }
   }
   
-  &__image {
+  figure {
     background: $color-green;
     clip-path: polygon(49% 0, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     height: $person-outline-height;
@@ -80,11 +81,6 @@ $person-outline-height: $person-height + ($person-stroke * 2);
     margin-right: $space-medium;
     position: relative;
     width: $person-outline-width;
-
-    .full-bio & {
-      margin-right: 0;
-    }
-
     
     img {
       clip-path: polygon(49% 0, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);

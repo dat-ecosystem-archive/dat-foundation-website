@@ -14,6 +14,7 @@ bio: >-
   international NGO, operating in slums across 30 countries in the Global
   South
 image: /images/joe-hand.jpg
+imageAltText: 'Joe Hand'
 website: 'https://jhand.space/'
 ---
 

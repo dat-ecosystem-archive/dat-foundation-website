@@ -8,7 +8,6 @@
 import { markdown } from '../../.vuepress/util'
 import codeOfConduct from '../../../site/_data/globals/code-of-conduct.yml'
 
-
 export default {
   name: 'Home',
   data () {

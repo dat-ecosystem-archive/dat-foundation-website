@@ -86,6 +86,7 @@ collections:
         format: 'D MMMM YYYY'
         dateFormat: 'D MMMM YYYY'
       - {label: 'Image', name: 'image', widget: 'image', required: false }
+      - {label: 'Image Alt Text', name: 'imageAltText', widget: 'string', required: false, hint: "Briefly describe the image; this will be read by screen readers." }
       - {label: 'Featured', name: 'featured', widget: 'boolean', hint: 'If set to featured, the full blog post card is displayed on the blog index.', required: false}
       - {label: "Template", name: "template", widget: "hidden", default: "blog"}
 
@@ -110,6 +111,7 @@ collections:
       - {label: 'Bio', name: 'bio', widget: 'markdown', buttons: ['link'], required: false}    
       - {label: 'Active', name: 'active', widget: 'boolean', hint: 'If set to active, the full bio is displayed.', required: false}
       - {label: 'Image', name: 'image', widget: 'image', required: false }
+      - {label: 'Image Alt Text', name: 'imageAltText', widget: 'string', required: false, hint: "Briefly describe the image; this will be read by screen readers." }
       - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, both image and name will link there.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
 
   - label: 'Projects'
@@ -122,6 +124,7 @@ collections:
       - {label: 'Name', name: 'name', widget: 'string', required: true}
       - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link'], required: true}
       - {label: 'Image', name: 'image', widget: 'image', required: false }
+      - {label: 'Image Alt Text', name: 'imageAltText', widget: 'string', required: false, hint: "Briefly describe the image; this will be read by screen readers." }
       - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, both image and name will link there.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
       - label: "Tags"
         name: "tags"
@@ -144,6 +147,7 @@ collections:
       - {label: 'Name', name: 'name', widget: 'string', required: true}
       - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link'], required: true}
       - {label: 'Image', name: 'image', widget: 'image', required: false }
+      - {label: 'Image Alt Text', name: 'imageAltText', widget: 'string', required: false, hint: "Briefly describe the image; this will be read by screen readers." }
       - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, both image and name will link there.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
       - label: "Tags"
         name: "tags"
@@ -174,6 +178,7 @@ collections:
       - {label: 'Name', name: 'name', widget: 'string', required: true}
       - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link'], required: true}
       - {label: 'Image', name: 'image', widget: 'image', required: false }
+      - {label: 'Image Alt Text', name: 'imageAltText', widget: 'string', required: false, hint: "Briefly describe the image; this will be read by screen readers." }
       - label: Date'
         name: 'date'
         widget: 'datetime'
@@ -248,6 +253,7 @@ collections:
             fields:
               - {label: 'Name', name: 'name', widget: 'string', hint: 'The name of the project.', required: true}
               - {label: 'Logo', name: 'logo', widget: 'image', hint: '350 x 150 max.' }
+              - {label: 'Image Alt Text', name: 'imageAltText', widget: 'string', required: false, hint: "Briefly describe the image; this will be read by screen readers." }
               - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, the logo will link here.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
               - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link']}
           - label: 'Sponsors'
@@ -256,6 +262,7 @@ collections:
             fields:
               - {label: 'Name', name: 'name', widget: 'string', hint: 'The name of the sponsor.', required: true}
               - {label: 'Logo', name: 'logo', widget: 'image', hint: '350 x 150 max.' }
+              - {label: 'Image Alt Text', name: 'imageAltText', widget: 'string', required: false, hint: "Briefly describe the image; this will be read by screen readers." }
               - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, the logo will link here.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
               - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link']}    
       - label: 'History'

@@ -3,7 +3,7 @@
     <img v-if="image"
          :src="image" 
          :alt="imageAltText">
-    <div v-else class="placeholder">placeholder image</div>
+    <div v-else class="placeholder"></div>
   </figure>
 </template>
 
@@ -24,4 +24,16 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../assets/stylesheets/variables.scss';
+
+.placeholder {
+  background-image: url('../public/hex-pattern.svg');
+  background-size: cover;
+  background-color: $color-neutral;
+  display: inline-block;
+  height: 100%;
+  min-height: 200px;
+  position: relative;
+  width: 100%;
+}
 </style>

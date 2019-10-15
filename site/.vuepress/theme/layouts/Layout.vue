@@ -1,11 +1,18 @@
 <template>
   <div class="app">
     <Nav/>
-    <div class="breadcrumbs">
-      <span v-for="crumb in breadcrumbs"
-            class="breadcrumbs__crumb">
-        {{ crumb }}
-      </span>
+    <div v-if="!isBlogIndex" class="breadcrumbs">
+      <div v-if="$page.frontmatter.template === 'blog'">
+        <router-link to="/blog" class="breadcrumbs__crumb" >Blog</router-link>
+        <span class="breadcrumbs__crumb">{{ $page.frontmatter.title }}</span>
+      </div>
+
+      <div v-else>
+        <span v-for="crumb in breadcrumbs"
+              class="breadcrumbs__crumb">
+          {{ crumb }}
+        </span>
+      </div>
     </div>
 
     <main class="app__main">
@@ -35,6 +42,10 @@
         var crumbs = parts.filter(function(el) { return el; });
         return crumbs;
       },
+
+      isBlogIndex () {
+        return this.$page.path === '/blog/'
+      }
     },
   };
 </script>
@@ -81,7 +92,7 @@
 
   &__crumb {
     position: relative; 
-    
+
     &:last-of-type {
       font-weight: bold;
       
@@ -97,6 +108,11 @@
         left: 0;
         top: 0;
       }
+    }
+    
+    &.router-link-active {
+      &::before { display: none; }
+      font-weight: normal;
     }
   }
 }

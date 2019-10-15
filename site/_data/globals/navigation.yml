@@ -16,6 +16,9 @@ nav_items:
       - external: true
         label: Forums
         path: 'https://dat.discourse.group/'
+      - label: Code of Conduct
+        path: /community/code-of-conduct/
+
   - label: Blog
     path: /blog/
   - label: Learn

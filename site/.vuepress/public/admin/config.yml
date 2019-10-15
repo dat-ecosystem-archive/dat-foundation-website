@@ -45,6 +45,11 @@ collections:
         name: missionStatement
         fields: 
           - {label: Mission Statement, name: missionStatement, widget: markdown}
+      - file: site/_data/globals/code-of-conduct.yml
+        label: Code of Conduct
+        name: codeOfConduct
+        fields: 
+          - {label: Code of Conduct, name: codeOfConduct, widget: markdown}
   
   - name: 'blog' 
     label: 'Blog' 

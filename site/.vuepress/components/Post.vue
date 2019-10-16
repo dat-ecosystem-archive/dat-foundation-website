@@ -8,7 +8,7 @@
     <h1 class="post__title">{{ $page.frontmatter.title }}</h1>
     <div v-html="markdown($page.frontmatter.excerpt)"
          class="post__excerpt"></div>
-    <div>{{ $page.frontmatter.publishdate }}</div>
+    <div>{{ $page.frontmatter.publish_date }}</div>
     
     <div v-for="author in $page.frontmatter.authors">
       <div class="post__author">{{ author }}</div>

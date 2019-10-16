@@ -56,7 +56,7 @@ collections:
     folder: 'site/blog/posts'
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    preview_path_date_field: "date"
+    preview_path_date_field: "publish_date"
     fields: 
       - {label: 'Title', name: 'title', widget: 'string'}
       - {label: 'Excerpt', name: 'excerpt', widget: 'markdown', hint: 'This displays on the blog index page and as the subhead of the blog post.', required: true}
@@ -91,127 +91,10 @@ collections:
       - {label: "Template", name: "template", widget: "hidden", default: "blog"}
 
 
-  # Collections
-  - label: 'People'
-    name: 'people'
-    identifier_field: 'name'
-    folder: 'site/people'
-    create: true
-    slug: "{{name}}"
-    fields: 
-      - {label: 'Name', name: 'name', widget: 'string', hint: 'First and last name; required.', required: true}
-      - {label: 'Title', name: 'title', widget: 'string', required: false}
-      - label: 'Affiliation'
-        name: 'affiliation'
-        widget: 'object'
-        required: false
-        fields: 
-          - {label: 'Organization or company name', name: 'name', widget: 'string', required: false}
-          - {label: 'URL', name: 'url', widget: 'string', required: false, pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.'] }
-      - {label: 'Bio', name: 'bio', widget: 'markdown', buttons: ['link'], required: false}    
-      - {label: 'Active', name: 'active', widget: 'boolean', hint: 'If set to active, the full bio is displayed.', required: false}
-      - {label: 'Image', name: 'image', widget: 'image', required: false }
-      - {label: 'Image Alt Text', name: 'imageAltText', widget: 'string', required: false, hint: "Briefly describe the image; this will be read by screen readers." }
-      - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, both image and name will link there.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
-
-  - label: 'Projects'
-    name: 'projects'
-    identifier_field: 'name'
-    folder: 'site/projects'
-    create: true
-    slug: "{{name}}"
-    fields: 
-      - {label: 'Name', name: 'name', widget: 'string', required: true}
-      - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link'], required: true}
-      - {label: 'Image', name: 'image', widget: 'image', required: false }
-      - {label: 'Image Alt Text', name: 'imageAltText', widget: 'string', required: false, hint: "Briefly describe the image; this will be read by screen readers." }
-      - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, both image and name will link there.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
-      - label: "Tags"
-        name: "tags"
-        widget: "relation"
-        collection: "tags"
-        searchFields: ["name"]
-        multiple: true
-        valueField: "name"
-        displayFields: ["name"]
-        required: false
-      - {label: 'Featured', name: 'featured', widget: 'boolean', default: false, hint: 'If set to featured, the project displays full-width in the Featured section on the projects index page.', required: false}
-
-  - label: 'Modules'
-    name: 'modules'
-    identifier_field: 'name'
-    folder: 'site/modules'
-    create: true
-    slug: "{{name}}"
-    fields: 
-      - {label: 'Name', name: 'name', widget: 'string', required: true}
-      - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link'], required: true}
-      - {label: 'Image', name: 'image', widget: 'image', required: false }
-      - {label: 'Image Alt Text', name: 'imageAltText', widget: 'string', required: false, hint: "Briefly describe the image; this will be read by screen readers." }
-      - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, both image and name will link there.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
-      - label: "Tags"
-        name: "tags"
-        widget: "relation"
-        collection: "tags"
-        searchFields: ["name"]
-        multiple: true
-        valueField: "name"
-        displayFields: ["name"]
-        required: false
-        
-  - label: 'Tags'
-    name: 'tags'
-    identifier_field: 'name'
-    folder: 'site/tags'
-    create: true
-    slug: "{{name}}"
-    fields: 
-      - {label: 'Name', name: 'name', widget: 'string', required: true}
-       
-  - label: 'Events'
-    name: 'events'
-    identifier_field: 'name'
-    folder: 'site/events'
-    create: true
-    slug: "{{name}}"
-    fields: 
-      - {label: 'Name', name: 'name', widget: 'string', required: true}
-      - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link'], required: true}
-      - {label: 'Image', name: 'image', widget: 'image', required: false }
-      - {label: 'Image Alt Text', name: 'imageAltText', widget: 'string', required: false, hint: "Briefly describe the image; this will be read by screen readers." }
-      - label: Date'
-        name: 'date'
-        widget: 'datetime'
-        default: ''
-        format: 'D MMMM YYYY'
-      - label: "Start time"
-        name: "start"
-        widget: "datetime"
-        dateFormat: false
-        default: ""
-        format: "h:mm"
-      - label: "End time"
-        name: "end"
-        widget: "datetime"
-        dateFormat: false
-        default: ""
-        format: "H:mm"
-      - label: 'Location'
-        name: 'location'
-        widget: 'object'
-        required: false
-        hint: 'Leave this blank if the event is online only.'
-        fields: 
-          - {label: 'Name', name: 'name', widget: 'string', required: false}
-          - {label: 'URL', name: 'url', widget: 'string', required: false, pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.'] }
-          - {label: 'Address Line 1', name: 'addressOne', widget: 'string', required: false}
-          - {label: 'Address Line 2', name: 'addressTwo', widget: 'string', required: false}
-      - {label: 'RSVP URL', name: 'rsvp', widget: 'string', required: false, pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.'] }
-      - {label: 'Livestream URL', name: 'livestream', widget: 'string', required: false, pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.'] }
 
 
   # Pages
-  - label: 'About'
+  - label: 'Pages: About'
     name: 'about'
     files:    
       - label: 'People'
@@ -282,49 +165,25 @@ collections:
                 default: ''
                 format: 'MMMM YYYY'
               - {label: 'Milestone', name: 'milestone', widget: 'boolean', hint: 'If set as a milestone the timeline item is displayed at a larger size.', required: false}
-  - label: 'Learn'
-    name: 'learn'
-    files:    
-      - label: 'Tutorials'
-        name: 'tutorials'
-        file: 'site/learn/tutorials/index.md'
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: 'Content', name: 'content', widget: 'markdown'}
-      - label: 'Protocol'
-        name: 'protocol'
-        file: 'site/learn/protocol/index.md'
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: 'Content', name: 'content', widget: 'markdown'}
 
-  - label: 'Community'
+  - label: 'Pages: Community'
     name: 'community'
     files:    
-      - label: 'Code of Conduct'
-        name: 'code-of-conduct'
-        file: 'site/about/coc/index.md'
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Content, name: content, widget: markdown}
       - label: 'I want to help!'
         name: 'contribute'
         file: 'site/community/contribute/index.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: 'Content', name: 'content', widget: 'markdown'}
-      - label: 'Newsletter'
-        name: 'newsletter'
-        file: 'site/community/newsletter/index.md'
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: 'Content', name: 'content', widget: 'markdown'}
+
+      # TODO: use data 
       - label: 'Chat'
         name: 'chat'
         file: 'site/community/chat/index.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: 'Content', name: 'content', widget: 'markdown'}
+
       - label: 'Events'
         name: 'events'
         file: 'site/community/events/index.md'
@@ -332,7 +191,7 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: 'Content', name: 'content', widget: 'markdown'}
 
-  - label: 'Explore'
+  - label: 'Pages: Explore'
     name: 'explore'
     files:    
       - label: 'Projects'
@@ -348,3 +207,120 @@ collections:
         fields:
           - {label: Title, name: title, widget: string}
           - {label: 'Content', name: 'content', widget: 'markdown'}
+  # Collections
+  - label: 'Collection: People'
+    name: 'people'
+    identifier_field: 'name'
+    folder: 'site/people'
+    create: true
+    slug: "{{name}}"
+    fields: 
+      - {label: 'Name', name: 'name', widget: 'string', hint: 'First and last name; required.', required: true}
+      - {label: 'Title', name: 'title', widget: 'string', required: false}
+      - label: 'Affiliation'
+        name: 'affiliation'
+        widget: 'object'
+        required: false
+        fields: 
+          - {label: 'Organization or company name', name: 'name', widget: 'string', required: false}
+          - {label: 'URL', name: 'url', widget: 'string', required: false, pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.'] }
+      - {label: 'Bio', name: 'bio', widget: 'markdown', buttons: ['link'], required: false}    
+      - {label: 'Active', name: 'active', widget: 'boolean', hint: 'If set to active, the full bio is displayed.', required: false}
+      - {label: 'Image', name: 'image', widget: 'image', required: false }
+      - {label: 'Image Alt Text', name: 'imageAltText', widget: 'string', required: false, hint: "Briefly describe the image; this will be read by screen readers." }
+      - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, both image and name will link there.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
+
+  - label: 'Collection: Projects'
+    name: 'projects'
+    identifier_field: 'name'
+    folder: 'site/projects'
+    create: true
+    slug: "{{name}}"
+    fields: 
+      - {label: 'Name', name: 'name', widget: 'string', required: true}
+      - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link'], required: true}
+      - {label: 'Image', name: 'image', widget: 'image', required: false }
+      - {label: 'Image Alt Text', name: 'imageAltText', widget: 'string', required: false, hint: "Briefly describe the image; this will be read by screen readers." }
+      - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, both image and name will link there.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
+      - label: "Tags"
+        name: "tags"
+        widget: "relation"
+        collection: "tags"
+        searchFields: ["name"]
+        multiple: true
+        valueField: "name"
+        displayFields: ["name"]
+        required: false
+      - {label: 'Featured', name: 'featured', widget: 'boolean', default: false, hint: 'If set to featured, the project displays full-width in the Featured section on the projects index page.', required: false}
+
+  - label: 'Collection: Modules'
+    name: 'modules'
+    identifier_field: 'name'
+    folder: 'site/modules'
+    create: true
+    slug: "{{name}}"
+    fields: 
+      - {label: 'Name', name: 'name', widget: 'string', required: true}
+      - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link'], required: true}
+      - {label: 'Image', name: 'image', widget: 'image', required: false }
+      - {label: 'Image Alt Text', name: 'imageAltText', widget: 'string', required: false, hint: "Briefly describe the image; this will be read by screen readers." }
+      - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, both image and name will link there.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
+      - label: "Tags"
+        name: "tags"
+        widget: "relation"
+        collection: "tags"
+        searchFields: ["name"]
+        multiple: true
+        valueField: "name"
+        displayFields: ["name"]
+        required: false
+        
+  - label: 'Collection: Tags'
+    name: 'tags'
+    identifier_field: 'name'
+    folder: 'site/tags'
+    create: true
+    slug: "{{name}}"
+    fields: 
+      - {label: 'Name', name: 'name', widget: 'string', required: true}
+       
+  - label: 'Collection: Events'
+    name: 'events'
+    identifier_field: 'name'
+    folder: 'site/events'
+    create: true
+    slug: "{{name}}"
+    fields: 
+      - {label: 'Name', name: 'name', widget: 'string', required: true}
+      - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link'], required: true}
+      - {label: 'Image', name: 'image', widget: 'image', required: false }
+      - {label: 'Image Alt Text', name: 'imageAltText', widget: 'string', required: false, hint: "Briefly describe the image; this will be read by screen readers." }
+      - label: Date'
+        name: 'date'
+        widget: 'datetime'
+        default: ''
+        format: 'D MMMM YYYY'
+      - label: "Start time"
+        name: "start"
+        widget: "datetime"
+        dateFormat: false
+        default: ""
+        format: "h:mm"
+      - label: "End time"
+        name: "end"
+        widget: "datetime"
+        dateFormat: false
+        default: ""
+        format: "H:mm"
+      - label: 'Location'
+        name: 'location'
+        widget: 'object'
+        required: false
+        hint: 'Leave this blank if the event is online only.'
+        fields: 
+          - {label: 'Name', name: 'name', widget: 'string', required: false}
+          - {label: 'URL', name: 'url', widget: 'string', required: false, pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.'] }
+          - {label: 'Address Line 1', name: 'addressOne', widget: 'string', required: false}
+          - {label: 'Address Line 2', name: 'addressTwo', widget: 'string', required: false}
+      - {label: 'RSVP URL', name: 'rsvp', widget: 'string', required: false, pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.'] }
+      - {label: 'Livestream URL', name: 'livestream', widget: 'string', required: false, pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.'] }

@@ -16,7 +16,7 @@
         </span>
 
         <span class="blog__index__post__byline__date">
-          {{ post.frontmatter.date }}
+          {{ post.frontmatter.publish_date }}
         </span>
       </div>
         
@@ -35,7 +35,7 @@
       journal() {
         return this.$site.pages
           .filter(x => x.path.startsWith('/blog/posts'))
-          .sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
+          .sort((a, b) => new Date(b.frontmatter.publish_date) - new Date(a.frontmatter.publish_date))
       }
     },
     methods: { markdown }

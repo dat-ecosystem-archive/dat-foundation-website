@@ -1,6 +1,6 @@
 <template>
   <header>
-    <router-link to="/">
+    <router-link to="/" tabindex="0">
       <div class="logo">
       </div>
     </router-link>
@@ -10,23 +10,29 @@
   </div>
 
   <div v-if="mobileNavActive" class="nav__shade" />
-  <nav :class="{'is-visible': mobileNavActive}">
+  <nav :class="{'is-visible': mobileNavActive}"
+       role="navigation"
+       aria-label="Main Navigation">
     <div class="nav__mobile__close" @click="toggleMobileNav">
       <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><path d="M2.343.929l12.728 12.728-1.414 1.414L.929 2.343z"/><path d="M13.657.929L.929 13.657l1.414 1.414L15.071 2.343z"/></g></svg>
     </div>
     <div v-for="(navItem, index) in navItems"
         :key="`navItem-${index}`"
-        class="nav-section">
+        class="nav-section"
+        :class="{'has-submenu': navItem.secondary}">
       
         <router-link v-if="navItem.path"
            :to="navItem.path"
-           class="nav-section__name">
+           class="nav-section__name"
+           tabindex="0">
           {{ navItem.label }}
         </router-link>
 
         <div v-else 
              class="nav-section__name"
-             :class="{'is-active': subIsActive('/' + navItem.label.toLowerCase())}">
+             :class="{'is-active': subIsActive('/' + navItem.label.toLowerCase())}"
+             aria-expanded="false"
+             tabindex="0">
           {{ navItem.label }}
         </div>
 
@@ -37,7 +43,8 @@
           <a v-if="secondary.external"
              target="_blank"
              rel="noopener"
-             :href="secondary.path">
+             :href="secondary.path"
+             tabindex="0">
             {{ secondary.label }}
           </a>
               
@@ -77,10 +84,33 @@ export default {
     '$route' () {
       this.mobileNavActive = false
     }
+  },
+  
+  mounted () {
+    var menuItems = document.querySelectorAll('.nav-section')
+    Array.prototype.forEach.call(menuItems, function(el, i){
+      el.querySelector('.nav-section__name').addEventListener("keypress", function(e){
+        if (e.keyCode === 13) {
+          if (this.parentNode.className == "nav-section has-submenu") {
+            this.parentNode.className = "nav-section has-submenu open"
+            this.setAttribute('aria-expanded', "true")
+            // this.parentNode.blur()
+
+          } else {
+            this.parentNode.className = "nav-section has-submenu"
+            this.setAttribute('aria-expanded', "false")
+            
+          }
+          event.preventDefault()
+          return false
+        }
+      })
+    })
   }
 }
 </script>
-
+when you focus on something with this class it displays this
+when you focus on something else, it clears the existing focus
 <style lang="scss">
 @import '../assets/stylesheets/variables.scss';
 
@@ -160,7 +190,8 @@ nav,
       margin-right: 0;
     }
     
-    &:hover {
+    &:hover,
+    &.open {
       .nav-section__items { 
         visibility: visible; 
         opacity: 1; }

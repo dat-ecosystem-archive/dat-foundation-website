@@ -1,29 +1,10 @@
 <template>
   <div class="blog__index">
     <h1 class="blog__index__page-title page-title">Blog</h1>
+    <BlogPost v-for="post in posts" 
+              :key="post.title" 
+              :post="post" />
     
-    <div v-for="post in journal" 
-         :key="post.title" 
-         class="blog__index__post" 
-         :class="{'featured': post.frontmatter.featured}">
-      <ImageHelper :image="post.frontmatter.image"
-                   :imageAltText="post.frontmatter.imageAltText" />
-      
-      <div class="blog__index__post__byline">
-        <span v-if="post.frontmatter.author" 
-              class="blog__index__post__byline__author">
-          {{ post.frontmatter.author }}
-        </span>
-
-        <span class="blog__index__post__byline__date">
-          {{ post.frontmatter.publish_date }}
-        </span>
-      </div>
-        
-
-      <router-link tag="h3" :to="post.path" class="blog__index__post__title">{{ post.frontmatter.title }}</router-link>
-      <p class="blog__index__post__excerpt" v-html="markdown(post.frontmatter.excerpt)"></p>
-    </div>
 
   </div>
 </template>
@@ -32,7 +13,7 @@
   import { markdown } from '../util'
   export default {
     computed: {
-      journal() {
+      posts () {
         return this.$site.pages
           .filter(x => x.path.startsWith('/blog/posts'))
           .sort((a, b) => new Date(b.frontmatter.publish_date) - new Date(a.frontmatter.publish_date))

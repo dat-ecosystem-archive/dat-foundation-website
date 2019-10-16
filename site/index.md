@@ -1,6 +1,7 @@
 <template>
   <h1 class="mission-statement">{{ missionStatement }}</h1>
   <Values />
+  <FeaturedProjects />
 </template>
 
 <script> 

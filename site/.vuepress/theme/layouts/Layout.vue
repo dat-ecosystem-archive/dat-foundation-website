@@ -129,5 +129,7 @@
   padding: $space-medium;
 
   @include mobile { grid-template-columns: repeat(2, 1fr); }
+
+  @include tablet { padding: $space-large; }
 }
 </style>

@@ -52,7 +52,7 @@ export default {
 
 .project {
   figure {
-    height: 12vw;
+    height: 20vw;
     width: 100%;
     overflow: hidden;
     margin-bottom: $space-base;

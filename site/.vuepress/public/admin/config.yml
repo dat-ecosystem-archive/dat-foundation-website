@@ -55,7 +55,7 @@ collections:
     label: 'Blog' 
     folder: 'site/blog/posts'
     create: true
-    slug: "{{publish_date.year}}-{{slug}}"
+    slug: "{{publish_date}}-{{slug}}"
     fields: 
       - {label: 'Title', name: 'title', widget: 'string'}
       - {label: 'Excerpt', name: 'excerpt', widget: 'markdown', hint: 'This displays on the blog index page and as the subhead of the blog post.', required: true}
@@ -83,7 +83,6 @@ collections:
         widget: 'datetime'
         default: ''
         format: 'D MMMM YYYY'
-        dateFormat: 'D MMMM YYYY'
       - {label: 'Image', name: 'image', widget: 'image', required: false }
       - {label: 'Image Alt Text', name: 'imageAltText', widget: 'string', required: false, hint: "Briefly describe the image; this will be read by screen readers." }
       - {label: 'Featured', name: 'featured', widget: 'boolean', hint: 'If set to featured, the full blog post card is displayed on the blog index.', required: false}

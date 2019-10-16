@@ -2,6 +2,7 @@
   <h1 class="mission-statement">{{ missionStatement }}</h1>
   <Values />
   <FeaturedProjects />
+  <FeaturedPosts />
 </template>
 
 <script> 

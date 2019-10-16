@@ -1,13 +1,13 @@
 <template>
-  <div class="featured-projects">
-    <h2 class="page-title">Featured projects</h2>
+  <div class="featured-posts">
+    <h2 class="page-title">Blog</h2>
 
-    <div class="featured-projects__grid">
-      <Project v-for="project in projects.slice(0,2)" 
-               :project="project"/>
+    <div class="featured-posts__grid">
+      <BlogPost v-for="post in posts.slice(0,2)" 
+               :post="post"/>
     </div>
 
-    <router-link tag="a" class="button" to="explore/projects">All projects →</router-link>
+    <router-link tag="a" class="button" to="/blog">All posts →</router-link>
   </div>
 </template>
 
@@ -22,9 +22,9 @@ export default {
   },
 
   computed: {
-    projects () {
+    posts () {
       return this.$site.pages
-        .filter(x => x.path.startsWith('/projects') && x.frontmatter.featured)
+        .filter(x => x.path.startsWith('/blog/posts') && x.frontmatter.featured)
     }
   },
   methods: { markdown }
@@ -34,9 +34,9 @@ export default {
 <style lang="scss">
 @import '../../.vuepress/assets/stylesheets/variables.scss';
 
-.featured-projects {
-  margin-bottom: $space-large;
-  
+.featured-posts {
+  margin-bottom: $space-medium;
+
   &__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

@@ -487,5 +487,6 @@ content: >-
   improving the usability of `dat store`.
 publish_date: October 2019
 template: blog
+featured: true
 ---
 

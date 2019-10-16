@@ -65,8 +65,6 @@ $color-gray: #65737f;
 $color-gray-light: #a7afb6;
 $color-highlight: #94e4a5;
 
-
-
 a {
   text-decoration: none;
   color: inherit;
@@ -149,7 +147,6 @@ ul, ol {
   }
 }
 
-// TODO: make this look really nice;
 code {
   color: white;
   background: $color-black;
@@ -288,3 +285,29 @@ input {
 //     background: yellow;
 //   }
 // }
+
+// Draws a hexagon with CSS; provide a width and stroke width when used.
+@mixin hexagon($width, $stroke) {
+  $height: $width * 1.15;
+
+  &::before,
+  &::after {
+    clip-path: polygon(49% 0, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    content: '';
+    margin: auto;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+  }
+
+  &::before {
+    background: $color-green;
+    height: $height;
+    width: $width;
+  }
+
+  &::after {
+    background: $color-white;
+    height: $height - (2 * $stroke);
+    width: $width - (2 * $stroke); 
+  }
+}

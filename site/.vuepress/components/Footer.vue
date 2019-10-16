@@ -96,6 +96,7 @@ export default {
 
       &__link  {
         color: $color-white;
+        margin-left: 0;
       }
     }
   }

@@ -55,7 +55,7 @@ collections:
     label: 'Blog' 
     folder: 'site/blog/posts'
     create: true
-    slug: "{{publish_date}}-{{slug}}"
+    slug: "{{fields.publish_date.year}}-{{fields.publish_date.month}}-{{fields.publish_date.day}}-{{slug}}"
     fields: 
       - {label: 'Title', name: 'title', widget: 'string'}
       - {label: 'Excerpt', name: 'excerpt', widget: 'markdown', hint: 'This displays on the blog index page and as the subhead of the blog post.', required: true}

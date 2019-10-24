@@ -53,7 +53,7 @@ This is a layer of abstraction on top of standard Git pull requests and merges; 
 
 
 # Content Structure
-We deviated from the default VuePress content model in order to integrate Netlify CMS. **Pages** and **Global** content is stored in `/site/_data` as YML and imported directly into views and components as needed. This separation of data from view component is a solution to Netlify CMS occasionally overwriting template data when updating YML frontmatter via the editorial workflow. Unfortunately it makes it harder to take advantage of some of the default VuePress features, and hope that as Netlify CMS matures we can revert to a 
+We deviated from the default VuePress content model in order to integrate Netlify CMS. **Pages** and **Global** content is stored in `/site/_data` as YML and imported directly into views and components as needed. This separation of data from view component is a solution to Netlify CMS occasionally overwriting template data when updating YML frontmatter via the editorial workflow. Unfortunately it makes it harder to take advantage of some of the default VuePress features, and hope that as Netlify CMS matures we can troubleshoot this.
 
 
 ## Collections

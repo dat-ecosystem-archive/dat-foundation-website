@@ -25,18 +25,6 @@ intro: >-
   data and research, only recently with a wider focus on more general user-owned
   applications. Dat has been almost exclusively funded by [grants from private
   foundations](https://blog.datproject.org/2017/09/15/dat-funding-history/).
-projects:
-  - description: >-
-      [Beaker](https://beakerbrowser.com/) is an experimental browser for
-      exploring and building the peer-to-peer Web.
-    logo: /images/beaker-logo.png
-    name: Beaker Browser
-    website: 'https://beakerbrowser.com/'
-  - description: >-
-      [Wireline](https://www.wireline.io/) provides the infrastructure to build fullstack internet-scale peer-to-peer applications.
-    logo: /images/wireline-logo.png
-    name: Wireline
-    website: 'https://www.wireline.io/'
 sponsors:
   - description: >-
       Code for Science and society empowers communities to work together and

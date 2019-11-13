@@ -1,40 +1,23 @@
 nav_items:
   - label: About
     secondary:
-      - label: People
-        path: /about/people/
       - label: Foundation
         path: /about/foundation/
       - label: History
         path: /about/history/
   - label: Community
     secondary:
-      - label: Chat
-        path: /community/chat/
-      - label: Events
-        path: /community/events/
+      - label: Projects
+        path: /explore/projects/
       - external: true
-        label: Forums
+        label: Forum
         path: 'https://dat.discourse.group/'
-      - label: Code of Conduct
-        path: /community/code-of-conduct/
 
-  - label: Blog
-    path: /blog/
   - label: Learn
     secondary:
       - external: true
         label: Docs
         path: 'https://docs.dat.foundation/'
       - external: true
-        label: Tutorials
-        path: 'https://docs.dat.foundation/tutorials'
-      - external: true
         label: Protocol
         path: 'https://www.datprotocol.com'
-  - label: Explore
-    secondary:
-      - label: Projects
-        path: /explore/projects/
-      - label: Modules
-        path: /explore/modules/

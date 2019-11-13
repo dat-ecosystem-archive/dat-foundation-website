@@ -2,13 +2,34 @@ title: History
 intro: >-
   Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas faucibus mollis interdum. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue.
 timeline:
-  - date: September 2019
-    description: Donec sed odio dui.
-    milestone: true
-  - date: August 2019
+  - date: June 2013
     description: >-
-      Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem
-      ipsum dolor sit amet, consectetur adipiscing elit.
+      Knight Foundation grants Max Ogden $50k to prototype Dat for 7 months.
+  - date: August 2013
+    description: >-
+      The [first code](https://github.com/datproject/dat/commit/e5eda57b53f60b05c0c3d97da90c10cd17dcbe19) is committed to Dat.
+    milestone: true
+  - date: April 2014
+    description: >-
+      Alfred P. Sloan Foundation grants $260k to [support 1 year](https://usopendata.org/2014/04/02/dat/) of development, with a focus on scientific research.
+  - date: August 2014
+    description: >-
+      The first [Dat alpha](https://github.com/datproject/old-website/blob/master/posts/2014-08-19-dat-alpha.md) is announced. This version of Dat was focused on versioning changes and transformations to tabular data.
+    milestone: true
+  - date: April 2015
+    description: >-
+      Alfred P. Sloan Foundation [renews support](https://usopendata.org/2015/04/03/sloan/) of Dat with $640k for 2 years of development work.
+  - date: July 2015
+    description: >-
+      [Dat beta](https://github.com/datproject/old-website/blob/master/posts/2015-07-29-dat-beta.md) launched, with the new focus on research data and moving towards a data collaboration tool.
+  - date: February 2016
+    description: >-
+      Dat moves peer-to-peer! The [Dat 1.0 release](https://github.com/datproject/old-website/blob/master/posts/2016-02-01-dat-1.md) shifts focus from tabular data to files and peer-to-peer.
+    milestone: true
+  - date: April 2016
+    description: >-
+      Karissa McKelvey [expands support](https://blog.datproject.org/2016/02/01/announcing-publicbits-org/) of Dat via the Knight Foundation news challenge, receiving a grant of $420k for 1 year.
+    milestone: true
   - date: April 2019
     description: >-
       Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras

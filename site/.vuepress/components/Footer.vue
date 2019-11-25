@@ -4,7 +4,7 @@
       <div v-for="(footerItem, index) in footerItems"
           :key="`footerItem-${index}`"
           class="footer__section">
-        
+
         <router-link v-if="footerItem.path"
           :to="footerItem.path"
            :href="footerItem.path"
@@ -19,7 +19,10 @@
         <ul class="footer__section__items">
           <li v-for="secondary in footerItem.secondary"
               class="footer__section__items__link">
-            <router-link :to="secondary.path">
+            <a v-if="secondary.external" :href="secondary.path">
+              {{ secondary.label }}
+            </a>
+            <router-link :to="secondary.path" v-else>
               {{ secondary.label }}
             </router-link>
           </li>
@@ -66,7 +69,7 @@ export default {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: $space-large;
-    
+
     @include tablet {
       flex-wrap: nowrap;
       justify-content: space-between;

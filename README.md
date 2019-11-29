@@ -1,6 +1,6 @@
 # Dat Foundation website
 
-This is a shiny new website for the Dat Foundation! It is built on [VuePress](https://vuepress.vuejs.org/), pulls its content from this GitHub repo, is editable with [Netlify CMS](https://www.netlifycms.org/), and is continuously integrated with Netlify. 
+This is a shiny new website for the Dat Foundation! It is built on [VuePress](https://vuepress.vuejs.org/), pulls its content from this GitHub repo, is editable with [Netlify CMS](https://www.netlifycms.org/), and is continuously integrated with Netlify.
 
 ## Development
 
@@ -8,14 +8,14 @@ For local development:
 
 Install dependencies using Yarn.
 
-```bash 
+```bash
 yarn install
 ```
 
 Run the development server.
 
 ```bash
-npm run dev 
+npm run dev
 ```
 
 **Things to note:**
@@ -24,9 +24,9 @@ npm run dev
 
 ## Build and deploy
 
-To build the site: 
+To build the site:
 ```bash
-npm run build 
+npm run build
 ```
 
 This repo is continuously integrated with Netlify and all commits to master will trigger a deploy.

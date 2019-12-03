@@ -7,6 +7,8 @@ nav_items:
         path: /about/history/
   - label: Community
     secondary:
+      - label: Get Started
+        path: /explore/get-started/
       - label: Projects
         path: /explore/projects/
       - external: true

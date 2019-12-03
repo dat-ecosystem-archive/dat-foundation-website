@@ -1,41 +1,72 @@
 title: History
 intro: >-
-  Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas faucibus mollis interdum. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue.
+  Since 2013, Dat has led the pack of cutting-edge research & development in distributed ledger technology and data syncronization primitives.  
 timeline:
-  - date: June 2013
+  - date: December 2019
     description: >-
-      Knight Foundation grants Max Ogden $50k to prototype Dat for 7 months.
-  - date: August 2013
-    description: >-
-      The [first code](https://github.com/datproject/dat/commit/e5eda57b53f60b05c0c3d97da90c10cd17dcbe19) is committed to Dat.
+      Dat Project is now the [Dat Protocol Foundation](https://blog.datproject.org/2019/12/02/dat-project-is-now-dat-protocol-foundation/).
     milestone: true
-  - date: April 2014
+  - date: December 2018
     description: >-
-      Alfred P. Sloan Foundation grants $260k to [support 1 year](https://usopendata.org/2014/04/02/dat/) of development, with a focus on scientific research.
-  - date: August 2014
+      Dat is awarded with $170k in grants from [Samsung and Handshake](https://blog.datproject.org/2019/01/15/dat-receives-two-new-grants/). New hires: Andrew Osheroff, developer; Georgiy Shibaev, community manager; David Clements, developer; Karissa McKelvey, project director.
+  - date: March 2018
     description: >-
-      The first [Dat alpha](https://github.com/datproject/old-website/blob/master/posts/2014-08-19-dat-alpha.md) is announced. This version of Dat was focused on versioning changes and transformations to tabular data.
+      Dat is awarded a [Ford-Mozilla Open Web Fellow](https://blog.datproject.org/2018/03/21/css-apply-open-web-fellow/). The governance team picks [Darius Kazemi](https://twitter.com/tinysubversions).
+  - date: June 2017
+    description: >-
+      Dat is awarded $200k by the Moore foundation for the 'Dat in the Lab' project, researching enhancements for containerization of scientific data & code. The team size is now much smaller.
     milestone: true
-  - date: April 2015
+  - date: December 2017
     description: >-
-      Alfred P. Sloan Foundation [renews support](https://usopendata.org/2015/04/03/sloan/) of Dat with $640k for 2 years of development work.
-  - date: July 2015
+      Max Ogden [leaves the project](https://blog.datproject.org/2017/12/20/organization-changes-dat-css/).
+  - date: June 2017
     description: >-
-      [Dat beta](https://github.com/datproject/old-website/blob/master/posts/2015-07-29-dat-beta.md) launched, with the new focus on research data and moving towards a data collaboration tool.
+      Desktop application and dataset registry are announced & released. Funding ends for Knight & Sloan grants. Kristina, Julian, and Chia-liang move on to new projects.
+  - date: December 2016
+    description: >-
+      Code for Science and Society is incorporated as a 501c(3) non-profit.
+    milestone: true
+  - date: October 2016
+    description: >-
+      The first meetups for 'Coding for Science & Society' are held in Berlin, Oakland, and Portland; organized by the Dat team.
+  - date: June 2016
+    description: >-
+      The team grows from 3 to 8, to include developers & designers on the Desktop application, commandline tool, and dataset registry. New hires during 2016-2017 are Joe Hand, developer; Kristina Schneider, designer; Julian Gruber, developer; Chia-liang Kao, developer.
+    milestone: true
+  - date: May 2017
+    description: >-
+      A public peer called [Dat Base.org](https://blog.datproject.org/2017/05/08/a-public-dat-peer/) announced for short-term backups and previews.
   - date: February 2016
     description: >-
-      Dat moves peer-to-peer! The [Dat 1.0 release](https://github.com/datproject/old-website/blob/master/posts/2016-02-01-dat-1.md) shifts focus from tabular data to files and peer-to-peer.
+      We received a $420k grant from the Knight Foundation for a Dat dataset registry and desktop application. [Read More](https://blog.datproject.org/2016/02/01/announcing-publicbits-org/).
+  - date: January 2016
+    description: >-
+      The team begins to rewrite Dat as they plan for a files-first approach, ditching tabular representations of data. Mathias starts working on hypercore. [Read More](https://blog.datproject.org/2016/01/19/a-brief-history-of-dat/).
+  - date: April 2015
+    description: >-
+      The Alfred P. Sloan Foundation provided $640k in funding until March, 2017 to support the continued development of Dat as well as targeted outreach to the natural and social science research community. [Read More](https://sloan.org/grant-detail/6618)
+  - date: July 2015
+    description: >-
+      Dat Beta is released, which focused on tabular datasets. It turns out to be too complex for typical use cases [Read More](https://usopendata.org/2015/07/29/dat-beta/).
     milestone: true
-  - date: April 2016
+  - date: December 2015
     description: >-
-      Karissa McKelvey [expands support](https://blog.datproject.org/2016/02/01/announcing-publicbits-org/) of Dat via the Knight Foundation news challenge, receiving a grant of $420k for 1 year.
+      Alpha testing with pilot projects in science, including Sloan Digital Sky Survey (Astronomy), iRNA-Seq (Bioinformatics -- RNA), and Bionode (Bioinformatics -- DNA).
+  - date: October 2014
+    description: >-
+      Karissa McKelvey is hired as a software engineer and scientific partnerships manager.
+  - date: August 2014
+    description: >-
+      Dat Alpha announced. Dat is now a set of tools & modules for creating and sharing streaming data pipelines. [Read more](https://blog.datproject.org/2014/08/19/dat-alpha/)
     milestone: true
-  - date: April 2019
+  - date: July 2014
     description: >-
-      Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras
-      mattis consectetur purus sit amet fermentum.
-  - date: September 2018
+      Juan Benet leaves Dat and starts working on IPFS.
     description: >-
-      Donec sed odio dui. Curabitur blandit tempus porttitor. Cras justo odio,
-      dapibus ac facilisis in, egestas eget quam.
+      Mathias Buus is hired as the lead distributed systems engineer.
+  - date: March 2014
+    description: >-
+      The Alfred P. Sloan Foundation provides $260k in funding to support the continued development of Dat. That money was used to pay Max and two additional developers to spend the year growing Dat into a vibrant, healthy, widely used open source project. Sloan’s interest is in seeing Dat used in the sciences. [Read more](https://blog.datproject.org/2014/03/08/sloan-funding/)
+  - date: August 2013
+    description: First round of funding from the Knight Foundation awarded, supporting Max Ogden in building the first pre-alpha prototype with a $50k grant. 
     milestone: true

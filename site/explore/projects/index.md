@@ -10,10 +10,6 @@
              :project="project"/>
   </div>
 
-  <div class="projects-index__filters">
-    Filters
-  </div>
-
   <div class="projects-index__grid">
     <Project v-for="project in projects" 
              :project="project"/>

@@ -1,19 +1,10 @@
-<div class="modules-index">
-  <h1 class="page-title">Modules</h1>
-  <div class="modules-index__intro">{{ intro }}</div>
-
-  <div class="modules-index__filters">
-    Filters
-  </div>
-
-  <div class="modules-index__grid">
-    <Project v-for="module in modules" 
-             :project="module"/>
-  </div>
+<div class="projects-index">
+  <h1 class="page-title">Projects</h1>
+  <div class="projects-index__intro">{{ intro }}</div>
 </div>
 
 <script>
-import content from '../../../site/_data/explore/modules.yml'
+import content from '../../../site/_data/explore/getting-started.yml'
 import { markdown } from '../../.vuepress/util'
 export default {
   data () {
@@ -23,9 +14,9 @@ export default {
   },
 
   computed: {
-    modules () {
+    projects () {
       return this.$site.pages
-        .filter(x => x.path.startsWith('/modules'))
+        .filter(x => x.path.startsWith('/getting-started'))
     }
   },
   methods: { markdown }
@@ -35,7 +26,7 @@ export default {
 <style lang="scss">
 @import '../../.vuepress/assets/stylesheets/variables.scss';
 
-.modules-index {
+.projects-index {
   &__intro {
     @include text-subhead;
     margin-bottom: $space-medium;

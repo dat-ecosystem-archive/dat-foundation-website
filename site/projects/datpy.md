@@ -5,5 +5,5 @@ description: >-
 image: /images/field-notes.jpg
 website: 'https://datpy.decentral1.se/'
 tags:
-  - node
+  - community
 ---

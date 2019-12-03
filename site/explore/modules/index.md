@@ -3,11 +3,11 @@
   <div class="modules-index__intro">{{ intro }}</div>
 
   <div class="modules-index__filters">
-    Filters
+    All Modules
   </div>
 
   <div class="modules-index__grid">
-    <Project v-for="module in modules" 
+    <Project v-for="module in modules"
              :project="module"/>
   </div>
 </div>

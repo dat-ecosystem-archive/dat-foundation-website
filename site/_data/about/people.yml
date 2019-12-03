@@ -12,9 +12,10 @@ section:
       - Karissa McKelvey
       - Mathias Buus
   - description: >-
-      The Dat Foundation consists of many open source developers working
-      together towards common goals. Here are some of the prominant contributors
-      to the development of the core technologies.
+      The Dat Foundation supports many open source developers working
+      on modules compatible with the protocol. Here are 
+      some of the prominant contributors to the development of 
+      the core technologies.
     name: Other Contributors
     people:
       - Paul Frazee

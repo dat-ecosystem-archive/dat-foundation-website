@@ -5,7 +5,6 @@ description: >-
 image: /images/datcxx.png
 website: 'https://datcxx.github.io/'
 tags:
-  - node
   - community
 featured: false
 ---

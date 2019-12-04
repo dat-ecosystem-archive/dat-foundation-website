@@ -1,6 +1,6 @@
 title: History
 intro: >-
-  Since 2013, Dat has led the pack of cutting-edge research & development in distributed ledger technology and data syncronization primitives.  
+  Since 2013, Dat has led the pack of cutting-edge research & development in distributed ledger technology and data syncronization primitives.
 timeline:
   - date: December 2019
     description: >-
@@ -62,11 +62,11 @@ timeline:
   - date: July 2014
     description: >-
       Juan Benet leaves Dat and starts working on IPFS.
-    description: >-
+  - description: >-
       Mathias Buus is hired as the lead distributed systems engineer.
   - date: March 2014
     description: >-
       The Alfred P. Sloan Foundation provides $260k in funding to support the continued development of Dat. That money was used to pay Max and two additional developers to spend the year growing Dat into a vibrant, healthy, widely used open source project. Sloan’s interest is in seeing Dat used in the sciences. [Read more](https://blog.datproject.org/2014/03/08/sloan-funding/)
   - date: August 2013
-    description: First round of funding from the Knight Foundation awarded, supporting Max Ogden in building the first pre-alpha prototype with a $50k grant. 
+    description: First round of funding from the Knight Foundation awarded, supporting Max Ogden in building the first pre-alpha prototype with a $50k grant.
     milestone: true

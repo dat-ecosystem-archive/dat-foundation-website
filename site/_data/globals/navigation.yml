@@ -5,6 +5,9 @@ nav_items:
         path: /about/foundation/
       - label: History
         path: /about/history/
+      - external: true
+        label: Blog
+        path: 'https://blog.datproject.org'
   - label: Community
     secondary:
       - label: Get Started
@@ -14,7 +17,6 @@ nav_items:
       - external: true
         label: Forum
         path: 'https://dat.discourse.group/'
-
   - label: Learn
     secondary:
       - external: true

@@ -4,7 +4,7 @@
 </div>
 
 <script>
-import content from '../../../site/_data/explore/getting-started.yml'
+import content from '../../../site/_data/explore/get-started.yml'
 import { markdown } from '../../.vuepress/util'
 export default {
   data () {

@@ -1,0 +1,41 @@
+title: People
+section:
+  - description: >-
+      The Dat Foundation Governance supports the collaboration, funding, and
+      community management for Dat. This group is involved in financial and
+      legal decisions regarding the Dat Foundation in collaboration with Code
+      for Science and Society.
+    name: Dat Foundation Governance
+    people:
+      - Joe Hand
+      - Danielle Robinson
+      - Karissa McKelvey
+      - Mathias Buus
+  - description: >-
+      The Dat Foundation supports many open source developers working
+      on modules compatible with the protocol. Here are 
+      some of the prominant contributors to the development of 
+      the core technologies.
+    name: Other Contributors
+    people:
+      - Paul Frazee
+      - Andrew Osheroff
+      - David Clements
+      - Georgiy Shibaev
+  - description: >-
+      Here's some of the people that have contributed to Dat in the past.
+    name: Alumni
+    people:
+      - Tara Vancil
+      - Max Ogden
+      - Yoshua Wuyts
+      - Jim Pick
+      - Kristina Schneider
+      - Julian Gruber
+      - Chia-liang Kao
+      - Melanie Cebula
+      - Portia Burton
+      - Bruno Vieira
+      - Yuhong Wang
+      - Juan Batiz-Benet
+      - Finn Pauls

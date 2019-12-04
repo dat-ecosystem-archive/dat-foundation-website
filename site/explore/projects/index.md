@@ -5,14 +5,19 @@
     <h2 class="projects-index__featured__title">
       Featured
     </h2>
-    <Project v-for="project in projects" 
+    <Project v-for="project in projects"
              v-if="project.frontmatter.featured"
              :project="project"/>
   </div>
 
+  <div class="projects-index__filters">
+    All Projects
+  </div>
+
   <div class="projects-index__grid">
-    <Project v-for="project in projects" 
-             :project="project"/>
+    <Project v-for="project in projects"
+            v-if="!project.frontmatter.featured"
+            :project="project"/>
   </div>
 </div>
 

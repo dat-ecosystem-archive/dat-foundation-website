@@ -1,14 +1,38 @@
 # Dat Foundation website
 
-Web home for the Dat Foundation!
+This is a shiny new website for the Dat Foundation! It is built on [VuePress](https://vuepress.vuejs.org/), pulls its content from this GitHub repo, is editable with [Netlify CMS](https://www.netlifycms.org/), and is continuously integrated with Netlify.
 
-This website is built on [VuePress](https://vuepress.vuejs.org/), uses the content from this repository, is editable with [Netlify CMS](https://www.netlifycms.org/), and is deployed with Netlify. 
+## Development
+
+For local development:
+
+Install dependencies using Yarn.
+
+```bash
+yarn install
+```
 
 ## Contributing
 
-This is a static website that uses content inside the [/site](/site) folder. We've made it easy to contribute changes to the content with Netlify CMS
+```bash
+npm run dev
+```
 
-### Netlify CMS
+**Things to note:**
+- If you edit the VuePress config file (`site/config.json`) you'll have to restart the development server for any changes to take effect.
+
+
+## Build and deploy
+
+To build the site:
+```bash
+npm run build
+```
+
+This repo is continuously integrated with Netlify and all commits to master will trigger a deploy.
+
+
+## Netlify CMS
 
 Edit the site content at `/admin` with [Netlify CMS](https://www.netlifycms.org/)!
 
@@ -49,14 +73,14 @@ For local development:
 
 Install dependencies with `npm` or `Yarn`.
 
-```bash 
+```bash
 npm install
 ```
 
 Run the development server.
 
 ```bash
-npm run dev 
+npm run dev
 ```
 
 **Things to note:**
@@ -65,9 +89,9 @@ npm run dev
 
 ## Build and deploy
 
-To build the site: 
+To build the site:
 ```bash
-npm run build 
+npm run build
 ```
 
 This repo is continuously integrated with Netlify and all commits to master will trigger a deploy.

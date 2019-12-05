@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   repo: datproject/dat-foundation-website
-  branch: release
+  branch: launch-prep
 
 publish_mode: editorial_workflow
 media_folder: 'site/.vuepress/public/images'

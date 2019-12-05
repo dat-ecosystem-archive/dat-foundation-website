@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  repo: whoisgina/dat-foundation-website
+  repo: datproject/dat-foundation-website
   branch: release
 
 publish_mode: editorial_workflow

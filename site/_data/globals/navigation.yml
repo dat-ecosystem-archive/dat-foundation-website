@@ -10,8 +10,8 @@ nav_items:
         path: 'https://blog.datproject.org'
   - label: Community
     secondary:
-      - label: Get Started
-        path: /explore/get-started/
+      - label: Chat
+        path: /community/chat/
       - label: Projects
         path: /explore/projects/
       - external: true
@@ -19,6 +19,8 @@ nav_items:
         path: 'https://dat.discourse.group/'
   - label: Learn
     secondary:
+      - label: Get Started
+        path: /explore/get-started/
       - external: true
         label: Docs
         path: 'https://docs.dat.foundation/'

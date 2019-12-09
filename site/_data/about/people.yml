@@ -9,11 +9,33 @@ section:
     people:
       - Joe Hand
       - Danielle Robinson
+      - Karissa McKelvey
+      - Mathias Buus
   - description: >-
-      Donec sed odio dui. Donec id elit non mi porta gravida at eget metus.
-      Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem
-      malesuada magna mollis euismod. Integer posuere erat a ante venenatis
-      dapibus posuere velit aliquet.
-    name: Dat Protocol Working Group
+      The Dat Foundation supports many open source developers working
+      on modules compatible with the protocol. Here are 
+      some of the prominant contributors to the development of 
+      the core technologies.
+    name: Other Contributors
     people:
-      - Joe Hand
+      - Paul Frazee
+      - Andrew Osheroff
+      - David Clements
+      - Georgiy Shibaev
+  - description: >-
+      Here's some of the people that have contributed to Dat in the past.
+    name: Alumni
+    people:
+      - Tara Vancil
+      - Max Ogden
+      - Yoshua Wuyts
+      - Jim Pick
+      - Kristina Schneider
+      - Julian Gruber
+      - Chia-liang Kao
+      - Melanie Cebula
+      - Portia Burton
+      - Bruno Vieira
+      - Yuhong Wang
+      - Juan Batiz-Benet
+      - Finn Pauls

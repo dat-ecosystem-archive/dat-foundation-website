@@ -3,7 +3,9 @@ title: Chat
 content: This is the chat page.
 ---
 <h1 class="page-title">Chat</h1>
-<p class="chat__subhead">Here's the Gitter chat. A bunch of the avatars aren't loading. I extremely don't care right now!!! You can also join us on <a href="">IRC</a> if you're a huge nerd. </p>
+<p class="chat__subhead">
+Here's the <a href="https://gitter.im/datproject/discussions/">Gitter</a> chat which is bridged to our <a href="https://webchat.freenode.net/?channels=dat">IRC channel</a>.
+</p>
 <div class="gitter-chat"></div>
 
 <script>
@@ -28,7 +30,7 @@ export default {
 @import '../../.vuepress/assets/stylesheets/variables.scss';
 
 .gitter-chat {
-  @include shadow; 
+  @include shadow;
   border: 1px solid $color-gray-light;
 
   iframe {

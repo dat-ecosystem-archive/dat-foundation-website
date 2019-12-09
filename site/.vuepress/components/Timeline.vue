@@ -3,7 +3,7 @@
     <div v-for="item in sortedItems"
          class="timeline__item"
          :class="{ 'milestone': item.milestone }">
-      <div v-if="item.milestone" 
+      <div v-if="item.milestone"
            class="timeline__item--milestone">
       </div>
       <div class="timeline__item__description">
@@ -15,7 +15,7 @@
     <div class="timeline__item milestone">
       <div class="timeline__item--milestone">
       </div>
-      <p class="timeline__item__description">What's next? <a href="#">Sponsor us</a> or join our <a href="#">community</a> to learn how you can help build the future of the web.</p>
+      <p class="timeline__item__description">What's next? <a href="https://opencollective.com/dat">Sponsor us</a> or join our <a href="https://docs.datproject.org/docs/intro">community</a> to learn how you can help build the future of the web.</p>
     </div>
   </div>
 </template>
@@ -37,7 +37,7 @@ export default {
       return this.items.sort((a, b) => new Date(b.date) - new Date(a.date))
     }
   },
-  methods: { markdown } 
+  methods: { markdown }
 }
 </script>
 
@@ -51,7 +51,7 @@ export default {
     margin-bottom: $space-medium;
     position: relative;
     margin-left: $space-large;
-    
+
     // The green vertical line
     &::before {
       height: 200%;
@@ -65,8 +65,8 @@ export default {
     }
 
     &:last-of-type {
-      &::before { 
-        background-color: $color-white; 
+      &::before {
+        background-color: $color-white;
         height: 120%;
       }
     }

@@ -12,9 +12,7 @@ bio: >-
   community-driven organizations. Previously, Joe managed a global project at
   the Santa Fe Institute to transform data collection practices of an
   international NGO, operating in slums across 30 countries in the Global
-  South
-image: /images/joe-hand.jpg
+image: https://github.com/joehand.png
 imageAltText: 'Joe Hand'
 website: 'https://jhand.space/'
 ---
-

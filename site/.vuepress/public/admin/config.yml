@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
-  repo: whoisgina/dat-foundation-website
-  branch: master
+  repo: datproject/dat-foundation-website
+  branch: launch-prep
 
 publish_mode: editorial_workflow
 media_folder: 'site/.vuepress/public/images'
@@ -33,30 +33,30 @@ collections:
       - file: site/_data/globals/values.yml
         label: Values
         name: values
-        fields: 
+        fields:
           - label: Values
-            name: values 
-            widget: list 
-            fields: 
+            name: values
+            widget: list
+            fields:
                 - {label: Name, name: name, widget: string}
                 - {label: Description, name: description, widget: markdown}
       - file: site/_data/globals/mission-statement.yml
         label: Mission Statement
         name: missionStatement
-        fields: 
+        fields:
           - {label: Mission Statement, name: missionStatement, widget: markdown}
       - file: site/_data/globals/code-of-conduct.yml
         label: Code of Conduct
         name: codeOfConduct
-        fields: 
+        fields:
           - {label: Code of Conduct, name: codeOfConduct, widget: markdown}
-  
-  - name: 'blog' 
-    label: 'Blog' 
+
+  - name: 'blog'
+    label: 'Blog'
     folder: 'site/blog/posts'
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields: 
+    fields:
       - {label: 'Title', name: 'title', widget: 'string'}
       - {label: 'Excerpt', name: 'excerpt', widget: 'markdown', hint: 'This displays on the blog index page and as the subhead of the blog post.', required: true}
       - {label: 'Content', name: 'content', widget: 'markdown', required: true}
@@ -91,7 +91,7 @@ collections:
   # Pages
   - label: 'Pages: About'
     name: 'about'
-    files:    
+    files:
       - label: 'People'
         name: 'People'
         file: 'site/_data/about/people.yml'
@@ -102,7 +102,7 @@ collections:
             widget: 'list'
             fields:
               - {label: Section Name, name: name, widget: string}
-              - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link']}   
+              - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link']}
               - label: "People"
                 name: "people"
                 widget: "relation"
@@ -111,14 +111,14 @@ collections:
                 multiple: true
                 valueField: "name"
                 displayFields: ["name"]
-              
+
       - label: 'Financial'
         name: 'financial'
         file: 'site/about/financial/index.md'
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Introduction, name: intro, widget: markdown}
-          
+
       - label: 'Foundation'
         name: 'foundation'
         file: 'site/_data/about/foundation.yml'
@@ -142,7 +142,7 @@ collections:
               - {label: 'Logo', name: 'logo', widget: 'image', hint: '350 x 150 max.' }
               - {label: 'Image Alt Text', name: 'imageAltText', widget: 'string', required: false, hint: "Briefly describe the image; this will be read by screen readers." }
               - {label: 'Website', name: 'website', widget: 'string', required: false, hint: 'If this is present, the logo will link here.', pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.']}
-              - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link']}    
+              - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link']}
       - label: 'History'
         name: 'history'
         file: 'site/_data/about/history.yml'
@@ -153,7 +153,7 @@ collections:
             name: 'timeline'
             widget: 'list'
             fields:
-              - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link']}    
+              - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link']}
               - label: 'Month and year'
                 name: 'date'
                 widget: 'datetime'
@@ -163,7 +163,7 @@ collections:
 
   - label: 'Pages: Community'
     name: 'community'
-    files:    
+    files:
       - label: 'I want to help!'
         name: 'contribute'
         file: 'site/community/contribute/index.md'
@@ -171,7 +171,7 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: 'Content', name: 'content', widget: 'markdown'}
 
-      # TODO: use data 
+      # TODO: use data
       - label: 'Chat'
         name: 'chat'
         file: 'site/community/chat/index.md'
@@ -188,7 +188,7 @@ collections:
 
   - label: 'Pages: Explore'
     name: 'explore'
-    files:    
+    files:
       - label: 'Projects'
         name: 'projects'
         file: 'site/_data/explore/projects.yml'
@@ -209,17 +209,17 @@ collections:
     folder: 'site/people'
     create: true
     slug: "{{name}}"
-    fields: 
+    fields:
       - {label: 'Name', name: 'name', widget: 'string', hint: 'First and last name; required.', required: true}
       - {label: 'Title', name: 'title', widget: 'string', required: false}
       - label: 'Affiliation'
         name: 'affiliation'
         widget: 'object'
         required: false
-        fields: 
+        fields:
           - {label: 'Organization or company name', name: 'name', widget: 'string', required: false}
           - {label: 'URL', name: 'url', widget: 'string', required: false, pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.'] }
-      - {label: 'Bio', name: 'bio', widget: 'markdown', buttons: ['link'], required: false}    
+      - {label: 'Bio', name: 'bio', widget: 'markdown', buttons: ['link'], required: false}
       - {label: 'Active', name: 'active', widget: 'boolean', hint: 'If set to active, the full bio is displayed.', required: false}
       - {label: 'Image', name: 'image', widget: 'image', required: false }
       - {label: 'Image Alt Text', name: 'imageAltText', widget: 'string', required: false, hint: "Briefly describe the image; this will be read by screen readers." }
@@ -231,7 +231,7 @@ collections:
     folder: 'site/projects'
     create: true
     slug: "{{name}}"
-    fields: 
+    fields:
       - {label: 'Name', name: 'name', widget: 'string', required: true}
       - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link'], required: true}
       - {label: 'Image', name: 'image', widget: 'image', required: false }
@@ -254,7 +254,7 @@ collections:
     folder: 'site/modules'
     create: true
     slug: "{{name}}"
-    fields: 
+    fields:
       - {label: 'Name', name: 'name', widget: 'string', required: true}
       - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link'], required: true}
       - {label: 'Image', name: 'image', widget: 'image', required: false }
@@ -269,23 +269,23 @@ collections:
         valueField: "name"
         displayFields: ["name"]
         required: false
-        
+
   - label: 'Collection: Tags'
     name: 'tags'
     identifier_field: 'name'
     folder: 'site/tags'
     create: true
     slug: "{{name}}"
-    fields: 
+    fields:
       - {label: 'Name', name: 'name', widget: 'string', required: true}
-       
+
   - label: 'Collection: Events'
     name: 'events'
     identifier_field: 'name'
     folder: 'site/events'
     create: true
     slug: "{{name}}"
-    fields: 
+    fields:
       - {label: 'Name', name: 'name', widget: 'string', required: true}
       - {label: 'Description', name: 'description', widget: 'markdown', buttons: ['link'], required: true}
       - {label: 'Image', name: 'image', widget: 'image', required: false }
@@ -312,7 +312,7 @@ collections:
         widget: 'object'
         required: false
         hint: 'Leave this blank if the event is online only.'
-        fields: 
+        fields:
           - {label: 'Name', name: 'name', widget: 'string', required: false}
           - {label: 'URL', name: 'url', widget: 'string', required: false, pattern: ['^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|dat:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', hint: 'Must be a valid URL.'] }
           - {label: 'Address Line 1', name: 'addressOne', widget: 'string', required: false}

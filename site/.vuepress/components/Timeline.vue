@@ -15,7 +15,7 @@
     <div class="timeline__item milestone">
       <div class="timeline__item--milestone">
       </div>
-      <p class="timeline__item__description">What's next? <a href="https://opencollective.com/dat">Sponsor us</a> or join our <a href="/explore/get-started">community</a> to learn how you can help build the future of the web.</p>
+      <p class="timeline__item__description">What's next? <a href="https://opencollective.com/dat">Sponsor us</a> or join our <a href="https://docs.datproject.org/docs/intro">community</a> to learn how you can help build the future of the web.</p>
     </div>
   </div>
 </template>

@@ -19,8 +19,9 @@ nav_items:
         path: 'https://dat.discourse.group/'
   - label: Learn
     secondary:
-      - label: Get Started
-        path: /explore/get-started/
+      - external: true
+        label: Get Started
+        path: 'https://docs.datproject.org/docs/intro'
       - external: true
         label: Docs
         path: 'https://docs.dat.foundation/'

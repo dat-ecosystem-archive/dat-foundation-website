@@ -21,7 +21,7 @@ nav_items:
     secondary:
       - external: true
         label: Get Started
-        path: 'https://docs.datproject.org/docs/intro'
+        path: 'https://docs.dat.foundation/docs/intro'
       - external: true
         label: Docs
         path: 'https://docs.dat.foundation/'

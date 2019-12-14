@@ -119,7 +119,7 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: Introduction, name: intro, widget: markdown}
 
-      - label: 'Foundation'
+      - label: 'What is Dat?'
         name: 'foundation'
         file: 'site/_data/about/foundation.yml'
         fields:

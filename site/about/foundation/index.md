@@ -1,9 +1,11 @@
 <div class="foundation">
   <h1 class="foundation__title page-title">{{ title }}</h1>
   
+  <!--  
   <div v-html="markdown(missionStatement)"
-       class="foundation__mission-statement">
-  </div>
+         class="foundation__mission-statement">
+    </div>
+  -->
 
   <div v-html="markdown(intro)"
        class="foundation__content">

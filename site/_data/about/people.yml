@@ -1,18 +1,18 @@
 title: People
 section:
   - description: >-
-      The Dat Foundation Governance supports the collaboration, funding, and
+      The Dat Protocol Foundation Governance supports the collaboration, funding, and
       community management for Dat. This group is involved in financial and
-      legal decisions regarding the Dat Foundation in collaboration with Code
+      legal decisions regarding the Dat Protocol Foundation in collaboration with Code
       for Science and Society.
-    name: Dat Foundation Governance
+    name: Dat Protocol Foundation Governance
     people:
       - Joe Hand
       - Danielle Robinson
       - Karissa McKelvey
       - Mathias Buus
   - description: >-
-      The Dat Foundation supports many open source developers working
+      The Dat Protocol Foundation supports many open source developers working
       on modules compatible with the protocol. Here are 
       some of the prominant contributors to the development of 
       the core technologies.

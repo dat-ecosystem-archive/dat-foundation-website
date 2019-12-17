@@ -10,6 +10,22 @@
   <div v-html="markdown(intro)"
        class="foundation__content">
   </div>
+  
+
+  <h2 class="foundation__sponsors__title">
+    Sponsors
+  </h2>
+  <div class="foundation__sponsors">
+    <div v-for="sponsor in sponsors"
+         class="foundation__sponsor">
+      <a :href="sponsor.website">
+        <img :src="sponsor.logo"
+             class="foundation__sponsor__logo">
+      </a>
+      <div class="foundation__sponsor__description" v-html="markdown(sponsor.description)">
+      </div>
+    </div>
+  </div>
 </div>
 
 <script> 
@@ -23,6 +39,7 @@ export default {
     return {
       title: content.title,
       intro: content.intro,
+      sponsors: content.sponsors,
       missionStatement: missionStatement.missionStatement
     }
   },

@@ -1,6 +1,8 @@
 nav_items:
   - label: About
     secondary:
+      - label: People
+        path: /about/people/
       - label: Foundation
         path: /about/foundation/
       - label: History

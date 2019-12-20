@@ -14,21 +14,21 @@ section:
   - description: >-
       The Dat Protocol Foundation supports many open source developers working
       on modules compatible with the protocol. Here are 
-      some of the prominant contributors to the development of 
+      some of the prominent contributors to the development of 
       the core technologies.
-    name: Other Contributors
+    name: Community Contributors
     people:
       - Paul Frazee
       - Andrew Osheroff
       - David Clements
       - Georgiy Shibaev
+      - Yoshua Wuyts
   - description: >-
       Here's some of the people that have contributed to Dat in the past.
     name: Alumni
     people:
       - Tara Vancil
       - Max Ogden
-      - Yoshua Wuyts
       - Jim Pick
       - Kristina Schneider
       - Julian Gruber

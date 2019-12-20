@@ -28,8 +28,9 @@ export default {
 
   computed: {
     person (name) {
-      return this.$site.pages
-        .filter(x => x.path.startsWith('/people/') && x.frontmatter.name == this.name)[0].frontmatter
+      var people = this.$site.pages
+        .filter(x => x.path.startsWith('/people/') && x.frontmatter.name == this.name)
+      return people[0] && people[0].frontmatter
     }
   },
 

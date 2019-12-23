@@ -1,5 +1,5 @@
 <template>
-  <div class="person full-bio">
+  <div v-if="person" class="person full-bio">
     <a :href="person.website">
       <ImageHelper :image="person.image"
                    :imageAltText="person.imageAltText" />

@@ -1,8 +1,11 @@
 ---
-name: Julian Gruber
-active: false
-bio: >-
-  Programmer traveling the world. Contributor to projects like [Node.js](https://nodejs.org) and [LevelDB](https://leveldb.org/). Has a strong drive to rid humanity of redundant work and empower everyone to think big.
+name: Julian gruber
+active: true
+title: programmer
+affiliation:
+  url: https://libscie.org/
+  name: Liberate Science
+bio: P2P App Programmer
 image: https://github.com/juliangruber.png
-website: 'https://twitter.com/juliangruber/'
+website: https://twitter.com/juliangruber
 ---

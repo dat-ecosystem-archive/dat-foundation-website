@@ -25,5 +25,5 @@ jobs:
       run: |
         npx @sammacbeth/dat-publisher update --del -s $DAT_SITE_SECRET_KEY --seedtime 180 $DAT_SITE_ADDRESS site/.vuepress/dist/
       env:
-        DAT_SITE_ADDRESS: 3e7405dbc026be44f103b42cb3383e51ffab51aada8b58608347edc0a8f2ecce
+        DAT_SITE_ADDRESS: 60c525b5589a5099aa3610a8ee550dcd454c3e118f7ac93b7d41b6b850272330
         DAT_SITE_SECRET_KEY: ${{ secrets.DAT_SITE_SECRET_KEY }}

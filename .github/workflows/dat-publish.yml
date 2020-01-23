@@ -3,7 +3,7 @@ name: Publish Dat site
 on: 
   push:
     branches:
-      - master
+      - release
 
 jobs:
   build:

@@ -4,7 +4,7 @@
       <ImageHelper :image="project.frontmatter.image"
                    :imageAltText="project.frontmatter.imageAltText" />
     </a>
-    
+
     <div class="project__details">
       <div class="project__name">
         <a :href="project.frontmatter.website">
@@ -25,7 +25,7 @@
   </div>
 </template>
 
-<script> 
+<script>
 export default {
   name: 'Project',
   props: {
@@ -52,8 +52,9 @@ export default {
 
 .project {
   figure {
-    height: 20vw;
-    width: 100%;
+    height: 5vw;
+    width: 40%;
+    height: 160px;
     overflow: hidden;
     margin-bottom: $space-base;
 
@@ -73,12 +74,14 @@ export default {
   // Style when featured.
   .projects-index__featured & {
     display: flex;
+    flex-direction: column;
     margin-bottom: $space-medium;
 
     figure {
       margin-right: $space-base;
-      width: 40vw;
-      height: 25vw;
+      width: 25%;
+      height: 25%;
+      img { object-fit: cover; }
     }
 
     &__name {
@@ -87,4 +90,3 @@ export default {
   }
 }
 </style>
-

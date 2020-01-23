@@ -1,0 +1,29 @@
+name: Publish Dat site
+
+on: 
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: Build site
+      run: |
+        npm install -g yarn
+        yarn install
+        yarn build
+    - name: Publish Dat site
+      run: |
+        npx @sammacbeth/dat-publisher update --del -s $DAT_SITE_SECRET_KEY --seedtime 180 $DAT_SITE_ADDRESS site/.vuepress/dist/
+      env:
+        DAT_SITE_ADDRESS: 60c525b5589a5099aa3610a8ee550dcd454c3e118f7ac93b7d41b6b850272330
+        DAT_SITE_SECRET_KEY: ${{ secrets.DAT_SITE_SECRET_KEY }}

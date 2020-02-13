@@ -33,9 +33,8 @@
     <!-- TODO: Language switcher -->
     <!-- TODO: Sitemap link -->
 
-    <!-- TODO: Update this link -->
     <div class="footer__copyright">
-      Dat Foundation © 2013 - 2019 • Source on <a href="#">GitHub</a>
+      Dat Foundation © 2013 - 2019 • Source on <a href="https://github.com/datproject/dat">GitHub</a>
     </div>
   </footer>
 </template>

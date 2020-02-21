@@ -19,6 +19,9 @@ nav_items:
       - external: true
         label: Forum
         path: 'https://dat.discourse.group/'
+      - external: true
+        label: Comm Comm
+        path: 'https://comm-comm.datproject.org/'
   - label: Learn
     secondary:
       - external: true

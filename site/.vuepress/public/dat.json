@@ -1,5 +1,13 @@
 {
     "title": "Dat Protocol Foundation",
     "description": "Home of the Dat Protocol Foundation",
-    "url": "dat://60c525b5589a5099aa3610a8ee550dcd454c3e118f7ac93b7d41b6b850272330/"
+    "url": "dat://60c525b5589a5099aa3610a8ee550dcd454c3e118f7ac93b7d41b6b850272330/",
+    "links": {
+        "payment": [
+            {
+                "href": "https://opencollective.com/dat",
+                "type": "text/html"
+            }
+        ]
+    }
 }

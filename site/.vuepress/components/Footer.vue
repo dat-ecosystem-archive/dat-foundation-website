@@ -34,7 +34,7 @@
     <!-- TODO: Sitemap link -->
 
     <div class="footer__copyright">
-      Dat Foundation © 2013 - 2019 • Source on <a href="https://github.com/datproject/dat">GitHub</a>
+      Dat Foundation © 2013 - 2020 • Source on <a href="https://github.com/datproject/dat">GitHub</a>
     </div>
   </footer>
 </template>

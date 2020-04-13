@@ -3,7 +3,7 @@
     <h2 class="page-title">Featured projects</h2>
 
     <div class="featured-projects__grid">
-      <Project v-for="project in projects.slice(0,2)" 
+      <Project v-for="project in projects.slice(0,4)" 
                :project="project"/>
     </div>
 

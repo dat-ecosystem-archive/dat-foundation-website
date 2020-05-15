@@ -16,10 +16,8 @@ section:
     people:
       - Paul Frazee
       - Andrew Osheroff
-      - David Clements
       - Georgiy Shibaev
       - Yoshua Wuyts
-      - Joseph Werle
       - Kevin Faaborg
       - Alexander Cobleigh
       - Franz Heinzmann
@@ -32,7 +30,6 @@ section:
       - Max Ogden
       - Jim Pick
       - Kristina Schneider
-      - Julian Gruber
       - Chia-liang Kao
       - Melanie Cebula
       - Portia Burton
@@ -40,3 +37,4 @@ section:
       - Yuhong Wang
       - Juan Batiz-Benet
       - Finn Pauls
+      - David Clements

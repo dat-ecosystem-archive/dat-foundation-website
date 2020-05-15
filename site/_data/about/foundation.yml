@@ -1,6 +1,6 @@
 title: What is Dat?
 intro: >-
-  **Dat, The Protocol**
+  **Dat, The Project**
 
 
   The Internet is broken -- and we are using it to access and distribute all of human knowledge. Data monopolies hold and enclose upon personal & public datasets, threatening universal access. To tackle this problem, between 2013 and 2015 we performed a series of design & development sprints in collaboration with researchers, librarians, and civic technologists working to preserve the digital knowledge commons. Out of this research we built Dat, a distributed ledger & peer-to-peer data sharing toolkit.
@@ -12,16 +12,16 @@ intro: >-
   Dat combines the best of BitTorrent and Git. From BitTorrent, we took the scaling properties of peer-to-peer: downloads get faster rather than slower as more people join the network. From Git, we took mutability: the original publisher can add or modify data while peers can keep a full history for auditing and preservation. Dat is unique in the rapidly growing area of decentralized web, blockchain, and other cryptocurrency projects. It was the first in the field with a public interest focus. 
 
 
-  There are a [wide variety of core mission partners that are developing applications ](https://dat.foundation/explore/projects/)that use the dat:// protocol, including a web browser for developing peer-to-peer websites (Beaker Browser), a community-based mapping and monitoring application (Mapeo), a cooperatively-owned data infrastructure (Cobox), and a privacy-oriented chat application (Cabal). Independently, these applications show the power and flexibility of the protocol for building the next-generation Web. 
+  There are a [wide variety of core mission partners that are developing applications ](https://dat.foundation/explore/projects/)that use the \[hypercore-protocol](https://blog.datproject.org/2020/05/15/dat-protocol-renamed-hypercore-protocol/), including a web browser for developing peer-to-peer websites (Beaker Browser), a community-based mapping and monitoring application (Mapeo), a cooperatively-owned data infrastructure (Cobox), and a privacy-oriented chat application (Cabal). Independently, these applications show the power and flexibility of the protocol for building the next-generation Web. 
 
 
   **Dat, The Foundation**
 
 
-  The Dat Protocol Foundation is a small non-profit group fiscally sponsored by the US-based 501(c)(3) [Code for Science & Society](https://codeforscience.org). It provides grants as well as social and technical infrastructure for the consortium of projects and working groups that are enhancing the protocol and fostering the community. Since 2013, we've received about $1.7 million in funding from a variety of sources, especially from large foundation grants.
+  The Dat Foundation is a small non-profit group fiscally sponsored by the US-based 501(c)(3) [Code for Science & Society](https://codeforscience.org). It provides grants as well as social and technical infrastructure for the consortium of projects and working groups that are enhancing the protocol and fostering the community. Since 2013, we've received about $1.7 million in funding from a variety of sources, especially from large foundation grants.
 
 
-  The Dat Protocol Foundation supports work in three main focus areas:
+  The Dat Foundation supports work in three main focus areas:
 
 
   \* **Community Management:** Facilitation, community engagement, social infrastructure, and events.
@@ -33,7 +33,7 @@ intro: >-
   \* **Technical Research & Development:** Creating new modules, researching new approaches, and maintenance.
 
 
-  At the scale of the web, every decision can have a massive impact on our political systems and social well-being. To this end, development of the protocol is driven entirely by contributors from external organizations, keeping it neutral and flexible. The Dat Protocol Foundation working groups cover the full spectrum of organization types, including non-profit organizations, for-profit companies, and individual contributors. Our diverse organizational participants guide development in the direction of maximum public benefit.
+  At the scale of the web, every decision can have a massive impact on our political systems and social well-being. To this end, development of the protocol is driven entirely by contributors from external organizations, keeping it neutral and flexible. The Dat Foundation working groups cover the full spectrum of organization types, including non-profit organizations, for-profit companies, and individual contributors. Our diverse organizational participants guide development in the direction of maximum public benefit.
 sponsors:
   - description: Code for Science and society empowers communities to work together
       and build innovative technology for the public good.

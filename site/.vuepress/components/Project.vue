@@ -51,6 +51,8 @@ export default {
 @import '../assets/stylesheets/variables.scss';
 
 .project {
+  flex-basis: calc(25% - #{$space-medium});
+  flex-grow: 1;
   figure {
     height: 5vw;
     width: 40%;

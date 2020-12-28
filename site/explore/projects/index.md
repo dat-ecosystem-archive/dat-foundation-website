@@ -62,9 +62,9 @@ export default {
   }
 
   &__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: $space-medium;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-medium;
   }
 }
 </style>

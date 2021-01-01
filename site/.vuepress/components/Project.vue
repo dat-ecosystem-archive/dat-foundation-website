@@ -52,6 +52,7 @@ export default {
 
 .project {
   flex-basis: calc(25% - #{$space-medium});
+  margin: $space-base;
   flex-grow: 1;
   figure {
     height: 160px;

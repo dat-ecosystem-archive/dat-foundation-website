@@ -64,7 +64,6 @@ export default {
   &__grid {
     display: flex;
     flex-wrap: wrap;
-    gap: $space-medium;
   }
 }
 </style>

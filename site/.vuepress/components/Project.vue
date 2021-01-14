@@ -51,14 +51,17 @@ export default {
 @import '../assets/stylesheets/variables.scss';
 
 .project {
+  flex-basis: calc(25% - #{$space-medium});
+  margin: $space-base;
+  flex-grow: 1;
   figure {
-    height: 5vw;
-    width: 40%;
     height: 160px;
-    overflow: hidden;
     margin-bottom: $space-base;
 
-    img { object-fit: cover; }
+    img {
+      object-fit: contain;
+      max-height: 100%;
+    }
   }
 
   &__name {

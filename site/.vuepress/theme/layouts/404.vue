@@ -4,7 +4,7 @@
     <!-- TODO: Add link to open issue. -->
     <main class="app__main not-found">
       <h1 class="not-found__header">Uh oh!</h1>
-      <p>There's nothing here! If you think you've reached this page in error, <a>open an issue</a>. Otherwise, head on <router-link to="/">home</router-link>.</p>
+      <p>There's nothing here! If you think you've reached this page in error, <a>open an issue</a>. Otherwise, head on <router-link to="/dat-foundation-website/">home</router-link>.</p>
     </main>
     <Footer/>
   </div>

@@ -7,6 +7,7 @@ section:
     name: Community Contributors
     people:
       - Paul Frazee
+      - Mathias Buus
       - Andrew Osheroff
       - Georgiy Shibaev
       - Kevin Faaborg
@@ -14,7 +15,6 @@ section:
       - Franz Heinzmann
       - Diego Paez
       - Martin Heidegger
-      - Mathias Buus
   - description: Here's some of the people that have contributed to Dat in the past.
     name: Alumni
     people:

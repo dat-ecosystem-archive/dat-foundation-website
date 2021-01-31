@@ -1,13 +1,5 @@
 title: People
 section:
-  - description: The Dat Foundation Governance supports the collaboration, funding,
-      and community management. This group is involved in financial and legal
-      decisions regarding the Dat Foundation in collaboration with Code for
-      Science and Society.
-    name: Dat Foundation Governance
-    people:
-      - Karissa McKelvey
-      - Mathias Buus
   - description: The Dat Foundation supports and works in collaboration with many
       open source developers working on modules compatible with the protocol.
       Here are some of the prominent contributors to the development of the core
@@ -17,16 +9,18 @@ section:
       - Paul Frazee
       - Andrew Osheroff
       - Georgiy Shibaev
-      - Yoshua Wuyts
       - Kevin Faaborg
       - Alexander Cobleigh
       - Franz Heinzmann
       - Diego Paez
       - Martin Heidegger
+      - Mathias Buus
   - description: Here's some of the people that have contributed to Dat in the past.
     name: Alumni
     people:
+      - Karissa McKelvey
       - Tara Vancil
+      - Yoshua Wuyts
       - Max Ogden
       - Jim Pick
       - Kristina Schneider

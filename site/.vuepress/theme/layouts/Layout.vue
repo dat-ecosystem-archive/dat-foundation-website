@@ -3,7 +3,7 @@
     <Nav/>
     <div v-if="!isBlogIndex" class="breadcrumbs">
       <div v-if="$page.frontmatter.template === 'blog'">
-        <router-link to="/blog" class="breadcrumbs__crumb" >Blog</router-link>
+        <router-link to="/dat-foundation-website/blog" class="breadcrumbs__crumb" >Blog</router-link>
         <span class="breadcrumbs__crumb">{{ $page.frontmatter.title }}</span>
       </div>
 

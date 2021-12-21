@@ -7,7 +7,7 @@
                :post="post"/>
     </div>
 
-    <router-link tag="a" class="button" to="/blog">All posts →</router-link>
+    <router-link tag="a" class="button" to="/dat-foundation-website/blog">All posts →</router-link>
   </div>
 </template>
 

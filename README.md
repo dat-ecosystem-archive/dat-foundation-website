@@ -1,3 +1,10 @@
+
+[![deprecated](http://badges.github.io/stability-badges/dist/deprecated.svg)](https://dat-ecosystem.org/) 
+
+More info on active projects and modules at [dat-ecosystem.org](https://dat-ecosystem.org/) <img src="https://i.imgur.com/qZWlO1y.jpg" width="30" height="30" /> 
+
+---
+
 # Dat Foundation website
 
 This is a shiny new website for the Dat Foundation! It is built on [VuePress](https://vuepress.vuejs.org/), pulls its content from this GitHub repo, is editable with [Netlify CMS](https://www.netlifycms.org/), and is continuously integrated with Netlify.

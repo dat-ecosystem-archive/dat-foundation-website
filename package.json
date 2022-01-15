@@ -8,7 +8,7 @@
   "license": "MIT",
   "dependencies": {
     "js-yaml-loader": "^1.2.2",
-    "marked": "^0.7.0",
+    "marked": "^4.0.10",
     "vuepress": "^1.1.0",
     "webpack-dev-middleware": "3.6.0"
   },

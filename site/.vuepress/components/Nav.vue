@@ -1,6 +1,6 @@
 <template>
   <header>
-    <router-link to="/dat-foundation-website/" tabindex="0">
+    <router-link to="/" tabindex="0">
       <div class="logo">
       </div>
     </router-link>
